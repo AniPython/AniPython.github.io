@@ -1,0 +1,14 @@
+.. _api.py:
+
+
+Python
+------------------
+.. toctree::
+    :maxdepth: 1
+    :caption: Python
+
+    py/AndroidBot
+    py/WinBot
+    py/WebBot
+
+

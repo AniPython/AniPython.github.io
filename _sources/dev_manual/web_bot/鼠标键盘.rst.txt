@@ -1,0 +1,75 @@
+.. currentmodule:: AiBot
+
+
+发送文本 ``sendKeys()``
+-----------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#sendKeys
+    .. tab:: Python
+        .. automethod:: WebBotMain.send_keys
+
+
+发送Vk虚拟键 ``sendVk()``
+-----------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#sendVk
+    .. tab:: Python
+        .. automethod:: WebBotMain.send_vk
+
+
+点击鼠标 ``clickMouse()``
+-----------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#clickMouse
+    .. tab:: Python
+        .. automethod:: WebBotMain.click_mouse
+
+
+
+移动鼠标 ``moveMouse()``
+-----------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#moveMouse
+    .. tab:: Python
+        .. automethod:: WebBotMain.move_mouse
+
+
+滚动鼠标 wheelMouse()
+-----------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#wheelMouse
+    .. tab:: Python
+        .. automethod:: WebBotMain.scroll_mouse
+
+
+
+通过 xpath 点击鼠标(元素中心点) ``clickMouseByXpath()``
+-----------------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#clickMouseByXpath
+    .. tab:: Python
+        .. automethod:: WebBotMain.click_mouse_by_element
+
+
+通过 xpath 移动鼠标(元素中心点) ``moveMouseByXpath()``
+-----------------------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#moveMouseByXpath
+    .. tab:: Python
+        .. automethod:: WebBotMain.move_to_element
+
+
+通过 xpath 滚动鼠标 ``wheelMouseByXpath()``
+--------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#wheelMouseByXpath
+    .. tab:: Python
+        .. automethod:: WebBotMain.scroll_mouse_by_element

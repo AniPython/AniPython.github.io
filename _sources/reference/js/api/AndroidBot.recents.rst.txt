@@ -1,0 +1,5 @@
+
+AndroidBot.recents
+=========================================================
+
+.. js:autofunction:: AndroidBot#recents

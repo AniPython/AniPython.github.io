@@ -1,0 +1,34 @@
+
+上传训练文件到服务器 ``uploadTrainFile()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#uploadTrainFile
+
+
+列出单个训练文件信息 ``listTrainFile()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#listTrainFile
+
+
+列出所有训练文件信息 ``listTrainFiles()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#listTrainFiles
+
+
+下载训练文件内容 ``downloadTrainFile()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#downloadTrainFile
+
+
+删除训练文件 ``deleteTrainFile()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#deleteTrainFile

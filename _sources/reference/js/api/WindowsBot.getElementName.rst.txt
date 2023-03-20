@@ -1,0 +1,5 @@
+
+WindowsBot.getElementName
+=========================================================
+
+.. js:autofunction:: WindowsBot#getElementName

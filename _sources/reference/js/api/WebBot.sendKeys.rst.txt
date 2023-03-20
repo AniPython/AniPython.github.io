@@ -1,0 +1,5 @@
+
+WebBot.sendKeys
+=========================================================
+
+.. js:autofunction:: WebBot#sendKeys

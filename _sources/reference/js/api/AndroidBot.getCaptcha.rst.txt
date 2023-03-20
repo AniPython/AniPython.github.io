@@ -1,0 +1,5 @@
+
+AndroidBot.getCaptcha
+=========================================================
+
+.. js:autofunction:: AndroidBot#getCaptcha

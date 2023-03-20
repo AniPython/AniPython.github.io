@@ -1,0 +1,5 @@
+
+AndroidBot.getElementText
+=========================================================
+
+.. js:autofunction:: AndroidBot#getElementText

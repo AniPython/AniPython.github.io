@@ -1,0 +1,5 @@
+
+WindowsBot.uploadTrainFile
+=========================================================
+
+.. js:autofunction:: WindowsBot#uploadTrainFile

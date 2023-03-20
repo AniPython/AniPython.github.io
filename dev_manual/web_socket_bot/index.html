@@ -56,7 +56,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="多模块混合开发" href="../multimodule_mixing/index.html" />
-    <link rel="prev" title="WebBot" href="../web_bot/index.html" />
+    <link rel="prev" title="界面开发" href="../ui/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
   </head>
@@ -285,11 +285,11 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../android_bot/index.html">AndroidBot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../window_bot/index.html">WindowBot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../web_bot/index.html">WebBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../window_bot/index.html">WindowBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui/index.html">界面开发</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">WebSocketBot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../multimodule_mixing/index.html">多模块混合开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ui/index.html">界面开发</a></li>
 </ul>
 </div>
 </nav></div>
@@ -353,48 +353,48 @@ document.write(`
 <h2>WebSocketBot &amp; AndroidBot 启动App示例<a class="headerlink" href="#websocketbot-androidbot-app" title="此标题的永久链接">#</a></h2>
 <section id="node-js">
 <h3>服务端node.js<a class="headerlink" href="#node-js" title="此标题的永久链接">#</a></h3>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebSocketBot&#39;</span><span class="p">);</span><span class="c1">//引用WebSocketBot</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">AndroidBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;AndroidBot&#39;</span><span class="p">);</span><span class="c1">//引用AndroidBot模块</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebSocketBot&#39;</span><span class="p">);</span><span class="c1">//引用WebSocketBot</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">AndroidBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;AndroidBot&#39;</span><span class="p">);</span><span class="c1">//引用AndroidBot模块</span><span class="w"></span>
 
-<span class="c1">//构建WebSocketBot</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="p">.</span><span class="nx">build</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">isBinary</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">//解析客户端字符串格式数据</span>
-<span class="w">    </span><span class="c1">//let strMsg = data.toString();</span>
+<span class="c1">//构建WebSocketBot</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="p">.</span><span class="nx">build</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">isBinary</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//解析客户端字符串格式数据</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//let strMsg = data.toString();</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//解析客户端json格式数据</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;command&quot;</span><span class="p">];</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">];</span>
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">command</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;startApp&quot;</span><span class="o">:</span>
-<span class="w">            </span><span class="c1">//遍历所有的androidBot 执行命令，可在循环内判断安卓androidId 选择设备执行</span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">androidsBot</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="c1">// let androidId = await webSocketBot.androidsBot[i].getAndroidId();</span>
-<span class="w">                </span><span class="c1">// console.log(androidId);</span>
-<span class="w">                </span><span class="k">await</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">androidsBot</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">startApp</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">sendData</span><span class="p">(</span><span class="nx">command</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;已执行&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">},</span><span class="w"> </span><span class="mf">8181</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//解析客户端json格式数据</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;command&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">command</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;startApp&quot;</span><span class="o">:</span><span class="w"></span>
+<span class="w">            </span><span class="c1">//遍历所有的androidBot 执行命令，可在循环内判断安卓androidId 选择设备执行</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">androidsBot</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// let androidId = await webSocketBot.androidsBot[i].getAndroidId();</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// console.log(androidId);</span><span class="w"></span>
+<span class="w">                </span><span class="k">await</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">androidsBot</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">startApp</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">            </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">sendData</span><span class="p">(</span><span class="nx">command</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;已执行&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">},</span><span class="w"> </span><span class="mf">8181</span><span class="p">);</span><span class="w"></span>
 
 
-<span class="c1">//注册主函数，安卓端连接脚本会自动调用androidMain，并传递AndroidBot对象。设置服务端监听端口，手机端默认连接端口16678</span>
-<span class="nx">AndroidBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">androidMain</span><span class="p">,</span><span class="w"> </span><span class="mf">16678</span><span class="p">);</span>
+<span class="c1">//注册主函数，安卓端连接脚本会自动调用androidMain，并传递AndroidBot对象。设置服务端监听端口，手机端默认连接端口16678</span><span class="w"></span>
+<span class="nx">AndroidBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">androidMain</span><span class="p">,</span><span class="w"> </span><span class="mf">16678</span><span class="p">);</span><span class="w"></span>
 
 <span class="cm">/**用作代码提示，androidMain函数会被多次调用，注意使用全局变量</span>
 <span class="cm"> * @param {AndroidBot} androidBot</span>
-<span class="cm"> */</span>
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">androidMain</span><span class="p">(</span><span class="nx">androidBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">//设置隐式等待</span>
-<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span>
-<span class="w">    </span><span class="c1">//获取安卓id</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">androidId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">getAndroidId</span><span class="p">();</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">androidMain</span><span class="p">(</span><span class="nx">androidBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//设置隐式等待</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//获取安卓id</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">androidId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">getAndroidId</span><span class="p">();</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//存入androidBot 和 androidId</span>
-<span class="w">    </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">androidsBot</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">androidBot</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">androidsId</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">androidId</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="c1">//存入androidBot 和 androidId</span><span class="w"></span>
+<span class="w">    </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">androidsBot</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">androidBot</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">androidsId</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">androidId</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -406,16 +406,16 @@ document.write(`
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Aibote中控<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="w">        </span><span class="p">.</span><span class="nc">aiboteLog</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nc">aiboteLog</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -427,39 +427,39 @@ document.write(`
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;startApp&quot;</span><span class="p">&gt;</span>打开App<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="s1">&#39;ws://localhost:8181&#39;</span><span class="p">);</span><span class="c1">//服务端端口8181 对应WebSocketBot.build第二个参数</span>
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onopen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接服务器成功&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="s1">&#39;ws://localhost:8181&#39;</span><span class="p">);</span><span class="c1">//服务端端口8181 对应WebSocketBot.build第二个参数</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onopen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接服务器成功&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;服务器关闭&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;服务器关闭&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onerror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接出错&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onerror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接出错&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">aiboteLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;aiboteLog&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//接收服务端的数据</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">aiboteLog</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">aiboteLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;aiboteLog&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//接收服务端的数据</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">aiboteLog</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">startApp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;startApp&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">startApp</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;appName&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-<span class="w">        </span><span class="c1">//发送json数据格式</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;startApp&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">appName</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="c1">//json格式转换成字符串</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">strMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jsonMsg</span><span class="p">);</span>
-<span class="w">        </span><span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">strMsg</span><span class="p">);</span><span class="c1">//发送数据到服务端</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">startApp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;startApp&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">startApp</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;appName&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//发送json数据格式</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;startApp&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">appName</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//json格式转换成字符串</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">strMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jsonMsg</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">strMsg</span><span class="p">);</span><span class="c1">//发送数据到服务端</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
@@ -470,41 +470,41 @@ document.write(`
 <h2>WebSocketBot &amp; WebBot url跳转示例<a class="headerlink" href="#websocketbot-webbot-url" title="此标题的永久链接">#</a></h2>
 <section id="id1">
 <h3>服务端node.js<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h3>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebBot&#39;</span><span class="p">);</span><span class="c1">//引用WebBot模块</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebSocketBot&#39;</span><span class="p">);</span><span class="c1">//引用WebSocketBot</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebBot&#39;</span><span class="p">);</span><span class="c1">//引用WebBot模块</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebSocketBot&#39;</span><span class="p">);</span><span class="c1">//引用WebSocketBot</span><span class="w"></span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">gWebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="c1">//定义全局变量，存放WebBot对象</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">gWebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="c1">//定义全局变量，存放WebBot对象</span><span class="w"></span>
 
-<span class="c1">//构建WebSocketBot</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="p">.</span><span class="nx">build</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">isBinary</span><span class="p">)=&gt;{</span>
-<span class="w">    </span><span class="c1">//解析客户端字符串格式数据</span>
-<span class="w">    </span><span class="c1">//let strMsg = data.toString();</span>
+<span class="c1">//构建WebSocketBot</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="p">.</span><span class="nx">build</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">isBinary</span><span class="p">)=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//解析客户端字符串格式数据</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//let strMsg = data.toString();</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//解析客户端json格式数据</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;command&quot;</span><span class="p">];</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">];</span>
-<span class="w">    </span><span class="k">switch</span><span class="p">(</span><span class="nx">command</span><span class="p">){</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;openUrl&quot;</span><span class="o">:</span>
-<span class="w">            </span><span class="k">await</span><span class="w"> </span><span class="nx">gWebBot</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
-<span class="w">            </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">sendData</span><span class="p">(</span><span class="s2">&quot;已打开&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">msg</span><span class="p">);</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">},</span><span class="w"> </span><span class="mf">8181</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//解析客户端json格式数据</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;command&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="k">switch</span><span class="p">(</span><span class="nx">command</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;openUrl&quot;</span><span class="o">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">await</span><span class="w"> </span><span class="nx">gWebBot</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">sendData</span><span class="p">(</span><span class="s2">&quot;已打开&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">},</span><span class="w"> </span><span class="mf">8181</span><span class="p">);</span><span class="w"></span>
 
 
-<span class="c1">//注册主函数</span>
-<span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="s2">&quot;chrome&quot;</span><span class="p">});</span>
+<span class="c1">//注册主函数</span><span class="w"></span>
+<span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="s2">&quot;chrome&quot;</span><span class="p">});</span><span class="w"></span>
 
 <span class="cm">/**用作代码提示，webMain函数会被多次调用，注意使用全局变量</span>
 <span class="cm">* @param {WebBot} webBot</span>
-<span class="cm">*/</span>
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">webMain</span><span class="p">(</span><span class="nx">webBot</span><span class="p">){</span>
-<span class="w">    </span><span class="c1">//设置隐式等待</span>
-<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">webBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">webMain</span><span class="p">(</span><span class="nx">webBot</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//设置隐式等待</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">webBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">gWebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">webBot</span><span class="p">;</span><span class="c1">//赋值给全局变量</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="nx">gWebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">webBot</span><span class="p">;</span><span class="c1">//赋值给全局变量</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -516,16 +516,16 @@ document.write(`
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Aibote中控<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="w">        </span><span class="p">.</span><span class="nc">aiboteLog</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nc">aiboteLog</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -537,39 +537,39 @@ document.write(`
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btnOpen&quot;</span><span class="p">&gt;</span>跳转网址<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="s1">&#39;ws://localhost:8181&#39;</span><span class="p">);</span><span class="c1">//服务端端口8181 对应WebSocketBot.build第二个参数</span>
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onopen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接服务器成功&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="s1">&#39;ws://localhost:8181&#39;</span><span class="p">);</span><span class="c1">//服务端端口8181 对应WebSocketBot.build第二个参数</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onopen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接服务器成功&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;服务器关闭&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;服务器关闭&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onerror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接出错&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onerror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接出错&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">aiboteLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;aiboteLog&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">//接收服务端的数据</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">aiboteLog</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">aiboteLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;aiboteLog&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//接收服务端的数据</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">aiboteLog</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">btnOpen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;btnOpen&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">btnOpen</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;valUrl&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-<span class="w">        </span><span class="c1">//发送json数据格式</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;openUrl&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">url</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="c1">//json格式转换成字符串</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">strMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jsonMsg</span><span class="p">);</span>
-<span class="w">        </span><span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">strMsg</span><span class="p">);</span><span class="c1">//发送数据到服务端</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">btnOpen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;btnOpen&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">btnOpen</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;valUrl&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//发送json数据格式</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;openUrl&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">url</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//json格式转换成字符串</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">strMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jsonMsg</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">strMsg</span><span class="p">);</span><span class="c1">//发送数据到服务端</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
@@ -580,46 +580,46 @@ document.write(`
 <h2>WebSocketBot &amp; WindowsBot QQ发送消息示例<a class="headerlink" href="#websocketbot-windowsbot-qq" title="此标题的永久链接">#</a></h2>
 <section id="id3">
 <h3>服务端node.js<a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h3>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WindowsBot&#39;</span><span class="p">);</span><span class="c1">//引用WindowsBot模块</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebSocketBot&#39;</span><span class="p">);</span><span class="c1">//引用WebSocketBot</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WindowsBot&#39;</span><span class="p">);</span><span class="c1">//引用WindowsBot模块</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebSocketBot&#39;</span><span class="p">);</span><span class="c1">//引用WebSocketBot</span><span class="w"></span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="c1">//定义全局变量，存放WindowsBot对象</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="c1">//定义全局变量，存放WindowsBot对象</span><span class="w"></span>
 
-<span class="c1">//构建WebSocketBot</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="p">.</span><span class="nx">build</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">isBinary</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">//解析客户端字符串格式数据</span>
-<span class="w">    </span><span class="c1">//let strMsg = data.toString();</span>
-
-
-<span class="w">    </span><span class="c1">//通过全局windowsBot获取聊天窗口句柄</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">hwnd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">.</span><span class="nx">findWindow</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Ai-Bot 3群&quot;</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">//解析客户端json格式数据</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;command&quot;</span><span class="p">];</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">];</span>
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">command</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;sendMessage&quot;</span><span class="o">:</span>
-<span class="w">            </span><span class="k">await</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">.</span><span class="nx">sendKeysByHwnd</span><span class="p">(</span><span class="nx">hwnd</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="p">);</span>
-<span class="w">            </span><span class="k">await</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">.</span><span class="nx">clickElement</span><span class="p">(</span><span class="nx">hwnd</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Button@name=发送(&amp;S)&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
-<span class="w">            </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">sendData</span><span class="p">(</span><span class="s2">&quot;已发送&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">msg</span><span class="p">);</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">},</span><span class="w"> </span><span class="mf">8181</span><span class="p">);</span>
+<span class="c1">//构建WebSocketBot</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">webSocketBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WebSocketBot</span><span class="p">.</span><span class="nx">build</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">isBinary</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//解析客户端字符串格式数据</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//let strMsg = data.toString();</span><span class="w"></span>
 
 
-<span class="c1">//注册主函数</span>
-<span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">windowsMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">26678</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//通过全局windowsBot获取聊天窗口句柄</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">hwnd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">.</span><span class="nx">findWindow</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Ai-Bot 3群&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">//解析客户端json格式数据</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;command&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">command</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;sendMessage&quot;</span><span class="o">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">await</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">.</span><span class="nx">sendKeysByHwnd</span><span class="p">(</span><span class="nx">hwnd</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">await</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">.</span><span class="nx">clickElement</span><span class="p">(</span><span class="nx">hwnd</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Button@name=发送(&amp;S)&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="nx">webSocketBot</span><span class="p">.</span><span class="nx">sendData</span><span class="p">(</span><span class="s2">&quot;已发送&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">},</span><span class="w"> </span><span class="mf">8181</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="c1">//注册主函数</span><span class="w"></span>
+<span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">windowsMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">26678</span><span class="p">);</span><span class="w"></span>
 
 <span class="cm">/**用作代码提示，windowsMain函数会被多次调用，注意使用全局变量</span>
 <span class="cm"> * @param {WindowsBot} windowsBot</span>
-<span class="cm"> */</span>
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">windowsMain</span><span class="p">(</span><span class="nx">windowsBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">//设置隐式等待</span>
-<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">windowsMain</span><span class="p">(</span><span class="nx">windowsBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//设置隐式等待</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">;</span><span class="c1">//赋值给全局变量</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">;</span><span class="c1">//赋值给全局变量</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -631,12 +631,12 @@ document.write(`
 <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Aibote中控<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="w">    </span><span class="p">.</span><span class="nc">aiboteLog</span><span class="p">{</span>
-<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="nt">body</span><span class="p">{</span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;}</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="nc">aiboteLog</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nt">body</span><span class="p">{</span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;}</span><span class="w"></span>
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -648,39 +648,39 @@ document.write(`
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btnSend&quot;</span><span class="p">&gt;</span>发送消息<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="s1">&#39;ws://localhost:8181&#39;</span><span class="p">);</span><span class="c1">//服务端端口8181 对应WebSocketBot.build第二个参数</span>
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onopen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接服务器成功&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">ws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">WebSocket</span><span class="p">(</span><span class="s1">&#39;ws://localhost:8181&#39;</span><span class="p">);</span><span class="c1">//服务端端口8181 对应WebSocketBot.build第二个参数</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onopen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接服务器成功&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;服务器关闭&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;服务器关闭&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onerror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接出错&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onerror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;连接出错&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">aiboteLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;aiboteLog&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">){</span>
-<span class="w">        </span><span class="c1">//接收服务端的数据</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">aiboteLog</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">aiboteLog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;aiboteLog&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//接收服务端的数据</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">aiboteLog</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">btnSend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;btnSend&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">btnSend</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;valText&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-<span class="w">        </span><span class="c1">//发送json数据格式</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="s2">&quot;sendMessage&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;data&quot;</span><span class="o">:</span><span class="nx">text</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="c1">//json格式转换成字符串</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">strMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jsonMsg</span><span class="p">);</span>
-<span class="w">        </span><span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">strMsg</span><span class="p">);</span><span class="c1">//发送数据到服务端</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">btnSend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;btnSend&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">btnSend</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;valText&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//发送json数据格式</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">jsonMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;command&quot;</span><span class="o">:</span><span class="s2">&quot;sendMessage&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;data&quot;</span><span class="o">:</span><span class="nx">text</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//json格式转换成字符串</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">strMsg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jsonMsg</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">strMsg</span><span class="p">);</span><span class="c1">//发送数据到服务端</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
@@ -698,12 +698,12 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../web_bot/index.html"
+       href="../ui/index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">上一页</p>
-        <p class="prev-next-title">WebBot</p>
+        <p class="prev-next-title">界面开发</p>
       </div>
     </a>
     <a class="right-next"
@@ -748,14 +748,6 @@ document.write(`
 </ul>
   </nav></div>
 
-  <div class="sidebar-secondary-item">
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/dev_manual/web_socket_bot/index.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> 显示源代码
-    </a>
-  </div>
-</div>
-
 </div></div>
               
             
@@ -799,7 +791,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
 </p></div>
       
     </div>

@@ -1,0 +1,100 @@
+.. currentmodule:: AiBot
+
+
+打开URL ``goto()``
+-------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#goto
+    .. tab:: Python
+        .. automethod:: WebBotMain.goto
+
+
+新建页面并跳转 ``newPage()``
+-------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#newPage
+    .. tab:: Python
+        .. automethod:: WebBotMain.new_page
+
+
+后退 ``back()``
+-----------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#back
+    .. tab:: Python
+        .. automethod:: WebBotMain.back
+
+
+
+前进 ``forward()``
+-----------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#forward
+    .. tab:: Python
+        .. automethod:: WebBotMain.forward
+
+刷新 ``refresh()``
+-----------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#refresh
+    .. tab:: Python
+        .. automethod:: WebBotMain.refresh
+
+
+获取当前页面ID ``getCurPageId()``
+-------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getCurPageId
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_current_page_id
+
+
+获取页面ID数组 ``getAllPageId()``
+----------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getAllPageId
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_all_page_id
+
+
+切换指定页面 ``switchPage()``
+------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#switchPage
+    .. tab:: Python
+        .. automethod:: WebBotMain.switch_to_page
+
+
+关闭当前页面 ``closePage()``
+----------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#closePage
+    .. tab:: Python
+        .. automethod:: WebBotMain.close_current_page
+
+
+获取URL ``getCurrentUrl()``
+----------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getCurrentUrl
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_current_url
+
+
+获取页面标题 ``getTitle()``
+----------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getTitle
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_current_title

@@ -1,0 +1,5 @@
+
+AndroidBot.getAndroidId
+=========================================================
+
+.. js:autofunction:: AndroidBot#getAndroidId

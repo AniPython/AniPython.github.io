@@ -1,0 +1,94 @@
+
+.. _api.js.WindowsBot:
+
+==================
+WindowsBot
+==================
+
+
+.. js:autoclass:: WindowsBot
+    :members:
+
+.. toctree::
+
+      api/WindowsBot.sleep.rst
+      api/WindowsBot.setImplicitTimeout.rst
+      api/WindowsBot.findWindow.rst
+      api/WindowsBot.findWindows.rst
+      api/WindowsBot.findSubWindow.rst
+      api/WindowsBot.findParentWindow.rst
+      api/WindowsBot.findDesktopWindow.rst
+      api/WindowsBot.getWindowName.rst
+      api/WindowsBot.showWindow.rst
+      api/WindowsBot.setWindowTop.rst
+      api/WindowsBot.getWindowPos.rst
+      api/WindowsBot.setWindowPos.rst
+      api/WindowsBot.moveMouse.rst
+      api/WindowsBot.moveMouseRelative.rst
+      api/WindowsBot.rollMouse.rst
+      api/WindowsBot.clickMouse.rst
+      api/WindowsBot.sendKeys.rst
+      api/WindowsBot.sendKeysByHwnd.rst
+      api/WindowsBot.sendVk.rst
+      api/WindowsBot.sendVkByHwnd.rst
+      api/WindowsBot.saveScreenshot.rst
+      api/WindowsBot.getColor.rst
+      api/WindowsBot.findImage.rst
+      api/WindowsBot.findAnimation.rst
+      api/WindowsBot.findColor.rst
+      api/WindowsBot.compareColor.rst
+      api/WindowsBot.getWords.rst
+      api/WindowsBot.findWords.rst
+      api/WindowsBot.getElementName.rst
+      api/WindowsBot.getElementValue.rst
+      api/WindowsBot.getElementRect.rst
+      api/WindowsBot.getElementWindow.rst
+      api/WindowsBot.clickElement.rst
+      api/WindowsBot.invokeElement.rst
+      api/WindowsBot.setElementFocus.rst
+      api/WindowsBot.setElementValue.rst
+      api/WindowsBot.setElementScroll.rst
+      api/WindowsBot.isSelected.rst
+      api/WindowsBot.closeWindow.rst
+      api/WindowsBot.setWindowState.rst
+      api/WindowsBot.setClipboardText.rst
+      api/WindowsBot.getClipboardText.rst
+      api/WindowsBot.startProcess.rst
+      api/WindowsBot.executeCommand.rst
+      api/WindowsBot.downloadFile.rst
+      api/WindowsBot.openExcel.rst
+      api/WindowsBot.openExcelSheet.rst
+      api/WindowsBot.saveExcel.rst
+      api/WindowsBot.writeExcelNum.rst
+      api/WindowsBot.writeExcelStr.rst
+      api/WindowsBot.readExcelNum.rst
+      api/WindowsBot.readExcelStr.rst
+      api/WindowsBot.removeExcelRow.rst
+      api/WindowsBot.removeExcelCol.rst
+      api/WindowsBot.getCaptcha.rst
+      api/WindowsBot.errorCaptcha.rst
+      api/WindowsBot.scoreCaptcha.rst
+      api/WindowsBot.initNLP.rst
+      api/WindowsBot.chatgpt.rst
+      api/WindowsBot.chatgptEdit.rst
+      api/WindowsBot.createFineTune.rst
+      api/WindowsBot.listFineTunes.rst
+      api/WindowsBot.listFineTune.rst
+      api/WindowsBot.cancelFineTune.rst
+      api/WindowsBot.deleteFineTuneModel.rst
+      api/WindowsBot.uploadTrainFile.rst
+      api/WindowsBot.listTrainFiles.rst
+      api/WindowsBot.listTrainFile.rst
+      api/WindowsBot.downloadTrainFile.rst
+      api/WindowsBot.deleteTrainFile.rst
+      api/WindowsBot.initSpeechService.rst
+      api/WindowsBot.audioFileToText.rst
+      api/WindowsBot.microphoneToText.rst
+      api/WindowsBot.textToBullhorn.rst
+      api/WindowsBot.textToAudioFile.rst
+      api/WindowsBot.SSMLToBullhorn.rst
+      api/WindowsBot.SSMLToFile.rst
+      api/WindowsBot.microphoneTranslationText.rst
+      api/WindowsBot.audioFileTranslationText.rst
+      api/WindowsBot.closeDriver.rst
+      

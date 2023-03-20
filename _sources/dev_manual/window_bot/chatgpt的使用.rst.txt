@@ -1,0 +1,43 @@
+
+
+使用chatgpt ``chatgpt()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#chatgpt
+
+
+使用chatgpt编辑模式 ``chatgptEdit()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#chatgptEdit
+
+
+.. code-block:: javascript
+
+    // 代码示例
+    // 初始化
+    let bRet = await windowsBot.initNLP("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    if (!bRet)
+        // return;
+
+    // chatgpt
+    let result = await windowsBot.chatgpt("text-davinci-003", "怎么称呼你？", 256, 0.7);
+    console.log(result["text"]);
+
+    // chatgpt 循环获取答案
+    let prompt = "请介绍下Aibote的应用场景，不少于500字";
+    let isFinish;
+    do {
+        let result = await windowsBot.chatgpt("text-davinci-003", prompt, 256, 0.7);
+        isFinish = result["finish"];
+        if (!isFinish)
+            prompt += result["text"];
+
+        console.log(result["text"]);
+    } while (!isFinish)
+
+    // chatgptEdit
+    let result = await windowsBot.chatgptEdit("text-davinci-edit-001", "你好码？", "修正错误文字", 256, 0);
+    console.log(result["text"]);

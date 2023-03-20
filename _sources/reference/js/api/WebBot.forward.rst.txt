@@ -1,0 +1,5 @@
+
+WebBot.forward
+=========================================================
+
+.. js:autofunction:: WebBot#forward

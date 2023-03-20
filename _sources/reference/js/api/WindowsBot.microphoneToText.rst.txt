@@ -1,0 +1,5 @@
+
+WindowsBot.microphoneToText
+=========================================================
+
+.. js:autofunction:: WindowsBot#microphoneToText

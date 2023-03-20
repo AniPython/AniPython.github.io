@@ -1,0 +1,14 @@
+
+SSML文本格式合成音频到扬声器 ``SSMLToBullhorn()``
+--------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#SSMLToBullhorn
+
+
+SSML文本格式合成音频到扬声器 ``SSMLToFile()``
+--------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#SSMLToFile
+

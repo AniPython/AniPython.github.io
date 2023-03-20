@@ -1,0 +1,81 @@
+.. currentmodule:: AiBot
+
+单击 ``click()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#click
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.click
+
+
+双击 ``doubleClick()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#doubleClick
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.double_click
+
+
+按下 ``press()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#press
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.todo
+
+
+长按 ``longClick()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#longClick
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.long_click
+
+
+抬起 ``release()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#release
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.todo
+
+
+移动 ``move()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#move
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.move
+
+
+滑动 ``swipe()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#swipe
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.swipe
+
+
+执行手势 ``dispatchGesture()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#dispatchGesture
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.gesture
+
+
+执行多个手势 ``dispatchGestures()``
+--------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#dispatchGestures
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.todo

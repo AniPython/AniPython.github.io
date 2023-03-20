@@ -1,0 +1,5 @@
+
+WindowsBot.clickElement
+=========================================================
+
+.. js:autofunction:: WindowsBot#clickElement

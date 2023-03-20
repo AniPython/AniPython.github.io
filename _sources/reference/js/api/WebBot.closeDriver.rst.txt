@@ -1,0 +1,5 @@
+
+WebBot.closeDriver
+=========================================================
+
+.. js:autofunction:: WebBot#closeDriver

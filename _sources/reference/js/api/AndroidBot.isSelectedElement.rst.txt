@@ -1,0 +1,5 @@
+
+AndroidBot.isSelectedElement
+=========================================================
+
+.. js:autofunction:: AndroidBot#isSelectedElement

@@ -1,0 +1,5 @@
+
+WindowsBot.audioFileTranslationText
+=========================================================
+
+.. js:autofunction:: WindowsBot#audioFileTranslationText

@@ -1,0 +1,5 @@
+
+WindowsBot.saveScreenshot
+=========================================================
+
+.. js:autofunction:: WindowsBot#saveScreenshot

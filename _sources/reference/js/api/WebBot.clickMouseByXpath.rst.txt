@@ -1,0 +1,5 @@
+
+WebBot.clickMouseByXpath
+=========================================================
+
+.. js:autofunction:: WebBot#clickMouseByXpath

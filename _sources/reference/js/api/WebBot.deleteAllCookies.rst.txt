@@ -1,0 +1,5 @@
+
+WebBot.deleteAllCookies
+=========================================================
+
+.. js:autofunction:: WebBot#deleteAllCookies

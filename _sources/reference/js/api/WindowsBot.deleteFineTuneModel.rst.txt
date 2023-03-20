@@ -1,0 +1,5 @@
+
+WindowsBot.deleteFineTuneModel
+=========================================================
+
+.. js:autofunction:: WindowsBot#deleteFineTuneModel

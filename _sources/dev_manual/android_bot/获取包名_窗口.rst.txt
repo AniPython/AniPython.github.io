@@ -1,0 +1,20 @@
+
+.. currentmodule:: AiBot
+
+
+返回当前activity ``getActivity()``
+----------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#getActivity
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.get_activity
+
+
+返回当前package ``getPackage()``
+----------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#getPackage
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.get_package

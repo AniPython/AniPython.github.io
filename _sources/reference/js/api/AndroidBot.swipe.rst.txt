@@ -1,0 +1,5 @@
+
+AndroidBot.swipe
+=========================================================
+
+.. js:autofunction:: AndroidBot#swipe

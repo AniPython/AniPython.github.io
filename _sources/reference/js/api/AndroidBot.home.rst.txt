@@ -1,0 +1,5 @@
+
+AndroidBot.home
+=========================================================
+
+.. js:autofunction:: AndroidBot#home

@@ -1,0 +1,14 @@
+
+麦克风音频翻译成目标语言文本 ``microphoneTranslationText()``
+-----------------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#microphoneTranslationText
+
+
+音频文件翻译成目标语言文本 ``audioFileTranslationText()``
+-----------------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#audioFileTranslationText
+

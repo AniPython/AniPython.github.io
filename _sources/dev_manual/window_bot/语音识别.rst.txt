@@ -1,0 +1,16 @@
+
+.. currentmodule:: AiBot
+
+音频文件转文本 ``audioFileToText()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#audioFileToText
+
+
+麦克风输入音频换文本 ``microphoneToText()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#microphoneToText
+

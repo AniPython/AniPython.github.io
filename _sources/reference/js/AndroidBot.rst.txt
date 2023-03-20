@@ -1,0 +1,75 @@
+
+.. _api.js.AndroidBot:
+
+==================
+AndroidBot
+==================
+
+
+.. js:autoclass:: AndroidBot
+    :members:
+
+.. toctree::
+
+      api/AndroidBot.sleep.rst
+      api/AndroidBot.setImplicitTimeout.rst
+      api/AndroidBot.saveScreenshot.rst
+      api/AndroidBot.getColor.rst
+      api/AndroidBot.findImage.rst
+      api/AndroidBot.findAnimation.rst
+      api/AndroidBot.findColor.rst
+      api/AndroidBot.compareColor.rst
+      api/AndroidBot.press.rst
+      api/AndroidBot.move.rst
+      api/AndroidBot.release.rst
+      api/AndroidBot.click.rst
+      api/AndroidBot.doubleClick.rst
+      api/AndroidBot.longClick.rst
+      api/AndroidBot.swipe.rst
+      api/AndroidBot.dispatchGesture.rst
+      api/AndroidBot.dispatchGestures.rst
+      api/AndroidBot.sendKeys.rst
+      api/AndroidBot.sendVk.rst
+      api/AndroidBot.back.rst
+      api/AndroidBot.home.rst
+      api/AndroidBot.recents.rst
+      api/AndroidBot.getWords.rst
+      api/AndroidBot.findWords.rst
+      api/AndroidBot.urlRequest.rst
+      api/AndroidBot.showToast.rst
+      api/AndroidBot.startApp.rst
+      api/AndroidBot.getWindowSize.rst
+      api/AndroidBot.getImageSize.rst
+      api/AndroidBot.getAndroidId.rst
+      api/AndroidBot.getCaptcha.rst
+      api/AndroidBot.errorCaptcha.rst
+      api/AndroidBot.scoreCaptcha.rst
+      api/AndroidBot.getElementRect.rst
+      api/AndroidBot.getElementDescription.rst
+      api/AndroidBot.getElementText.rst
+      api/AndroidBot.elementIsVisible.rst
+      api/AndroidBot.setElementText.rst
+      api/AndroidBot.clickElement.rst
+      api/AndroidBot.scrollElement.rst
+      api/AndroidBot.existsElement.rst
+      api/AndroidBot.isSelectedElement.rst
+      api/AndroidBot.pushFile.rst
+      api/AndroidBot.pullFile.rst
+      api/AndroidBot.writeAndroidFile.rst
+      api/AndroidBot.readAndroidFile.rst
+      api/AndroidBot.deleteAndroidFile.rst
+      api/AndroidBot.existsAndroidFile.rst
+      api/AndroidBot.openUri.rst
+      api/AndroidBot.callPhone.rst
+      api/AndroidBot.sendMsg.rst
+      api/AndroidBot.getActivity.rst
+      api/AndroidBot.getPackage.rst
+      api/AndroidBot.setClipboardText.rst
+      api/AndroidBot.getClipboardText.rst
+      api/AndroidBot.createTextView.rst
+      api/AndroidBot.createEditText.rst
+      api/AndroidBot.createCheckBox.rst
+      api/AndroidBot.createWebView.rst
+      api/AndroidBot.clearScriptControl.rst
+      api/AndroidBot.getScriptParam.rst
+      

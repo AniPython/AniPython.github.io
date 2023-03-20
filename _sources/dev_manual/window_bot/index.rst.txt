@@ -1,3 +1,4 @@
+.. currentmodule:: AiBot
 
 ======================
 WindowBot
@@ -5,121 +6,211 @@ WindowBot
 
 
 主函数示例
-------------
+========================
 .. include:: 主函数示例/index.rst
 
-注册主函数
-------------
-.. include:: 注册主函数/index.rst
 
 等待超时
-------------
-.. include:: 等待超时/index.rst
+========================
+.. include:: 等待超时.rst
+
 
 查找句柄
-------------
-.. include:: 查找句柄/index.rst
+========================
+.. include:: 查找句柄.rst
+
 
 获取窗口名称
-------------
-.. include:: 获取窗口名称/index.rst
+========================
+
+
+获取窗口名称 ``getWindowName()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getWindowName
+    .. tab:: Python
+        .. automethod:: WinBotMain.get_window_name
+
 
 窗口操作
-------------
-.. include:: 窗口操作/index.rst
+========================
+.. include:: 窗口操作.rst
+
 
 鼠标键盘
-------------
-.. include:: 鼠标键盘/index.rst
+========================
+.. include:: 鼠标键盘.rst
+
 
 图色操作
-------------
-.. include:: 图色操作/index.rst
+========================
+.. include:: 图色操作.rst
+
 
 OCR系统
-------------
-.. include:: OCR系统/index.rst
+========================
+
+找字 ``findWords()``
+------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#findWords
+    .. tab:: Python
+        .. automethod:: WinBotMain.find_text
+
+
+获取屏幕文字 ``getWords()``
+--------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getWords
+    .. tab:: Python
+        .. automethod:: WinBotMain.get_text
+
 
 元素操作
-------------
-.. include:: 元素操作/index.rst
+========================
+.. include:: 元素操作.rst
 
 系统剪切板
-------------
-.. include:: 系统剪切板/index.rst
+========================
+
+设置剪切板内容 ``setClipboardText()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#setClipboardText
+    .. tab:: Python
+        .. automethod:: WinBotMain.set_clipboard_text
+
+
+获取剪切板内容 ``getClipboardText()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getClipboardText
+    .. tab:: Python
+        .. automethod:: WinBotMain.get_clipboard_text
+
 
 启动进程
-------------
-.. include:: 启动进程/index.rst
+========================
+
+启动进程 ``startProcess()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#startProcess
+    .. tab:: Python
+        .. automethod:: WinBotMain.start_process
+
 
 执行cmd命令
-------------
-.. include:: 执行cmd命令/index.rst
+========================
+
+执行cmd命令 ``executeCommand()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#executeCommand
+    .. tab:: Python
+        .. automethod:: WinBotMain.start_process
+
 
 指定url下载文件
--------------------
-.. include:: 指定url下载文件/index.rst
+======================================
+
+指定url下载文件 ``downloadFile()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#downloadFile
+    .. tab:: Python
+        .. automethod:: WinBotMain.download_file
+
 
 Excel文档
-------------
-.. include:: Excel文档/index.rst
+========================
+
+
+
+
+.. include:: Excel文档.rst
+
 
 验证码系统
-------------
-.. include:: 验证码系统/index.rst
+========================
+.. include:: 验证码系统.rst
+
 
 自然语言处理(NLP)
------------------
-.. include:: 自然语言处理_NLP/index.rst
+==================================
 
-初始化NLP
-^^^^^^^^^^^^^^^^^
-.. include:: 初始化NLP/index.rst
+初始化NLP ``initNLP()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#initNLP
+
 
 
 chatGPT的使用
-^^^^^^^^^^^^^^^^^
-.. include:: chatgpt的使用/index.rst
+----------------------------------
+.. include:: chatgpt的使用.rst
 
 
 训练模型
-^^^^^^^^^^^^^^^^^
-.. include:: 训练模型/index.rst
+----------------------------------
+.. include:: 训练模型.rst
 
 训练数据文件
-^^^^^^^^^^^^^^^^^
-.. include:: 训练数据文件/index.rst
+----------------------------------
+.. include:: 训练数据文件.rst
+
 
 语音合成/识别服务
------------------
-.. include:: 语音合成_识别服务/index.rst
+==================================
 
-初始化语音服务
-^^^^^^^^^^^^^^^
-.. include:: 初始化语音服务/index.rst
+
+初始化语音服务 ``initSpeechService()``
+------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#initSpeechService
+
 
 语音识别
-^^^^^^^^^^^^^^^
-.. include:: 语音识别/index.rst
+------------------------------
+.. include:: 语音识别.rst
+
 
 合成语音
-^^^^^^^^^^^^^^^
-.. include:: 合成语音/index.rst
+------------------------------
+.. include:: 合成语音.rst
 
 
 SSML格式合成语音
-^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: SSML格式合成语音/index.rst
+------------------------------
+.. include:: SSML格式合成语音.rst
+
 
 语音翻译
-^^^^^^^^^^^^^^^
-.. include:: 语音翻译/index.rst
+------------------------------
+.. include:: 语音翻译.rst
+
 
 语言和发音人
-^^^^^^^^^^^^^^^
-.. include:: 语言和发音人_js.rst
+------------------------------
+.. include:: 语言和发音人.rst
 
 
 关闭 WindowsDriver.exe 驱动程序
-------------------------------------
-.. include:: 关闭WindowsDriver_exe驱动程序/index.rst
+===============================
+
+关闭WindowsDriver_exe驱动程序 ``closeDriver()``
+-----------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#closeDriver
+

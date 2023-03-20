@@ -1,0 +1,17 @@
+.. currentmodule:: AiBot
+
+上传文件到手机 ``pushFile()``
+---------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#pushFile
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.push_file
+
+拉取文件到电脑 ``pullFile()``
+---------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#pullFile
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.pull_file

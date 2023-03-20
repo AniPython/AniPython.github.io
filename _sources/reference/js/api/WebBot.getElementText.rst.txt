@@ -1,0 +1,5 @@
+
+WebBot.getElementText
+=========================================================
+
+.. js:autofunction:: WebBot#getElementText

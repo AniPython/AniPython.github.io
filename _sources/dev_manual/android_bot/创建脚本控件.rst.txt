@@ -1,0 +1,56 @@
+
+.. currentmodule:: AiBot
+
+
+创建TextView控件 ``createTextView()``
+---------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#createTextView
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.create_text_view
+
+
+创建EditText控件 ``createEditText()``
+---------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#createEditText
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.create_edit_view
+
+
+创建CheckBox控件 ``createCheckBox()``
+---------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#createCheckBox
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.create_check_box
+
+
+创建WebView控件 ``createWebView()``
+---------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#createWebView
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.create_web_view
+
+
+清除脚本控件 ``clearScriptControl()``
+---------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#clearScriptControl
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.clear_script_widget
+
+
+获取脚本配置参数 ``getScriptParam()``
+---------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#getScriptParam
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.get_script_params

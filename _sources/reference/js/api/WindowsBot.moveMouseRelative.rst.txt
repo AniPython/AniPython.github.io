@@ -1,0 +1,5 @@
+
+WindowsBot.moveMouseRelative
+=========================================================
+
+.. js:autofunction:: WindowsBot#moveMouseRelative

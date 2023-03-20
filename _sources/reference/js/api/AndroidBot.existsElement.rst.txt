@@ -1,0 +1,5 @@
+
+AndroidBot.existsElement
+=========================================================
+
+.. js:autofunction:: AndroidBot#existsElement

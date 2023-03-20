@@ -1,0 +1,126 @@
+
+.. currentmodule:: AiBot
+
+.. note::
+    文本、描述xpath 支持 @containsText 和 @containsDesc 模糊定位
+
+
+
+点击元素 ``clickElement()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#clickElement
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.click_element
+
+
+滑动并点击元素 ``clickElementBySlide()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+
+        todo
+
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.click_element_by_slide
+
+
+
+
+遍历点击元素 ``clickAnyElements``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+
+        todo
+
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.click_any_elements
+
+
+获取元素文本 ``getElementText()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#getElementText
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.get_element_text
+
+
+
+设置文本 ``setElementText``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#setElementText
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.set_element_text
+
+
+获取元素描述 ``getElementDescription()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#getElementDescription
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.get_element_desc
+
+
+获取元素矩形位置 ``getElementRect()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#getElementRect
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.get_element_rect
+
+
+判断元素是否存在 ``existsElement()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#existsElement
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.element_exists
+
+
+元素是否不存在 ``elementNotExists()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+
+        todo
+
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.element_not_exists
+
+
+
+判断任意是否元素存在 ``anyElementsExists()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+
+        todo
+
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.any_elements_exists
+
+
+判断元素是否选中 ``isSelectedElement()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#isSelectedElement
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.element_is_selected
+
+
+滚动元素 ``scrollElement()``
+-------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#scrollElement
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.scroll_element

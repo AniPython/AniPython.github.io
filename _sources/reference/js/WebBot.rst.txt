@@ -1,0 +1,66 @@
+
+.. _api.js.WebBot:
+
+==================
+WebBot
+==================
+
+
+.. js:autoclass:: WebBot
+    :members:
+
+.. toctree::
+
+      api/WebBot.sleep.rst
+      api/WebBot.setImplicitTimeout.rst
+      api/WebBot.goto.rst
+      api/WebBot.newPage.rst
+      api/WebBot.back.rst
+      api/WebBot.forward.rst
+      api/WebBot.refresh.rst
+      api/WebBot.getCurPageId.rst
+      api/WebBot.getAllPageId.rst
+      api/WebBot.switchPage.rst
+      api/WebBot.closePage.rst
+      api/WebBot.getCurrentUrl.rst
+      api/WebBot.getTitle.rst
+      api/WebBot.switchFrame.rst
+      api/WebBot.switchMainFrame.rst
+      api/WebBot.clickElement.rst
+      api/WebBot.setElementValue.rst
+      api/WebBot.getElementText.rst
+      api/WebBot.getElementOuterHTML.rst
+      api/WebBot.getElementInnerHTML.rst
+      api/WebBot.setElementAttribute.rst
+      api/WebBot.getElementAttribute.rst
+      api/WebBot.getElementRect.rst
+      api/WebBot.isSelected.rst
+      api/WebBot.isDisplayed.rst
+      api/WebBot.isEnabled.rst
+      api/WebBot.clearElement.rst
+      api/WebBot.setElementFocus.rst
+      api/WebBot.uploadFile.rst
+      api/WebBot.sendKeys.rst
+      api/WebBot.sendVk.rst
+      api/WebBot.clickMouse.rst
+      api/WebBot.moveMouse.rst
+      api/WebBot.wheelMouse.rst
+      api/WebBot.clickMouseByXpath.rst
+      api/WebBot.moveMouseByXpath.rst
+      api/WebBot.wheelMouseByXpath.rst
+      api/WebBot.takeScreenshot.rst
+      api/WebBot.clickAlert.rst
+      api/WebBot.getAlertText.rst
+      api/WebBot.getCookies.rst
+      api/WebBot.getAllCookies.rst
+      api/WebBot.setCookie.rst
+      api/WebBot.deleteCookies.rst
+      api/WebBot.deleteAllCookies.rst
+      api/WebBot.clearCache.rst
+      api/WebBot.executeScript.rst
+      api/WebBot.getWindowPos.rst
+      api/WebBot.setWindowPos.rst
+      api/WebBot.mobileEmulation.rst
+      api/WebBot.closeBrowser.rst
+      api/WebBot.closeDriver.rst
+      

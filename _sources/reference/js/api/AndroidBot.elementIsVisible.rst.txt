@@ -1,0 +1,5 @@
+
+AndroidBot.elementIsVisible
+=========================================================
+
+.. js:autofunction:: AndroidBot#elementIsVisible

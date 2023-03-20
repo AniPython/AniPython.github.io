@@ -1,0 +1,29 @@
+.. currentmodule:: AiBot
+
+
+识别验证码 ``getCaptcha()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getCaptcha
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo
+
+
+
+识别报错返分 ``errorCaptcha()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#errorCaptcha
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo
+
+
+查询验证码剩余题分 ``scoreCaptcha()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#scoreCaptcha
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo

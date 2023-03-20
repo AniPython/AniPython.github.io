@@ -1,0 +1,5 @@
+
+AndroidBot.dispatchGesture
+=========================================================
+
+.. js:autofunction:: AndroidBot#dispatchGesture

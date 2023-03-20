@@ -1,0 +1,1896 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>WebBot &#8212; Aibote  文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="WebBot.sleep" href="api/WebBot.sleep.html" />
+    <link rel="prev" title="AndroidBot.getScriptParam" href="api/AndroidBot.getScriptParam.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aibote  文档</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user_guide/index.html">
+                        Aibote 基本使用
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../dev_manual/index.html">
+                        Aibote 开发手册
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user_guide/index.html">
+                        Aibote 基本使用
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../dev_manual/index.html">
+                        Aibote 开发手册
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../JavaScript.html">Javascript</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="AndroidBot.html">AndroidBot</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.sleep.html">AndroidBot.sleep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.setImplicitTimeout.html">AndroidBot.setImplicitTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.saveScreenshot.html">AndroidBot.saveScreenshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getColor.html">AndroidBot.getColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.findImage.html">AndroidBot.findImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.findAnimation.html">AndroidBot.findAnimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.findColor.html">AndroidBot.findColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.compareColor.html">AndroidBot.compareColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.press.html">AndroidBot.press</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.move.html">AndroidBot.move</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.release.html">AndroidBot.release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.click.html">AndroidBot.click</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.doubleClick.html">AndroidBot.doubleClick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.longClick.html">AndroidBot.longClick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.swipe.html">AndroidBot.swipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.dispatchGesture.html">AndroidBot.dispatchGesture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.dispatchGestures.html">AndroidBot.dispatchGestures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.sendKeys.html">AndroidBot.sendKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.sendVk.html">AndroidBot.sendVk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.back.html">AndroidBot.back</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.home.html">AndroidBot.home</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.recents.html">AndroidBot.recents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getWords.html">AndroidBot.getWords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.findWords.html">AndroidBot.findWords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.urlRequest.html">AndroidBot.urlRequest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.showToast.html">AndroidBot.showToast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.startApp.html">AndroidBot.startApp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getWindowSize.html">AndroidBot.getWindowSize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getImageSize.html">AndroidBot.getImageSize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getAndroidId.html">AndroidBot.getAndroidId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getCaptcha.html">AndroidBot.getCaptcha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.errorCaptcha.html">AndroidBot.errorCaptcha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.scoreCaptcha.html">AndroidBot.scoreCaptcha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getElementRect.html">AndroidBot.getElementRect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getElementDescription.html">AndroidBot.getElementDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getElementText.html">AndroidBot.getElementText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.elementIsVisible.html">AndroidBot.elementIsVisible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.setElementText.html">AndroidBot.setElementText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.clickElement.html">AndroidBot.clickElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.scrollElement.html">AndroidBot.scrollElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.existsElement.html">AndroidBot.existsElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.isSelectedElement.html">AndroidBot.isSelectedElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.pushFile.html">AndroidBot.pushFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.pullFile.html">AndroidBot.pullFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.writeAndroidFile.html">AndroidBot.writeAndroidFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.readAndroidFile.html">AndroidBot.readAndroidFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.deleteAndroidFile.html">AndroidBot.deleteAndroidFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.existsAndroidFile.html">AndroidBot.existsAndroidFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.openUri.html">AndroidBot.openUri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.callPhone.html">AndroidBot.callPhone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.sendMsg.html">AndroidBot.sendMsg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getActivity.html">AndroidBot.getActivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getPackage.html">AndroidBot.getPackage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.setClipboardText.html">AndroidBot.setClipboardText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getClipboardText.html">AndroidBot.getClipboardText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.createTextView.html">AndroidBot.createTextView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.createEditText.html">AndroidBot.createEditText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.createCheckBox.html">AndroidBot.createCheckBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.createWebView.html">AndroidBot.createWebView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.clearScriptControl.html">AndroidBot.clearScriptControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/AndroidBot.getScriptParam.html">AndroidBot.getScriptParam</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">WebBot</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.sleep.html">WebBot.sleep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.setImplicitTimeout.html">WebBot.setImplicitTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.goto.html">WebBot.goto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.newPage.html">WebBot.newPage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.back.html">WebBot.back</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.forward.html">WebBot.forward</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.refresh.html">WebBot.refresh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getCurPageId.html">WebBot.getCurPageId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getAllPageId.html">WebBot.getAllPageId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.switchPage.html">WebBot.switchPage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.closePage.html">WebBot.closePage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getCurrentUrl.html">WebBot.getCurrentUrl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getTitle.html">WebBot.getTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.switchFrame.html">WebBot.switchFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.switchMainFrame.html">WebBot.switchMainFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.clickElement.html">WebBot.clickElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.setElementValue.html">WebBot.setElementValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getElementText.html">WebBot.getElementText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getElementOuterHTML.html">WebBot.getElementOuterHTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getElementInnerHTML.html">WebBot.getElementInnerHTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.setElementAttribute.html">WebBot.setElementAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getElementAttribute.html">WebBot.getElementAttribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getElementRect.html">WebBot.getElementRect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.isSelected.html">WebBot.isSelected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.isDisplayed.html">WebBot.isDisplayed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.isEnabled.html">WebBot.isEnabled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.clearElement.html">WebBot.clearElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.setElementFocus.html">WebBot.setElementFocus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.uploadFile.html">WebBot.uploadFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.sendKeys.html">WebBot.sendKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.sendVk.html">WebBot.sendVk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.clickMouse.html">WebBot.clickMouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.moveMouse.html">WebBot.moveMouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.wheelMouse.html">WebBot.wheelMouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.clickMouseByXpath.html">WebBot.clickMouseByXpath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.moveMouseByXpath.html">WebBot.moveMouseByXpath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.wheelMouseByXpath.html">WebBot.wheelMouseByXpath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.takeScreenshot.html">WebBot.takeScreenshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.clickAlert.html">WebBot.clickAlert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getAlertText.html">WebBot.getAlertText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getCookies.html">WebBot.getCookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getAllCookies.html">WebBot.getAllCookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.setCookie.html">WebBot.setCookie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.deleteCookies.html">WebBot.deleteCookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.deleteAllCookies.html">WebBot.deleteAllCookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.clearCache.html">WebBot.clearCache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.executeScript.html">WebBot.executeScript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.getWindowPos.html">WebBot.getWindowPos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.setWindowPos.html">WebBot.setWindowPos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.mobileEmulation.html">WebBot.mobileEmulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.closeBrowser.html">WebBot.closeBrowser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WebBot.closeDriver.html">WebBot.closeDriver</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="WindowsBot.html">WindowsBot</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.sleep.html">WindowsBot.sleep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.setImplicitTimeout.html">WindowsBot.setImplicitTimeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.findWindow.html">WindowsBot.findWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.findWindows.html">WindowsBot.findWindows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.findSubWindow.html">WindowsBot.findSubWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.findParentWindow.html">WindowsBot.findParentWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.findDesktopWindow.html">WindowsBot.findDesktopWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getWindowName.html">WindowsBot.getWindowName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.showWindow.html">WindowsBot.showWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.setWindowTop.html">WindowsBot.setWindowTop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getWindowPos.html">WindowsBot.getWindowPos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.setWindowPos.html">WindowsBot.setWindowPos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.moveMouse.html">WindowsBot.moveMouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.moveMouseRelative.html">WindowsBot.moveMouseRelative</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.rollMouse.html">WindowsBot.rollMouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.clickMouse.html">WindowsBot.clickMouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.sendKeys.html">WindowsBot.sendKeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.sendKeysByHwnd.html">WindowsBot.sendKeysByHwnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.sendVk.html">WindowsBot.sendVk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.sendVkByHwnd.html">WindowsBot.sendVkByHwnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.saveScreenshot.html">WindowsBot.saveScreenshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getColor.html">WindowsBot.getColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.findImage.html">WindowsBot.findImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.findAnimation.html">WindowsBot.findAnimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.findColor.html">WindowsBot.findColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.compareColor.html">WindowsBot.compareColor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getWords.html">WindowsBot.getWords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.findWords.html">WindowsBot.findWords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getElementName.html">WindowsBot.getElementName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getElementValue.html">WindowsBot.getElementValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getElementRect.html">WindowsBot.getElementRect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getElementWindow.html">WindowsBot.getElementWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.clickElement.html">WindowsBot.clickElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.invokeElement.html">WindowsBot.invokeElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.setElementFocus.html">WindowsBot.setElementFocus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.setElementValue.html">WindowsBot.setElementValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.setElementScroll.html">WindowsBot.setElementScroll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.isSelected.html">WindowsBot.isSelected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.closeWindow.html">WindowsBot.closeWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.setWindowState.html">WindowsBot.setWindowState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.setClipboardText.html">WindowsBot.setClipboardText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getClipboardText.html">WindowsBot.getClipboardText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.startProcess.html">WindowsBot.startProcess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.executeCommand.html">WindowsBot.executeCommand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.downloadFile.html">WindowsBot.downloadFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.openExcel.html">WindowsBot.openExcel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.openExcelSheet.html">WindowsBot.openExcelSheet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.saveExcel.html">WindowsBot.saveExcel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.writeExcelNum.html">WindowsBot.writeExcelNum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.writeExcelStr.html">WindowsBot.writeExcelStr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.readExcelNum.html">WindowsBot.readExcelNum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.readExcelStr.html">WindowsBot.readExcelStr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.removeExcelRow.html">WindowsBot.removeExcelRow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.removeExcelCol.html">WindowsBot.removeExcelCol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.getCaptcha.html">WindowsBot.getCaptcha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.errorCaptcha.html">WindowsBot.errorCaptcha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.scoreCaptcha.html">WindowsBot.scoreCaptcha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.initNLP.html">WindowsBot.initNLP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.chatgpt.html">WindowsBot.chatgpt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.chatgptEdit.html">WindowsBot.chatgptEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.createFineTune.html">WindowsBot.createFineTune</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.listFineTunes.html">WindowsBot.listFineTunes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.listFineTune.html">WindowsBot.listFineTune</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.cancelFineTune.html">WindowsBot.cancelFineTune</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.deleteFineTuneModel.html">WindowsBot.deleteFineTuneModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.uploadTrainFile.html">WindowsBot.uploadTrainFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.listTrainFiles.html">WindowsBot.listTrainFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.listTrainFile.html">WindowsBot.listTrainFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.downloadTrainFile.html">WindowsBot.downloadTrainFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.deleteTrainFile.html">WindowsBot.deleteTrainFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.initSpeechService.html">WindowsBot.initSpeechService</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.audioFileToText.html">WindowsBot.audioFileToText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.microphoneToText.html">WindowsBot.microphoneToText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.textToBullhorn.html">WindowsBot.textToBullhorn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.textToAudioFile.html">WindowsBot.textToAudioFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.SSMLToBullhorn.html">WindowsBot.SSMLToBullhorn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.SSMLToFile.html">WindowsBot.SSMLToFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.microphoneTranslationText.html">WindowsBot.microphoneTranslationText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.audioFileTranslationText.html">WindowsBot.audioFileTranslationText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/WindowsBot.closeDriver.html">WindowsBot.closeDriver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../py/AndroidBot.html">AndroidBot</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.any_elements_exists.html">AiBot.AndroidBotMain.any_elements_exists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.back.html">AiBot.AndroidBotMain.back</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.call_phone.html">AiBot.AndroidBotMain.call_phone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.clear_script_widget.html">AiBot.AndroidBotMain.clear_script_widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.click.html">AiBot.AndroidBotMain.click</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.click_any_elements.html">AiBot.AndroidBotMain.click_any_elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.click_element.html">AiBot.AndroidBotMain.click_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.click_element_by_slide.html">AiBot.AndroidBotMain.click_element_by_slide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.create_check_box.html">AiBot.AndroidBotMain.create_check_box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.create_edit_view.html">AiBot.AndroidBotMain.create_edit_view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.create_text_view.html">AiBot.AndroidBotMain.create_text_view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.create_web_view.html">AiBot.AndroidBotMain.create_web_view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.delete_android_file.html">AiBot.AndroidBotMain.delete_android_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.double_click.html">AiBot.AndroidBotMain.double_click</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.element_exists.html">AiBot.AndroidBotMain.element_exists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.element_is_selected.html">AiBot.AndroidBotMain.element_is_selected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.element_not_exists.html">AiBot.AndroidBotMain.element_not_exists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.execute.html">AiBot.AndroidBotMain.execute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.exists_android_file.html">AiBot.AndroidBotMain.exists_android_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.find_color.html">AiBot.AndroidBotMain.find_color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.find_dynamic_image.html">AiBot.AndroidBotMain.find_dynamic_image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.find_image.html">AiBot.AndroidBotMain.find_image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.find_images.html">AiBot.AndroidBotMain.find_images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.find_text.html">AiBot.AndroidBotMain.find_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.gesture.html">AiBot.AndroidBotMain.gesture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_activity.html">AiBot.AndroidBotMain.get_activity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_android_id.html">AiBot.AndroidBotMain.get_android_id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_clipboard_text.html">AiBot.AndroidBotMain.get_clipboard_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_color.html">AiBot.AndroidBotMain.get_color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_device_ip.html">AiBot.AndroidBotMain.get_device_ip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_element_desc.html">AiBot.AndroidBotMain.get_element_desc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_element_rect.html">AiBot.AndroidBotMain.get_element_rect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_element_text.html">AiBot.AndroidBotMain.get_element_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_image_size.html">AiBot.AndroidBotMain.get_image_size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_package.html">AiBot.AndroidBotMain.get_package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_script_params.html">AiBot.AndroidBotMain.get_script_params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_text.html">AiBot.AndroidBotMain.get_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.get_window_size.html">AiBot.AndroidBotMain.get_window_size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.home.html">AiBot.AndroidBotMain.home</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.long_click.html">AiBot.AndroidBotMain.long_click</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.move.html">AiBot.AndroidBotMain.move</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.open_uri.html">AiBot.AndroidBotMain.open_uri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.press.html">AiBot.AndroidBotMain.press</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.press_release.html">AiBot.AndroidBotMain.press_release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.pull_file.html">AiBot.AndroidBotMain.pull_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.push_file.html">AiBot.AndroidBotMain.push_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.read_android_file.html">AiBot.AndroidBotMain.read_android_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.recent_tasks.html">AiBot.AndroidBotMain.recent_tasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.release.html">AiBot.AndroidBotMain.release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.save_element_screenshot.html">AiBot.AndroidBotMain.save_element_screenshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.save_screenshot.html">AiBot.AndroidBotMain.save_screenshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.script_main.html">AiBot.AndroidBotMain.script_main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.scroll_element.html">AiBot.AndroidBotMain.scroll_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.send_keys.html">AiBot.AndroidBotMain.send_keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.send_msg.html">AiBot.AndroidBotMain.send_msg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.send_vk.html">AiBot.AndroidBotMain.send_vk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.set_clipboard_text.html">AiBot.AndroidBotMain.set_clipboard_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.set_element_text.html">AiBot.AndroidBotMain.set_element_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.show_toast.html">AiBot.AndroidBotMain.show_toast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.start_app.html">AiBot.AndroidBotMain.start_app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.swipe.html">AiBot.AndroidBotMain.swipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.AndroidBotMain.write_android_file.html">AiBot.AndroidBotMain.write_android_file</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../py/WinBot.html">WinBot</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.click_element.html">AiBot.WinBotMain.click_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.click_mouse.html">AiBot.WinBotMain.click_mouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.close_window.html">AiBot.WinBotMain.close_window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.download_file.html">AiBot.WinBotMain.download_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.execute.html">AiBot.WinBotMain.execute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.find_color.html">AiBot.WinBotMain.find_color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.find_dynamic_image.html">AiBot.WinBotMain.find_dynamic_image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.find_images.html">AiBot.WinBotMain.find_images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.find_parent_window.html">AiBot.WinBotMain.find_parent_window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.find_sub_window.html">AiBot.WinBotMain.find_sub_window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.find_text.html">AiBot.WinBotMain.find_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.find_window.html">AiBot.WinBotMain.find_window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.find_windows.html">AiBot.WinBotMain.find_windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.get_clipboard_text.html">AiBot.WinBotMain.get_clipboard_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.get_color.html">AiBot.WinBotMain.get_color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.get_element_name.html">AiBot.WinBotMain.get_element_name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.get_element_rect.html">AiBot.WinBotMain.get_element_rect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.get_element_value.html">AiBot.WinBotMain.get_element_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.get_element_window.html">AiBot.WinBotMain.get_element_window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.get_text.html">AiBot.WinBotMain.get_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.get_window_name.html">AiBot.WinBotMain.get_window_name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.move_mouse.html">AiBot.WinBotMain.move_mouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.save_screenshot.html">AiBot.WinBotMain.save_screenshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.script_main.html">AiBot.WinBotMain.script_main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.scroll_element.html">AiBot.WinBotMain.scroll_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.scroll_mouse.html">AiBot.WinBotMain.scroll_mouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.send_keys.html">AiBot.WinBotMain.send_keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.send_keys_by_hwnd.html">AiBot.WinBotMain.send_keys_by_hwnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.send_vk.html">AiBot.WinBotMain.send_vk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.send_vk_by_hwnd.html">AiBot.WinBotMain.send_vk_by_hwnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.set_clipboard_text.html">AiBot.WinBotMain.set_clipboard_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.set_element_focus.html">AiBot.WinBotMain.set_element_focus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.set_element_state.html">AiBot.WinBotMain.set_element_state</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.set_element_value.html">AiBot.WinBotMain.set_element_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.set_window_top.html">AiBot.WinBotMain.set_window_top</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.show_window.html">AiBot.WinBotMain.show_window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WinBotMain.start_process.html">AiBot.WinBotMain.start_process</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../py/WebBot.html">WebBot</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.back.html">AiBot.WebBotMain.back</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.clear_cache.html">AiBot.WebBotMain.clear_cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.clear_element.html">AiBot.WebBotMain.clear_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.click_alert.html">AiBot.WebBotMain.click_alert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.click_element.html">AiBot.WebBotMain.click_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.click_mouse.html">AiBot.WebBotMain.click_mouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.click_mouse_by_element.html">AiBot.WebBotMain.click_mouse_by_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.close_current_page.html">AiBot.WebBotMain.close_current_page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.delete_all_cookies.html">AiBot.WebBotMain.delete_all_cookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.delete_cookies.html">AiBot.WebBotMain.delete_cookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.execute.html">AiBot.WebBotMain.execute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.execute_script.html">AiBot.WebBotMain.execute_script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.forward.html">AiBot.WebBotMain.forward</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_alert_text.html">AiBot.WebBotMain.get_alert_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_all_cookies.html">AiBot.WebBotMain.get_all_cookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_all_page_id.html">AiBot.WebBotMain.get_all_page_id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_cookies.html">AiBot.WebBotMain.get_cookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_current_page_id.html">AiBot.WebBotMain.get_current_page_id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_current_title.html">AiBot.WebBotMain.get_current_title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_current_url.html">AiBot.WebBotMain.get_current_url</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_element_attr.html">AiBot.WebBotMain.get_element_attr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_element_inner_html.html">AiBot.WebBotMain.get_element_inner_html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_element_outer_html.html">AiBot.WebBotMain.get_element_outer_html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_element_rect.html">AiBot.WebBotMain.get_element_rect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_element_text.html">AiBot.WebBotMain.get_element_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.get_window_pos.html">AiBot.WebBotMain.get_window_pos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.goto.html">AiBot.WebBotMain.goto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.is_available.html">AiBot.WebBotMain.is_available</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.is_displayed.html">AiBot.WebBotMain.is_displayed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.is_selected.html">AiBot.WebBotMain.is_selected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.mobile_emulation.html">AiBot.WebBotMain.mobile_emulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.move_mouse.html">AiBot.WebBotMain.move_mouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.move_to_element.html">AiBot.WebBotMain.move_to_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.new_page.html">AiBot.WebBotMain.new_page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.quit.html">AiBot.WebBotMain.quit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.refresh.html">AiBot.WebBotMain.refresh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.save_screenshot.html">AiBot.WebBotMain.save_screenshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.script_main.html">AiBot.WebBotMain.script_main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.scroll_mouse.html">AiBot.WebBotMain.scroll_mouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.scroll_mouse_by_element.html">AiBot.WebBotMain.scroll_mouse_by_element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.send_keys.html">AiBot.WebBotMain.send_keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.send_vk.html">AiBot.WebBotMain.send_vk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.set_cookies.html">AiBot.WebBotMain.set_cookies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.set_element_attr.html">AiBot.WebBotMain.set_element_attr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.set_element_focus.html">AiBot.WebBotMain.set_element_focus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.set_element_value.html">AiBot.WebBotMain.set_element_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.set_window_pos.html">AiBot.WebBotMain.set_window_pos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.switch_to_frame.html">AiBot.WebBotMain.switch_to_frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.switch_to_main_frame.html">AiBot.WebBotMain.switch_to_main_frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.switch_to_page.html">AiBot.WebBotMain.switch_to_page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../py/api/AiBot.WebBotMain.upload_file_by_element.html">AiBot.WebBotMain.upload_file_by_element</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../JavaScript.html" class="nav-link">Javascript</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">WebBot</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="webbot">
+<span id="api-js-webbot"></span><h1>WebBot<a class="headerlink" href="#webbot" title="此标题的永久链接">#</a></h1>
+<dl class="js class">
+<dt class="sig sig-object js" id="WebBot">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">WebBot</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clientSocket</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot" title="永久链接至目标">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clientSocket</strong> (<em>TcpClientSocket</em>) – tcp 客户端</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="WebBot.sendData">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">sendData</span></span></span><a class="headerlink" href="#WebBot.sendData" title="永久链接至目标">#</a></dt>
+<dd><p>发送数据</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.back">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">back</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.back" title="永久链接至目标">#</a></dt>
+<dd><p>返回</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;boolean&gt;</strong> – 总是返回true</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.clearCache">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clearCache</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.clearCache" title="永久链接至目标">#</a></dt>
+<dd><p>清除缓存</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;string&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.clearElement">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clearElement</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.clearElement" title="永久链接至目标">#</a></dt>
+<dd><p>清空元素值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.clickAlert">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clickAlert</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acceptOrCancel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">promptText</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.clickAlert" title="永久链接至目标">#</a></dt>
+<dd><p>点击警告框</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>acceptOrCancel</strong> (<em>boolean</em>) – true接受, false取消</p></li>
+<li><p><strong>promptText</strong> (<em>string</em>) – 可选参数，输入prompt警告框文本</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.clickElement">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clickElement</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.clickElement" title="永久链接至目标">#</a></dt>
+<dd><p>点击元素</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.clickMouse">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clickMouse</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.clickMouse" title="永久链接至目标">#</a></dt>
+<dd><p>点击鼠标</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>number</em>) – 横坐标，非Windows坐标，页面左上角为起始坐标</p></li>
+<li><p><strong>y</strong> (<em>number</em>) – 纵坐标，非Windows坐标，页面左上角为起始坐标</p></li>
+<li><p><strong>msg</strong> (<em>number</em>) – 单击左键:1  单击右键:2  按下左键:3  弹起左键:4  按下右键:5  弹起右键:6  双击左键：7</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.clickMouseByXpath">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clickMouseByXpath</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.clickMouseByXpath" title="永久链接至目标">#</a></dt>
+<dd><p>通过xpath 点击鼠标</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+<li><p><strong>msg</strong> (<em>number</em>) – 单击左键:1  单击右键:2  按下左键:3  弹起左键:4  按下右键:5  弹起右键:6  双击左键：7</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.closeBrowser">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">closeBrowser</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.closeBrowser" title="永久链接至目标">#</a></dt>
+<dd><p>关闭浏览器</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;boolean&gt;</strong> – 总是返回true</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.closeDriver">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">closeDriver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.closeDriver" title="永久链接至目标">#</a></dt>
+<dd><p>关闭WebDriver.exe驱动程序</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;void&gt;</strong> –</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.closePage">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">closePage</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.closePage" title="永久链接至目标">#</a></dt>
+<dd><p>关闭当前页面</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.deleteAllCookies">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">deleteAllCookies</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.deleteAllCookies" title="永久链接至目标">#</a></dt>
+<dd><p>删除所有cookies</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;string&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.deleteCookies">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">deleteCookies</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.deleteCookies" title="永久链接至目标">#</a></dt>
+<dd><p>删除指定cookies</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – 要删除的 Cookie 的名称。</p></li>
+<li><p><strong>options</strong> (<em>Object</em>) – 可选参数 url 如果指定，则删除所有匹配 url 和 name的Cookie domain 如果指定，则删除所有匹配 domain 和 name的Cookie path 如果指定，则删除所有匹配 path 和 name的Cookie</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;string&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.executeScript">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">executeScript</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.executeScript" title="永久链接至目标">#</a></dt>
+<dd><p>注入JavaScript</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>command</strong> (<em>string</em>) – 注入的js代码</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;string&gt;</strong> – 假如注入代码为函数且有return语句，则返回retrun 的值，否则返回null;  注入示例：(function () {return “aibote rpa”})();</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.forward">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">forward</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.forward" title="永久链接至目标">#</a></dt>
+<dd><p>前进</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;boolean&gt;</strong> – 总是返回true</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getAlertText">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getAlertText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getAlertText" title="永久链接至目标">#</a></dt>
+<dd><p>获取警告框内容</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;boolean&gt;</strong> – 返回警告框内容</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getAllCookies">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getAllCookies</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getAllCookies" title="永久链接至目标">#</a></dt>
+<dd><p>获取所有cookies</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;string&gt;</strong> – 成功返回json格式的字符串，失败返回null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getAllPageId">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getAllPageId</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getAllPageId" title="永久链接至目标">#</a></dt>
+<dd><p>获取所有页面ID</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getCookies">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getCookies</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getCookies" title="永久链接至目标">#</a></dt>
+<dd><p>获取指定url匹配的cookies</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>string</em>) – 指定的url <a class="reference external" href="http:/">http:/</a>/或https:// 起头</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;string&gt;</strong> – 成功返回json格式的字符串，失败返回null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getCurPageId">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getCurPageId</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getCurPageId" title="永久链接至目标">#</a></dt>
+<dd><p>获取当前页面ID</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;string&gt;</strong> – 成功返回页面ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getCurrentUrl">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getCurrentUrl</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getCurrentUrl" title="永久链接至目标">#</a></dt>
+<dd><p>获取当前页面URL</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;string&gt;</strong> –</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getElementAttribute">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getElementAttribute</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getElementAttribute" title="永久链接至目标">#</a></dt>
+<dd><p>获取指定属性的值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – 属性名</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回元素属性值，失败返回null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getElementInnerHTML">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getElementInnerHTML</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getElementInnerHTML" title="永久链接至目标">#</a></dt>
+<dd><p>获取innerHTML</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回元素innerHTML，失败返回null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getElementOuterHTML">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getElementOuterHTML</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getElementOuterHTML" title="永久链接至目标">#</a></dt>
+<dd><p>获取outerHTML</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回元素outerHTML，失败返回null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getElementRect">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getElementRect</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getElementRect" title="永久链接至目标">#</a></dt>
+<dd><p>获取矩形位置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;{left:number, top:number, right:number, bottom:number, width:number, height:number}&gt;</strong> – 成功返回矩形位置，失败返回null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getElementText">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getElementText</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getElementText" title="永久链接至目标">#</a></dt>
+<dd><p>获取文本</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回元素文本，失败返回null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getTitle">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getTitle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getTitle" title="永久链接至目标">#</a></dt>
+<dd><p>获取当前页面标题</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;string&gt;</strong> –</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.getWindowPos">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getWindowPos</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.getWindowPos" title="永久链接至目标">#</a></dt>
+<dd><p>获取窗口位置和状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;{left:number, top:number, width:number, height:number, windowState:string}&gt;</strong> – 成功返回矩形位置和窗口状态，失败返回null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.goto">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">goto</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.goto" title="永久链接至目标">#</a></dt>
+<dd><p>跳转url</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>string</em>) – 要跳转的链接，必须http://或https:// 起头</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 总是返回true</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.isDisplayed">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">isDisplayed</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.isDisplayed" title="永久链接至目标">#</a></dt>
+<dd><p>判断元素是否可见</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 选中返回true，否则返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.isEnabled">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">isEnabled</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.isEnabled" title="永久链接至目标">#</a></dt>
+<dd><p>判断元素是否可用</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 选中返回true，否则返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.isSelected">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">isSelected</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.isSelected" title="永久链接至目标">#</a></dt>
+<dd><p>判断元素是否选中</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 选中返回true，否则返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.mobileEmulation">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">mobileEmulation</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">userAgent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platformVersion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acceptLanguage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timezoneId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latitude=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accuracy=0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.mobileEmulation" title="永久链接至目标">#</a></dt>
+<dd><p>手机浏览器仿真</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<em>number</em>) – 宽度</p></li>
+<li><p><strong>height</strong> (<em>number</em>) – 高度</p></li>
+<li><p><strong>userAgent</strong> (<em>string</em>) – 用户代理</p></li>
+<li><p><strong>platform</strong> (<em>string</em>) – 系统平台，例如 “Android”、”IOS”、”iPhone”</p></li>
+<li><p><strong>platformVersion</strong> (<em>string</em>) – 系统版本号，例如 “9.0”，应当与userAgent提供的版本号对应</p></li>
+<li><p><strong>acceptLanguage</strong> (<em>string</em>) – 可选参数，语言，例如 “zh-CN”、”en”</p></li>
+<li><p><strong>timezoneId</strong> (<em>string</em>) – 可选参数，时区标识，例如”Asia/Shanghai”、”Europe/Berlin”、”Europe/London” 时区应当与 语言、经纬度 对应</p></li>
+<li><p><strong>latitude</strong> (<em>number</em>) – 可选参数，纬度，例如 31.230416</p></li>
+<li><p><strong>longitude</strong> (<em>number</em>) – 可选参数，经度，例如 121.473701</p></li>
+<li><p><strong>accuracy</strong> (<em>number</em>) – 可选参数，精度，例如 1111</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.moveMouse">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">moveMouse</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.moveMouse" title="永久链接至目标">#</a></dt>
+<dd><p>移动鼠标</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>number</em>) – 同clickMouse解释一致</p></li>
+<li><p><strong>y</strong> (<em>number</em>) – 同clickMouse解释一致</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.moveMouseByXpath">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">moveMouseByXpath</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.moveMouseByXpath" title="永久链接至目标">#</a></dt>
+<dd><p>通过xpath 移动鼠标到元素的中心点</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.newPage">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">newPage</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.newPage" title="永久链接至目标">#</a></dt>
+<dd><p>新建tab页面并跳转到指定url</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>string</em>) – 跳转的链接，必须http://或https:// 起头</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.refresh">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">refresh</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.refresh" title="永久链接至目标">#</a></dt>
+<dd><p>刷新</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;boolean&gt;</strong> – 总是返回true</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.sendKeys">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">sendKeys</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.sendKeys" title="永久链接至目标">#</a></dt>
+<dd><p>输入文本</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径，如果元素不能设置焦点，应ClickMouse 点击锁定焦点输入</p></li>
+<li><p><strong>text</strong> (<em>string</em>) – 要输入的文本，例如sendKeys(‘//<a href="#id1"><span class="problematic" id="id2">*</span></a>[&#64;id=”kw”]’, ‘aiboter’); aibote换行</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.sendVk">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">sendVk</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vkCode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.sendVk" title="永久链接至目标">#</a></dt>
+<dd><p>发送Vk虚拟键</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vkCode</strong> (<em>number</em>) – VK键值，仅支持 回退键:8  制表键:9  回车键:13  空格键:32  方向左键:37  方向上键:38  方向右键:39  方向下键:40  删除键:46</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.setCookie">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setCookie</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cookieParam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.setCookie" title="永久链接至目标">#</a></dt>
+<dd><p>设置cookie</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cookieParam</strong> (<em>Object</em>) – cookie参数， name、value和url必填参数，其他参数可选</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.setElementAttribute">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setElementAttribute</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.setElementAttribute" title="永久链接至目标">#</a></dt>
+<dd><p>设置属性值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – 属性名</p></li>
+<li><p><strong>value</strong> (<em>string</em>) – 属性值</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.setElementFocus">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setElementFocus</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.setElementFocus" title="永久链接至目标">#</a></dt>
+<dd><p>设置元素焦点</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.setElementValue">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setElementValue</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.setElementValue" title="永久链接至目标">#</a></dt>
+<dd><p>设置编辑框值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+<li><p><strong>value</strong> (<em>string</em>) – 输入的值</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.setImplicitTimeout">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setImplicitTimeout</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waitMs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intervalMs=100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.setImplicitTimeout" title="永久链接至目标">#</a></dt>
+<dd><p>设置隐式等待</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>waitMs</strong> (<em>number</em>) – 等待时间,单位毫秒</p></li>
+<li><p><strong>intervalMs</strong> (<em>number</em>) – 心跳间隔，单位毫秒。可选参数，默认100毫秒</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;void&gt;</strong> –</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.setWindowPos">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setWindowPos</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">windowState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">可选参数，浏览器窗口位置，此参数仅windowState</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.setWindowPos" title="永久链接至目标">#</a></dt>
+<dd><p>设置窗口位置和状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>windowState</strong> (<em>string</em>) – 窗口状态，正常:”normal”  最小化:”minimized”  最大化:”maximized”  全屏:”fullscreen”</p></li>
+<li><p><strong>可选参数，浏览器窗口位置，此参数仅windowState</strong> (<em>Object</em>) – 值为 “normal” 时有效</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.sleep">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">sleep</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">millisecond</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.sleep" title="永久链接至目标">#</a></dt>
+<dd><p>睡眠等待</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>millisecond</strong> (<em>number</em>) – 等待时间,单位毫秒</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;void&gt;</strong> –</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.switchFrame">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">switchFrame</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.switchFrame" title="永久链接至目标">#</a></dt>
+<dd><p>切换frame</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 要切换frame的元素路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.switchMainFrame">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">switchMainFrame</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.switchMainFrame" title="永久链接至目标">#</a></dt>
+<dd><p>切换到主frame</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.switchPage">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">switchPage</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pageId</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.switchPage" title="永久链接至目标">#</a></dt>
+<dd><p>切换指定页面</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pageId</strong> (<em>string</em>) – 要切换的页面ID</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.takeScreenshot">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">takeScreenshot</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath=&quot;null&quot;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.takeScreenshot" title="永久链接至目标">#</a></dt>
+<dd><p>截图</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 可选参数，元素路径。如果指定该参数则截取元素图片</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;(string|boolean)&gt;</strong> – 成功返回PNG图片格式 base64 字符串，失败返回null</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.uploadFile">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">uploadFile</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filePath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.uploadFile" title="永久链接至目标">#</a></dt>
+<dd><p>通过元素上传文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+<li><p><strong>filePath</strong> (<em>string</em>) – 本地文件路径，路径不存在会导致网页崩溃</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.wheelMouse">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">wheelMouse</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deltaX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltaY</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y=0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.wheelMouse" title="永久链接至目标">#</a></dt>
+<dd><p>滚动鼠标</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deltaX</strong> (<em>number</em>) – 水平滚动条移动的距离</p></li>
+<li><p><strong>deltaY</strong> (<em>number</em>) – 垂直滚动条移动的距离</p></li>
+<li><p><strong>x</strong> (<em>number</em>) – 可选参数，鼠标横坐标位置， 默认为0</p></li>
+<li><p><strong>y</strong> (<em>number</em>) – 可选参数，鼠标纵坐标位置， 默认为0</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="WebBot.wheelMouseByXpath">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">wheelMouseByXpath</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltaX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltaY</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.wheelMouseByXpath" title="永久链接至目标">#</a></dt>
+<dd><p>通过xpath 滚动鼠标</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xpath</strong> (<em>string</em>) – 元素路径</p></li>
+<li><p><strong>deltaX</strong> (<em>number</em>) – 水平滚动条移动的距离</p></li>
+<li><p><strong>deltaY</strong> (<em>number</em>) – 垂直滚动条移动的距离</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Promise.&lt;boolean&gt;</strong> – 成功返回true，失败返回false</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js staticfunction">
+<dt class="sig sig-object js" id="WebBot.registerMain">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="n"><span class="pre">WebBot</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">registerMain</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">webMain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#WebBot.registerMain" title="永久链接至目标">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>webMain</strong> (<em>function</em>) – 要注册的函数，必须含一个参数，用作接收WebBot对象</p></li>
+<li><p><strong>ip</strong> (<em>number</em>) – 脚本所在的地址，传递给WebDriver.exe。如果值为 “127.0.0.1”脚本会将参数 ip和port作为启动参数并启动WebDriver.exe，否则用户需要手动启动WebDriver.exe 并且提供启动参数。</p></li>
+<li><p><strong>port</strong> (<em>number</em>) – 监听端口，传递给WebDriver.exe</p></li>
+<li><p><strong>options</strong> (<em>Object</em>) – 可选参数 browserName 浏览器名称，默认 chrome 浏览器。除edge和chrome浏览器会自动寻找浏览器路径，其他浏览器需要指定browserPath。 debugPort 调试端口,默认 0 随机端口。指定端口则接管已打开的浏览器。启动浏览应指定的参数 –remote-debugging-port=19222 –user-data-dir=C:\Users\电脑用户名\AppData\Local\Google\Chrome\User Data userDataDir 用户数据目录,默认./UserData。多进程同时操作多个浏览器数据目录不能相同 browserPath 浏览器路径 argument 浏览器启动参数。例如：无头模式: –headless   设置代理：–proxy-server=127.0.0.1:8080</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.sleep.html">WebBot.sleep</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.sleep.html#WebBot.sleep"><code class="docutils literal notranslate"><span class="pre">WebBot.sleep()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.setImplicitTimeout.html">WebBot.setImplicitTimeout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.setImplicitTimeout.html#WebBot.setImplicitTimeout"><code class="docutils literal notranslate"><span class="pre">WebBot.setImplicitTimeout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.goto.html">WebBot.goto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.goto.html#WebBot.goto"><code class="docutils literal notranslate"><span class="pre">WebBot.goto()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.newPage.html">WebBot.newPage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.newPage.html#WebBot.newPage"><code class="docutils literal notranslate"><span class="pre">WebBot.newPage()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.back.html">WebBot.back</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.back.html#WebBot.back"><code class="docutils literal notranslate"><span class="pre">WebBot.back()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.forward.html">WebBot.forward</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.forward.html#WebBot.forward"><code class="docutils literal notranslate"><span class="pre">WebBot.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.refresh.html">WebBot.refresh</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.refresh.html#WebBot.refresh"><code class="docutils literal notranslate"><span class="pre">WebBot.refresh()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getCurPageId.html">WebBot.getCurPageId</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getCurPageId.html#WebBot.getCurPageId"><code class="docutils literal notranslate"><span class="pre">WebBot.getCurPageId()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getAllPageId.html">WebBot.getAllPageId</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getAllPageId.html#WebBot.getAllPageId"><code class="docutils literal notranslate"><span class="pre">WebBot.getAllPageId()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.switchPage.html">WebBot.switchPage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.switchPage.html#WebBot.switchPage"><code class="docutils literal notranslate"><span class="pre">WebBot.switchPage()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.closePage.html">WebBot.closePage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.closePage.html#WebBot.closePage"><code class="docutils literal notranslate"><span class="pre">WebBot.closePage()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getCurrentUrl.html">WebBot.getCurrentUrl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getCurrentUrl.html#WebBot.getCurrentUrl"><code class="docutils literal notranslate"><span class="pre">WebBot.getCurrentUrl()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getTitle.html">WebBot.getTitle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getTitle.html#WebBot.getTitle"><code class="docutils literal notranslate"><span class="pre">WebBot.getTitle()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.switchFrame.html">WebBot.switchFrame</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.switchFrame.html#WebBot.switchFrame"><code class="docutils literal notranslate"><span class="pre">WebBot.switchFrame()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.switchMainFrame.html">WebBot.switchMainFrame</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.switchMainFrame.html#WebBot.switchMainFrame"><code class="docutils literal notranslate"><span class="pre">WebBot.switchMainFrame()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.clickElement.html">WebBot.clickElement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.clickElement.html#WebBot.clickElement"><code class="docutils literal notranslate"><span class="pre">WebBot.clickElement()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.setElementValue.html">WebBot.setElementValue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.setElementValue.html#WebBot.setElementValue"><code class="docutils literal notranslate"><span class="pre">WebBot.setElementValue()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getElementText.html">WebBot.getElementText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getElementText.html#WebBot.getElementText"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementText()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getElementOuterHTML.html">WebBot.getElementOuterHTML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getElementOuterHTML.html#WebBot.getElementOuterHTML"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementOuterHTML()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getElementInnerHTML.html">WebBot.getElementInnerHTML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getElementInnerHTML.html#WebBot.getElementInnerHTML"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementInnerHTML()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.setElementAttribute.html">WebBot.setElementAttribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.setElementAttribute.html#WebBot.setElementAttribute"><code class="docutils literal notranslate"><span class="pre">WebBot.setElementAttribute()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getElementAttribute.html">WebBot.getElementAttribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getElementAttribute.html#WebBot.getElementAttribute"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementAttribute()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getElementRect.html">WebBot.getElementRect</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getElementRect.html#WebBot.getElementRect"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementRect()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.isSelected.html">WebBot.isSelected</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.isSelected.html#WebBot.isSelected"><code class="docutils literal notranslate"><span class="pre">WebBot.isSelected()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.isDisplayed.html">WebBot.isDisplayed</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.isDisplayed.html#WebBot.isDisplayed"><code class="docutils literal notranslate"><span class="pre">WebBot.isDisplayed()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.isEnabled.html">WebBot.isEnabled</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.isEnabled.html#WebBot.isEnabled"><code class="docutils literal notranslate"><span class="pre">WebBot.isEnabled()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.clearElement.html">WebBot.clearElement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.clearElement.html#WebBot.clearElement"><code class="docutils literal notranslate"><span class="pre">WebBot.clearElement()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.setElementFocus.html">WebBot.setElementFocus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.setElementFocus.html#WebBot.setElementFocus"><code class="docutils literal notranslate"><span class="pre">WebBot.setElementFocus()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.uploadFile.html">WebBot.uploadFile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.uploadFile.html#WebBot.uploadFile"><code class="docutils literal notranslate"><span class="pre">WebBot.uploadFile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.sendKeys.html">WebBot.sendKeys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.sendKeys.html#WebBot.sendKeys"><code class="docutils literal notranslate"><span class="pre">WebBot.sendKeys()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.sendVk.html">WebBot.sendVk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.sendVk.html#WebBot.sendVk"><code class="docutils literal notranslate"><span class="pre">WebBot.sendVk()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.clickMouse.html">WebBot.clickMouse</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.clickMouse.html#WebBot.clickMouse"><code class="docutils literal notranslate"><span class="pre">WebBot.clickMouse()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.moveMouse.html">WebBot.moveMouse</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.moveMouse.html#WebBot.moveMouse"><code class="docutils literal notranslate"><span class="pre">WebBot.moveMouse()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.wheelMouse.html">WebBot.wheelMouse</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.wheelMouse.html#WebBot.wheelMouse"><code class="docutils literal notranslate"><span class="pre">WebBot.wheelMouse()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.clickMouseByXpath.html">WebBot.clickMouseByXpath</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.clickMouseByXpath.html#WebBot.clickMouseByXpath"><code class="docutils literal notranslate"><span class="pre">WebBot.clickMouseByXpath()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.moveMouseByXpath.html">WebBot.moveMouseByXpath</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.moveMouseByXpath.html#WebBot.moveMouseByXpath"><code class="docutils literal notranslate"><span class="pre">WebBot.moveMouseByXpath()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.wheelMouseByXpath.html">WebBot.wheelMouseByXpath</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.wheelMouseByXpath.html#WebBot.wheelMouseByXpath"><code class="docutils literal notranslate"><span class="pre">WebBot.wheelMouseByXpath()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.takeScreenshot.html">WebBot.takeScreenshot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.takeScreenshot.html#WebBot.takeScreenshot"><code class="docutils literal notranslate"><span class="pre">WebBot.takeScreenshot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.clickAlert.html">WebBot.clickAlert</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.clickAlert.html#WebBot.clickAlert"><code class="docutils literal notranslate"><span class="pre">WebBot.clickAlert()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getAlertText.html">WebBot.getAlertText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getAlertText.html#WebBot.getAlertText"><code class="docutils literal notranslate"><span class="pre">WebBot.getAlertText()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getCookies.html">WebBot.getCookies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getCookies.html#WebBot.getCookies"><code class="docutils literal notranslate"><span class="pre">WebBot.getCookies()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getAllCookies.html">WebBot.getAllCookies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getAllCookies.html#WebBot.getAllCookies"><code class="docutils literal notranslate"><span class="pre">WebBot.getAllCookies()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.setCookie.html">WebBot.setCookie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.setCookie.html#WebBot.setCookie"><code class="docutils literal notranslate"><span class="pre">WebBot.setCookie()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.deleteCookies.html">WebBot.deleteCookies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.deleteCookies.html#WebBot.deleteCookies"><code class="docutils literal notranslate"><span class="pre">WebBot.deleteCookies()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.deleteAllCookies.html">WebBot.deleteAllCookies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.deleteAllCookies.html#WebBot.deleteAllCookies"><code class="docutils literal notranslate"><span class="pre">WebBot.deleteAllCookies()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.clearCache.html">WebBot.clearCache</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.clearCache.html#WebBot.clearCache"><code class="docutils literal notranslate"><span class="pre">WebBot.clearCache()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.executeScript.html">WebBot.executeScript</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.executeScript.html#WebBot.executeScript"><code class="docutils literal notranslate"><span class="pre">WebBot.executeScript()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.getWindowPos.html">WebBot.getWindowPos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.getWindowPos.html#WebBot.getWindowPos"><code class="docutils literal notranslate"><span class="pre">WebBot.getWindowPos()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.setWindowPos.html">WebBot.setWindowPos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.setWindowPos.html#WebBot.setWindowPos"><code class="docutils literal notranslate"><span class="pre">WebBot.setWindowPos()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.mobileEmulation.html">WebBot.mobileEmulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.mobileEmulation.html#WebBot.mobileEmulation"><code class="docutils literal notranslate"><span class="pre">WebBot.mobileEmulation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.closeBrowser.html">WebBot.closeBrowser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.closeBrowser.html#WebBot.closeBrowser"><code class="docutils literal notranslate"><span class="pre">WebBot.closeBrowser()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/WebBot.closeDriver.html">WebBot.closeDriver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/WebBot.closeDriver.html#WebBot.closeDriver"><code class="docutils literal notranslate"><span class="pre">WebBot.closeDriver()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="api/AndroidBot.getScriptParam.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">AndroidBot.getScriptParam</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="api/WebBot.sleep.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">WebBot.sleep</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot"><code class="docutils literal notranslate"><span class="pre">WebBot</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.sendData"><code class="docutils literal notranslate"><span class="pre">WebBot.sendData</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.back"><code class="docutils literal notranslate"><span class="pre">WebBot.back()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.clearCache"><code class="docutils literal notranslate"><span class="pre">WebBot.clearCache()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.clearElement"><code class="docutils literal notranslate"><span class="pre">WebBot.clearElement()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.clickAlert"><code class="docutils literal notranslate"><span class="pre">WebBot.clickAlert()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.clickElement"><code class="docutils literal notranslate"><span class="pre">WebBot.clickElement()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.clickMouse"><code class="docutils literal notranslate"><span class="pre">WebBot.clickMouse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.clickMouseByXpath"><code class="docutils literal notranslate"><span class="pre">WebBot.clickMouseByXpath()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.closeBrowser"><code class="docutils literal notranslate"><span class="pre">WebBot.closeBrowser()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.closeDriver"><code class="docutils literal notranslate"><span class="pre">WebBot.closeDriver()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.closePage"><code class="docutils literal notranslate"><span class="pre">WebBot.closePage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.deleteAllCookies"><code class="docutils literal notranslate"><span class="pre">WebBot.deleteAllCookies()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.deleteCookies"><code class="docutils literal notranslate"><span class="pre">WebBot.deleteCookies()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.executeScript"><code class="docutils literal notranslate"><span class="pre">WebBot.executeScript()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.forward"><code class="docutils literal notranslate"><span class="pre">WebBot.forward()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getAlertText"><code class="docutils literal notranslate"><span class="pre">WebBot.getAlertText()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getAllCookies"><code class="docutils literal notranslate"><span class="pre">WebBot.getAllCookies()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getAllPageId"><code class="docutils literal notranslate"><span class="pre">WebBot.getAllPageId()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getCookies"><code class="docutils literal notranslate"><span class="pre">WebBot.getCookies()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getCurPageId"><code class="docutils literal notranslate"><span class="pre">WebBot.getCurPageId()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getCurrentUrl"><code class="docutils literal notranslate"><span class="pre">WebBot.getCurrentUrl()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getElementAttribute"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementAttribute()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getElementInnerHTML"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementInnerHTML()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getElementOuterHTML"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementOuterHTML()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getElementRect"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementRect()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getElementText"><code class="docutils literal notranslate"><span class="pre">WebBot.getElementText()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getTitle"><code class="docutils literal notranslate"><span class="pre">WebBot.getTitle()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.getWindowPos"><code class="docutils literal notranslate"><span class="pre">WebBot.getWindowPos()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.goto"><code class="docutils literal notranslate"><span class="pre">WebBot.goto()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.isDisplayed"><code class="docutils literal notranslate"><span class="pre">WebBot.isDisplayed()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.isEnabled"><code class="docutils literal notranslate"><span class="pre">WebBot.isEnabled()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.isSelected"><code class="docutils literal notranslate"><span class="pre">WebBot.isSelected()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.mobileEmulation"><code class="docutils literal notranslate"><span class="pre">WebBot.mobileEmulation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.moveMouse"><code class="docutils literal notranslate"><span class="pre">WebBot.moveMouse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.moveMouseByXpath"><code class="docutils literal notranslate"><span class="pre">WebBot.moveMouseByXpath()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.newPage"><code class="docutils literal notranslate"><span class="pre">WebBot.newPage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.refresh"><code class="docutils literal notranslate"><span class="pre">WebBot.refresh()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.sendKeys"><code class="docutils literal notranslate"><span class="pre">WebBot.sendKeys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.sendVk"><code class="docutils literal notranslate"><span class="pre">WebBot.sendVk()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.setCookie"><code class="docutils literal notranslate"><span class="pre">WebBot.setCookie()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.setElementAttribute"><code class="docutils literal notranslate"><span class="pre">WebBot.setElementAttribute()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.setElementFocus"><code class="docutils literal notranslate"><span class="pre">WebBot.setElementFocus()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.setElementValue"><code class="docutils literal notranslate"><span class="pre">WebBot.setElementValue()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.setImplicitTimeout"><code class="docutils literal notranslate"><span class="pre">WebBot.setImplicitTimeout()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.setWindowPos"><code class="docutils literal notranslate"><span class="pre">WebBot.setWindowPos()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.sleep"><code class="docutils literal notranslate"><span class="pre">WebBot.sleep()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.switchFrame"><code class="docutils literal notranslate"><span class="pre">WebBot.switchFrame()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.switchMainFrame"><code class="docutils literal notranslate"><span class="pre">WebBot.switchMainFrame()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.switchPage"><code class="docutils literal notranslate"><span class="pre">WebBot.switchPage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.takeScreenshot"><code class="docutils literal notranslate"><span class="pre">WebBot.takeScreenshot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.uploadFile"><code class="docutils literal notranslate"><span class="pre">WebBot.uploadFile()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.wheelMouse"><code class="docutils literal notranslate"><span class="pre">WebBot.wheelMouse()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.wheelMouseByXpath"><code class="docutils literal notranslate"><span class="pre">WebBot.wheelMouseByXpath()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#WebBot.registerMain"><code class="docutils literal notranslate"><span class="pre">WebBot.registerMain</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner"></div>
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, Aibote.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

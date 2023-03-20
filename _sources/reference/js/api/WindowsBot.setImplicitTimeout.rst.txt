@@ -1,0 +1,5 @@
+
+WindowsBot.setImplicitTimeout
+=========================================================
+
+.. js:autofunction:: WindowsBot#setImplicitTimeout

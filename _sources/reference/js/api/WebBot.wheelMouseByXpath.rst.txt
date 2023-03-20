@@ -1,0 +1,5 @@
+
+WebBot.wheelMouseByXpath
+=========================================================
+
+.. js:autofunction:: WebBot#wheelMouseByXpath

@@ -1,0 +1,5 @@
+
+WindowsBot.findAnimation
+=========================================================
+
+.. js:autofunction:: WindowsBot#findAnimation

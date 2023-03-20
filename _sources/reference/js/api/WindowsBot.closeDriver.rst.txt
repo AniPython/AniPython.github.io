@@ -1,0 +1,5 @@
+
+WindowsBot.closeDriver
+=========================================================
+
+.. js:autofunction:: WindowsBot#closeDriver

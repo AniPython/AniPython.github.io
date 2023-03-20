@@ -1,0 +1,5 @@
+
+WindowsBot.getElementValue
+=========================================================
+
+.. js:autofunction:: WindowsBot#getElementValue

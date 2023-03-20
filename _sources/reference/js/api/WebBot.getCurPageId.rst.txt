@@ -1,0 +1,5 @@
+
+WebBot.getCurPageId
+=========================================================
+
+.. js:autofunction:: WebBot#getCurPageId

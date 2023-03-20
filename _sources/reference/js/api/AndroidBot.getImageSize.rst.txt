@@ -1,0 +1,5 @@
+
+AndroidBot.getImageSize
+=========================================================
+
+.. js:autofunction:: AndroidBot#getImageSize

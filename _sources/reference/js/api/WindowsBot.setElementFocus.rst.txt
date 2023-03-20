@@ -1,0 +1,5 @@
+
+WindowsBot.setElementFocus
+=========================================================
+
+.. js:autofunction:: WindowsBot#setElementFocus

@@ -1,0 +1,48 @@
+.. currentmodule:: AiBot
+
+
+查找窗口句柄 ``findWindow()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#findWindow
+    .. tab:: Python
+        .. automethod:: WinBotMain.find_window
+
+
+查找窗口句柄数组 ``findWindows()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#findWindows
+    .. tab:: Python
+        .. automethod:: WinBotMain.find_windows
+
+
+
+查找子窗口句柄 ``findSubWindow()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#findSubWindow
+    .. tab:: Python
+        .. automethod:: WinBotMain.find_sub_window
+
+
+
+查找父窗口句柄 ``findParentWindow()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#findParentWindow
+    .. tab:: Python
+        .. automethod:: WinBotMain.find_parent_window
+
+
+查找桌面窗口句柄 ``findDesktopWindow()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#findDesktopWindow
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo

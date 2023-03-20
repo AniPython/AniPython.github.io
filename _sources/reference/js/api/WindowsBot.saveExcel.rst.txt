@@ -1,0 +1,5 @@
+
+WindowsBot.saveExcel
+=========================================================
+
+.. js:autofunction:: WindowsBot#saveExcel

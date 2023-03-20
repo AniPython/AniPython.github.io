@@ -1,0 +1,5 @@
+
+WebBot.uploadFile
+=========================================================
+
+.. js:autofunction:: WebBot#uploadFile

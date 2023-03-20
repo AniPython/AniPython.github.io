@@ -1,0 +1,5 @@
+
+WebBot.clickElement
+=========================================================
+
+.. js:autofunction:: WebBot#clickElement

@@ -1,0 +1,5 @@
+
+WindowsBot.closeWindow
+=========================================================
+
+.. js:autofunction:: WindowsBot#closeWindow

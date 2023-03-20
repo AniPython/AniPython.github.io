@@ -1,0 +1,134 @@
+
+.. currentmodule:: AiBot
+
+
+点击元素 ``click_element()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#clickElement
+    .. tab:: Python
+        .. automethod:: WebBotMain.click_element
+
+
+设置编辑框内容 ``setElementValue()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#setElementValue
+    .. tab:: Python
+        .. automethod:: WebBotMain.set_element_value
+
+
+获取元素文本 ``getElementText()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getElementText
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_element_text
+
+
+获取outerHTML ``getElementOuterHTML()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getElementOuterHTML
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_element_outer_html
+
+
+获取innerHTML ``getElementInnerHTML()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getElementInnerHTML
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_element_inner_html
+
+await webBot.setElementAttribute(xpath, attributeName, value);
+//设置属性值
+//参数一 字符串型，元素路径
+//参数二 字符串型，指定的属性名
+//参数三 字符串型，属性值
+//成功返回true，失败返回false
+
+设置属性值 ``setElementAttribute()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#setElementAttribute
+    .. tab:: Python
+        .. automethod:: WebBotMain.set_element_attr
+
+
+获取属性值 ``getElementAttribute()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getElementAttribute
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_element_attr
+
+
+获取矩形位置 ``get_element_rect()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getElementRect
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_element_rect
+
+
+判断该元素是否选中 ``isSelected()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#isSelected
+    .. tab:: Python
+        .. automethod:: WebBotMain.is_selected
+
+
+判断该元素是否可见 ``is_displayed()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#isDisplayed
+    .. tab:: Python
+        .. automethod:: WebBotMain.is_displayed
+
+
+判断元素是否可用 ``isEnabled()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#isEnabled
+    .. tab:: Python
+        .. automethod:: WebBotMain.is_available
+
+
+清除元素值 ``clearElement()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#clearElement
+    .. tab:: Python
+        .. automethod:: WebBotMain.clear_element
+
+
+设置元素焦点 ``setElementFocus()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#setElementFocus
+    .. tab:: Python
+        .. automethod:: WebBotMain.set_element_focus
+
+
+通过元素上传文件 ``uploadFile()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#uploadFile
+    .. tab:: Python
+        .. automethod:: WebBotMain.upload_file_by_element

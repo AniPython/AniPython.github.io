@@ -1,0 +1,5 @@
+
+AndroidBot.showToast
+=========================================================
+
+.. js:autofunction:: AndroidBot#showToast

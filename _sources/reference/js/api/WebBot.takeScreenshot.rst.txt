@@ -1,0 +1,5 @@
+
+WebBot.takeScreenshot
+=========================================================
+
+.. js:autofunction:: WebBot#takeScreenshot

@@ -1,0 +1,5 @@
+
+WebBot.switchMainFrame
+=========================================================
+
+.. js:autofunction:: WebBot#switchMainFrame

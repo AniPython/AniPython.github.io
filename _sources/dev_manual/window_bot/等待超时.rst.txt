@@ -1,0 +1,16 @@
+.. currentmodule:: AiBot
+
+显式等待 ``sleep()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#sleep
+
+隐式等待 ``setImplicitTimeout()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#setImplicitTimeout
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo
+

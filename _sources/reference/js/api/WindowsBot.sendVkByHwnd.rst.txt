@@ -1,0 +1,5 @@
+
+WindowsBot.sendVkByHwnd
+=========================================================
+
+.. js:autofunction:: WindowsBot#sendVkByHwnd

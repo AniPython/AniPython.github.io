@@ -1,0 +1,5 @@
+
+WindowsBot.sendKeys
+=========================================================
+
+.. js:autofunction:: WindowsBot#sendKeys

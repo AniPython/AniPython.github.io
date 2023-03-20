@@ -1,0 +1,5 @@
+
+WebBot.isEnabled
+=========================================================
+
+.. js:autofunction:: WebBot#isEnabled

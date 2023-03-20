@@ -1,0 +1,5 @@
+
+WebBot.setElementValue
+=========================================================
+
+.. js:autofunction:: WebBot#setElementValue

@@ -1,0 +1,5 @@
+
+WebBot.clearElement
+=========================================================
+
+.. js:autofunction:: WebBot#clearElement

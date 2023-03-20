@@ -206,10 +206,6 @@ document.write(`
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
-      <span class="fa-solid fa-outdent"></span>
-    </label>
-  
 </div>
 
     </nav>
@@ -285,11 +281,11 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="android_bot/index.html">AndroidBot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="window_bot/index.html">WindowBot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="web_bot/index.html">WebBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="window_bot/index.html">WindowBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui/index.html">界面开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="web_socket_bot/index.html">WebSocketBot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="multimodule_mixing/index.html">多模块混合开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ui/index.html">界面开发</a></li>
 </ul>
 </div>
 </nav></div>
@@ -350,7 +346,11 @@ document.write(`
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="android_bot/index.html">AndroidBot</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id1">主函数示例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id2">等待超时</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id2">等待超时</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AndroidBot.setImplicitTimeout"><code class="docutils literal notranslate"><span class="pre">AndroidBot.setImplicitTimeout()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AiBot.AndroidBotMain.todo"><code class="docutils literal notranslate"><span class="pre">AndroidBotMain.todo()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id3">图片与颜色</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#savescreenshot">截图保存 <code class="docutils literal notranslate"><span class="pre">saveScreenshot()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#findimage">找图 <code class="docutils literal notranslate"><span class="pre">findImage()</span></code></a></li>
@@ -363,7 +363,6 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#ocr">OCR系统</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#findwords">获取文字坐标 <code class="docutils literal notranslate"><span class="pre">findWords()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#getwords">获取屏幕文字 <code class="docutils literal notranslate"><span class="pre">getWords()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#test">测试 <code class="docutils literal notranslate"><span class="pre">test()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id5">点击手势</a><ul>
@@ -378,16 +377,54 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#dispatchgestures">执行多个手势 <code class="docutils literal notranslate"><span class="pre">dispatchGestures()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id6">发送文本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id7">发送按键</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#app">启动APP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id8">屏幕大小</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id9">图片大小</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id">获取安卓ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#url">URL请求</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#toast">Toast消息提示</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id10">验证码系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id11">元素操作</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id9">发送文本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AndroidBot.sendKeys"><code class="docutils literal notranslate"><span class="pre">AndroidBot.sendKeys()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AiBot.AndroidBotMain.send_keys"><code class="docutils literal notranslate"><span class="pre">AndroidBotMain.send_keys()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id10">发送按键</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#back">返回 <code class="docutils literal notranslate"><span class="pre">back()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#home">返回桌面 <code class="docutils literal notranslate"><span class="pre">home()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#recents">显示最近任务 <code class="docutils literal notranslate"><span class="pre">recents()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#sendvk">发送按键值 <code class="docutils literal notranslate"><span class="pre">sendVk()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#app">启动APP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AndroidBot.startApp"><code class="docutils literal notranslate"><span class="pre">AndroidBot.startApp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AiBot.AndroidBotMain.start_app"><code class="docutils literal notranslate"><span class="pre">AndroidBotMain.start_app()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id11">屏幕大小</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AndroidBot.getWindowSize"><code class="docutils literal notranslate"><span class="pre">AndroidBot.getWindowSize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AiBot.AndroidBotMain.get_window_size"><code class="docutils literal notranslate"><span class="pre">AndroidBotMain.get_window_size()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id12">图片大小</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AndroidBot.getImageSize"><code class="docutils literal notranslate"><span class="pre">AndroidBot.getImageSize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AiBot.AndroidBotMain.get_image_size"><code class="docutils literal notranslate"><span class="pre">AndroidBotMain.get_image_size()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id">获取安卓ID</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AndroidBot.getAndroidId"><code class="docutils literal notranslate"><span class="pre">AndroidBot.getAndroidId()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AiBot.AndroidBotMain.get_android_id"><code class="docutils literal notranslate"><span class="pre">AndroidBotMain.get_android_id()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#url">URL请求</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AndroidBot.urlRequest"><code class="docutils literal notranslate"><span class="pre">AndroidBot.urlRequest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#id13"><code class="docutils literal notranslate"><span class="pre">AndroidBotMain.todo()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#toast">Toast消息提示</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AndroidBot.showToast"><code class="docutils literal notranslate"><span class="pre">AndroidBot.showToast()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AiBot.AndroidBotMain.show_toast"><code class="docutils literal notranslate"><span class="pre">AndroidBotMain.show_toast()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id14">验证码系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#AndroidBot.getCaptcha"><code class="docutils literal notranslate"><span class="pre">AndroidBot.getCaptcha()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#id15"><code class="docutils literal notranslate"><span class="pre">AndroidBotMain.todo()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id16">元素操作</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#clickelement">点击元素 <code class="docutils literal notranslate"><span class="pre">clickElement()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#clickelementbyslide">滑动并点击元素 <code class="docutils literal notranslate"><span class="pre">clickElementBySlide()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#clickanyelements">遍历点击元素 <code class="docutils literal notranslate"><span class="pre">clickAnyElements</span></code></a></li>
@@ -402,68 +439,287 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#scrollelement">滚动元素 <code class="docutils literal notranslate"><span class="pre">scrollElement()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id12">文件传输</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id13">安卓文件操作</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#intent">Intent跳转</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id14">获取包名/窗口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id15">安卓剪切板</a></li>
-<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id16">创建脚本控件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id17">文件传输</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#pushfile">上传文件到手机 <code class="docutils literal notranslate"><span class="pre">pushFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#pullfile">拉取文件到电脑 <code class="docutils literal notranslate"><span class="pre">pullFile()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="window_bot/index.html">WindowBot</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id1">主函数示例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id2">注册主函数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id3">等待超时</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id4">查找句柄</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id5">获取窗口名称</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id6">窗口操作</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id7">鼠标键盘</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id8">图色操作</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#ocr">OCR系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id9">元素操作</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id10">系统剪切板</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id11">启动进程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#cmd">执行cmd命令</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#url">指定url下载文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#excel">Excel文档</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id12">验证码系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#nlp">自然语言处理(NLP)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id13">初始化NLP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#chatgpt">chatGPT的使用</a></li>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id14">训练模型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id15">训练数据文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id18">安卓文件操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#writeandroidfile">写入安卓文件 <code class="docutils literal notranslate"><span class="pre">writeAndroidFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#readandroidfile">读取安卓文件 <code class="docutils literal notranslate"><span class="pre">readAndroidFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#deleteandroidfile">删除安卓文件 <code class="docutils literal notranslate"><span class="pre">deleteAndroidFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#existsandroidfile">判断文件是否存在 <code class="docutils literal notranslate"><span class="pre">existsAndroidFile()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id16">语音合成/识别服务</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id17">初始化语音服务</a></li>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id18">语音识别</a></li>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id19">合成语音</a></li>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#ssml">SSML格式合成语音</a></li>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id20">语音翻译</a></li>
-<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id21">语言和发音人</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#intent">Intent跳转</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#uri-openuri">跳转uri <code class="docutils literal notranslate"><span class="pre">openUri()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#callphone">拨打电话 <code class="docutils literal notranslate"><span class="pre">callPhone()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#sendmsg">发送短信 <code class="docutils literal notranslate"><span class="pre">sendMsg()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#windowsdriver-exe">关闭 WindowsDriver.exe 驱动程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id19">获取包名/窗口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#activity-getactivity">返回当前activity <code class="docutils literal notranslate"><span class="pre">getActivity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#package-getpackage">返回当前package <code class="docutils literal notranslate"><span class="pre">getPackage()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id20">安卓剪切板</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#setclipboardtext">设置剪切板内容 <code class="docutils literal notranslate"><span class="pre">setClipboardText()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#getclipboardtext">获取剪切板内容 <code class="docutils literal notranslate"><span class="pre">getClipboardText()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android_bot/index.html#id21">创建脚本控件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#textview-createtextview">创建TextView控件 <code class="docutils literal notranslate"><span class="pre">createTextView()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#edittext-createedittext">创建EditText控件 <code class="docutils literal notranslate"><span class="pre">createEditText()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#checkbox-createcheckbox">创建CheckBox控件 <code class="docutils literal notranslate"><span class="pre">createCheckBox()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#webview-createwebview">创建WebView控件 <code class="docutils literal notranslate"><span class="pre">createWebView()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#clearscriptcontrol">清除脚本控件 <code class="docutils literal notranslate"><span class="pre">clearScriptControl()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="android_bot/index.html#getscriptparam">获取脚本配置参数 <code class="docutils literal notranslate"><span class="pre">getScriptParam()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="web_bot/index.html">WebBot</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id1">主函数示例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id2">注册主函数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id3">等待超时</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id4">页面和导航</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#iframe">IFrame</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id5">元素操作</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id6">鼠标键盘</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id7">截图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#alert-prompt">alert/prompt弹窗</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#cookie">cookie操作</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#javascript">注入JavaScript</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id8">浏览器窗口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id9">手机浏览器仿真</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#id10">关闭浏览器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#webdriver-exe">关闭WebDriver.exe驱动程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id2">等待超时</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#sleep">显示等待 <code class="docutils literal notranslate"><span class="pre">sleep()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#id3">隐式等待 <code class="docutils literal notranslate"><span class="pre">sleep()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id4">页面和导航</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#url-goto">打开URL <code class="docutils literal notranslate"><span class="pre">goto()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#newpage">新建页面并跳转 <code class="docutils literal notranslate"><span class="pre">newPage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#back">后退 <code class="docutils literal notranslate"><span class="pre">back()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#forward">前进 <code class="docutils literal notranslate"><span class="pre">forward()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#refresh">刷新 <code class="docutils literal notranslate"><span class="pre">refresh()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#id-getcurpageid">获取当前页面ID <code class="docutils literal notranslate"><span class="pre">getCurPageId()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#id-getallpageid">获取页面ID数组 <code class="docutils literal notranslate"><span class="pre">getAllPageId()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#switchpage">切换指定页面 <code class="docutils literal notranslate"><span class="pre">switchPage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#closepage">关闭当前页面 <code class="docutils literal notranslate"><span class="pre">closePage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#url-getcurrenturl">获取URL <code class="docutils literal notranslate"><span class="pre">getCurrentUrl()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#gettitle">获取页面标题 <code class="docutils literal notranslate"><span class="pre">getTitle()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#iframe">IFrame</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#frame-switchframe">切换frame <code class="docutils literal notranslate"><span class="pre">switchFrame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#frame-switchmainframe">切换主frame <code class="docutils literal notranslate"><span class="pre">switchMainFrame()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id5">元素操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#click-element">点击元素 <code class="docutils literal notranslate"><span class="pre">click_element()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#setelementvalue">设置编辑框内容 <code class="docutils literal notranslate"><span class="pre">setElementValue()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#getelementtext">获取元素文本 <code class="docutils literal notranslate"><span class="pre">getElementText()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#outerhtml-getelementouterhtml">获取outerHTML <code class="docutils literal notranslate"><span class="pre">getElementOuterHTML()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#innerhtml-getelementinnerhtml">获取innerHTML <code class="docutils literal notranslate"><span class="pre">getElementInnerHTML()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#setelementattribute">设置属性值 <code class="docutils literal notranslate"><span class="pre">setElementAttribute()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#getelementattribute">获取属性值 <code class="docutils literal notranslate"><span class="pre">getElementAttribute()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#get-element-rect">获取矩形位置 <code class="docutils literal notranslate"><span class="pre">get_element_rect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#isselected">判断该元素是否选中 <code class="docutils literal notranslate"><span class="pre">isSelected()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#is-displayed">判断该元素是否可见 <code class="docutils literal notranslate"><span class="pre">is_displayed()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#isenabled">判断元素是否可用 <code class="docutils literal notranslate"><span class="pre">isEnabled()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#clearelement">清除元素值 <code class="docutils literal notranslate"><span class="pre">clearElement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#setelementfocus">设置元素焦点 <code class="docutils literal notranslate"><span class="pre">setElementFocus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#uploadfile">通过元素上传文件 <code class="docutils literal notranslate"><span class="pre">uploadFile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id6">鼠标键盘</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#sendkeys">发送文本 <code class="docutils literal notranslate"><span class="pre">sendKeys()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#vk-sendvk">发送Vk虚拟键 <code class="docutils literal notranslate"><span class="pre">sendVk()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#clickmouse">点击鼠标 <code class="docutils literal notranslate"><span class="pre">clickMouse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#movemouse">移动鼠标 <code class="docutils literal notranslate"><span class="pre">moveMouse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#wheelmouse">滚动鼠标 wheelMouse()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#xpath-clickmousebyxpath">通过 xpath 点击鼠标(元素中心点) <code class="docutils literal notranslate"><span class="pre">clickMouseByXpath()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#xpath-movemousebyxpath">通过 xpath 移动鼠标(元素中心点) <code class="docutils literal notranslate"><span class="pre">moveMouseByXpath()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#xpath-wheelmousebyxpath">通过 xpath 滚动鼠标 <code class="docutils literal notranslate"><span class="pre">wheelMouseByXpath()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id7">截图</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#png-base64-takescreenshot">截图(PNG-base64) <code class="docutils literal notranslate"><span class="pre">takeScreenshot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#alert-prompt">alert/prompt弹窗</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#clickalert">点击警告框 <code class="docutils literal notranslate"><span class="pre">clickAlert()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#getalerttext">获取警告框文本 <code class="docutils literal notranslate"><span class="pre">getAlertText()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#cookie">cookie操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#urlcookies-getcookies-url">获取指定url匹配的cookies <code class="docutils literal notranslate"><span class="pre">getCookies(url)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#cookies-getallcookies">获取所有的Cookies <code class="docutils literal notranslate"><span class="pre">getAllCookies()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#cookies-setcookie">设置cookies <code class="docutils literal notranslate"><span class="pre">setCookie()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#cookies-deletecookies">删除cookies <code class="docutils literal notranslate"><span class="pre">deleteCookies()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#cookies-deleteallcookies">删除所有cookies <code class="docutils literal notranslate"><span class="pre">deleteAllCookies()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#clearcache">清除缓存 <code class="docutils literal notranslate"><span class="pre">clearCache()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#javascript">注入JavaScript</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#js-executescript">注入执行 JS <code class="docutils literal notranslate"><span class="pre">executeScript()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id8">浏览器窗口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#getwindowpos">获取窗口位置和状态 <code class="docutils literal notranslate"><span class="pre">getWindowPos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#setwindowpos">设置窗口位置和状态 <code class="docutils literal notranslate"><span class="pre">setWindowPos()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id9">手机浏览器仿真</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#mobileemulation">手机浏览器仿真 <code class="docutils literal notranslate"><span class="pre">mobileEmulation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#id10">关闭浏览器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#closebrowser">关闭浏览器 <code class="docutils literal notranslate"><span class="pre">closeBrowser()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_bot/index.html#webdriver-exe">关闭WebDriver.exe驱动程序</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_bot/index.html#webdriver-exe-closedriver">关闭WebDriver.exe驱动程序 <code class="docutils literal notranslate"><span class="pre">closeDriver()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="window_bot/index.html">WindowBot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id1">主函数示例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id2">等待超时</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#sleep">显式等待 <code class="docutils literal notranslate"><span class="pre">sleep()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#setimplicittimeout">隐式等待 <code class="docutils literal notranslate"><span class="pre">setImplicitTimeout()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id3">查找句柄</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#findwindow">查找窗口句柄 <code class="docutils literal notranslate"><span class="pre">findWindow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#findwindows">查找窗口句柄数组 <code class="docutils literal notranslate"><span class="pre">findWindows()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#findsubwindow">查找子窗口句柄 <code class="docutils literal notranslate"><span class="pre">findSubWindow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#findparentwindow">查找父窗口句柄 <code class="docutils literal notranslate"><span class="pre">findParentWindow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#finddesktopwindow">查找桌面窗口句柄 <code class="docutils literal notranslate"><span class="pre">findDesktopWindow()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id4">获取窗口名称</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getwindowname">获取窗口名称 <code class="docutils literal notranslate"><span class="pre">getWindowName()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id5">窗口操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#showwindow">显示/隐藏窗口 <code class="docutils literal notranslate"><span class="pre">showWindow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#setwindowtop">设置窗口到最顶层 <code class="docutils literal notranslate"><span class="pre">setWindowTop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getwindowpos">获取窗口位置 <code class="docutils literal notranslate"><span class="pre">getWindowPos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#setwindowpos">设置窗口位置 <code class="docutils literal notranslate"><span class="pre">setWindowPos()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id8">鼠标键盘</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#movemouse">移动鼠标 <code class="docutils literal notranslate"><span class="pre">moveMouse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#movemouserelative">移动鼠标(相对坐标) <code class="docutils literal notranslate"><span class="pre">moveMouseRelative()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#rollmouse">滚动鼠标 <code class="docutils literal notranslate"><span class="pre">rollMouse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#clickmouse">鼠标点击 <code class="docutils literal notranslate"><span class="pre">clickMouse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#sendkeys">输入文本 <code class="docutils literal notranslate"><span class="pre">sendKeys()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#sendkeysbyhwnd">后台输入文本 <code class="docutils literal notranslate"><span class="pre">sendKeysByHwnd()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#vk-sendvk">输入虚拟键值(VK) <code class="docutils literal notranslate"><span class="pre">sendVk()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#vk-sendvkbyhwnd">后台输入虚拟键值(VK) <code class="docutils literal notranslate"><span class="pre">sendVkByHwnd()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id10">图色操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#savescreenshot">截图保存 <code class="docutils literal notranslate"><span class="pre">saveScreenshot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getcolor">获取指定坐标点的色值 <code class="docutils literal notranslate"><span class="pre">getColor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#findimage">找图 <code class="docutils literal notranslate"><span class="pre">findImage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#findanimation">找动态图 <code class="docutils literal notranslate"><span class="pre">findAnimation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#findcolor">查找指定色值的坐标点 <code class="docutils literal notranslate"><span class="pre">findColor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#comparecolor">比较指定坐标点的颜色值 <code class="docutils literal notranslate"><span class="pre">compareColor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#ocr">OCR系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#findwords">找字 <code class="docutils literal notranslate"><span class="pre">findWords()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getwords">获取屏幕文字 <code class="docutils literal notranslate"><span class="pre">getWords()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id12">元素操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getelementname">获取元素名称 <code class="docutils literal notranslate"><span class="pre">getElementName()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getelementvalue">获取元素文本 <code class="docutils literal notranslate"><span class="pre">getElementValue()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getelementrect">获取元素矩形大小 <code class="docutils literal notranslate"><span class="pre">getElementRect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getelementwindow">获取元素窗口句柄 <code class="docutils literal notranslate"><span class="pre">getElementWindow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#clickelement">点击元素 ``clickElement()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#invokeelement">执行元素默认操作(一般是点击操作) <code class="docutils literal notranslate"><span class="pre">invokeElement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#setelementfocus">设置元素作为焦点 <code class="docutils literal notranslate"><span class="pre">setElementFocus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#setelementvalue">设置元素文本 <code class="docutils literal notranslate"><span class="pre">setElementValue()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#setelementscroll">滚动元素 <code class="docutils literal notranslate"><span class="pre">setElementScroll()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#isselected">单/复选框是否选中 <code class="docutils literal notranslate"><span class="pre">isSelected()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#closewindow">关闭窗口 <code class="docutils literal notranslate"><span class="pre">closeWindow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#setwindowstate">设置窗口状态 <code class="docutils literal notranslate"><span class="pre">setWindowState()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id17">系统剪切板</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#setclipboardtext">设置剪切板内容 <code class="docutils literal notranslate"><span class="pre">setClipboardText()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getclipboardtext">获取剪切板内容 <code class="docutils literal notranslate"><span class="pre">getClipboardText()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id18">启动进程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#startprocess">启动进程 <code class="docutils literal notranslate"><span class="pre">startProcess()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#cmd">执行cmd命令</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#cmd-executecommand">执行cmd命令 <code class="docutils literal notranslate"><span class="pre">executeCommand()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#url">指定url下载文件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#url-downloadfile">指定url下载文件 <code class="docutils literal notranslate"><span class="pre">downloadFile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#excel">Excel文档</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#excel-openexcel">打开excel文档 <code class="docutils literal notranslate"><span class="pre">openExcel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#excel-openexcelsheet">打开excel表格 <code class="docutils literal notranslate"><span class="pre">openExcelSheet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#excel-saveexcel">保存/关闭excel文档 <code class="docutils literal notranslate"><span class="pre">saveExcel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#excel-writeexcelnum">写入数字到excel表格 <code class="docutils literal notranslate"><span class="pre">writeExcelNum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#excel-writeexcelstr">写入字串到excel表格 <code class="docutils literal notranslate"><span class="pre">writeExcelStr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#excel-readexcelnum">读取excel表格数字 <code class="docutils literal notranslate"><span class="pre">readExcelNum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#excel-readexcelstr">读取excel表格字串 <code class="docutils literal notranslate"><span class="pre">readExcelStr()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#excel-removeexcelrow">删除excel表格行 <code class="docutils literal notranslate"><span class="pre">removeExcelRow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#excel-removeexcelcol">删除excel表格列 <code class="docutils literal notranslate"><span class="pre">removeExcelCol()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id20">验证码系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#getcaptcha">识别验证码 <code class="docutils literal notranslate"><span class="pre">getCaptcha()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#errorcaptcha">识别报错返分 <code class="docutils literal notranslate"><span class="pre">errorCaptcha()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#scorecaptcha">查询验证码剩余题分 <code class="docutils literal notranslate"><span class="pre">scoreCaptcha()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#nlp">自然语言处理(NLP)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#nlp-initnlp">初始化NLP <code class="docutils literal notranslate"><span class="pre">initNLP()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#chatgpt">chatGPT的使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#chatgpt-chatgpt">使用chatgpt <code class="docutils literal notranslate"><span class="pre">chatgpt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#chatgpt-chatgptedit">使用chatgpt编辑模式 <code class="docutils literal notranslate"><span class="pre">chatgptEdit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id24">训练模型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#createfinetune">创建微调模型 <code class="docutils literal notranslate"><span class="pre">createFineTune()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#listfinetunes">列出所有微调信息 <code class="docutils literal notranslate"><span class="pre">listFineTunes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#cancelfinetune">取消正在微调的作业 <code class="docutils literal notranslate"><span class="pre">cancelFineTune()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#deletefinetunemodel">删除微调模型 <code class="docutils literal notranslate"><span class="pre">deleteFineTuneModel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id25">训练数据文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#uploadtrainfile">上传训练文件到服务器 <code class="docutils literal notranslate"><span class="pre">uploadTrainFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#listtrainfile">列出单个训练文件信息 <code class="docutils literal notranslate"><span class="pre">listTrainFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#listtrainfiles">列出所有训练文件信息 <code class="docutils literal notranslate"><span class="pre">listTrainFiles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#downloadtrainfile">下载训练文件内容 <code class="docutils literal notranslate"><span class="pre">downloadTrainFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#deletetrainfile">删除训练文件 <code class="docutils literal notranslate"><span class="pre">deleteTrainFile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#id26">语音合成/识别服务</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#initspeechservice">初始化语音服务 <code class="docutils literal notranslate"><span class="pre">initSpeechService()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id27">语音识别</a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#audiofiletotext">音频文件转文本 <code class="docutils literal notranslate"><span class="pre">audioFileToText()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#microphonetotext">麦克风输入音频换文本 <code class="docutils literal notranslate"><span class="pre">microphoneToText()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id28">合成语音</a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#texttobullhorn">文本合成语音输出到扬声器播放 <code class="docutils literal notranslate"><span class="pre">textToBullhorn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#texttoaudiofile">文本合成语音保存到本地音频文件 <code class="docutils literal notranslate"><span class="pre">textToAudioFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#ssml">SSML格式合成语音</a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#ssml-ssmltobullhorn">SSML文本格式合成音频到扬声器 <code class="docutils literal notranslate"><span class="pre">SSMLToBullhorn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#ssml-ssmltofile">SSML文本格式合成音频到扬声器 <code class="docutils literal notranslate"><span class="pre">SSMLToFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id29">语音翻译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#microphonetranslationtext">麦克风音频翻译成目标语言文本 <code class="docutils literal notranslate"><span class="pre">microphoneTranslationText()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#audiofiletranslationtext">音频文件翻译成目标语言文本 <code class="docutils literal notranslate"><span class="pre">audioFileTranslationText()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#id30">语言和发音人</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="window_bot/index.html#windowsdriver-exe">关闭 WindowsDriver.exe 驱动程序</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="window_bot/index.html#windowsdriver-exe-closedriver">关闭WindowsDriver_exe驱动程序 <code class="docutils literal notranslate"><span class="pre">closeDriver()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui/index.html">界面开发</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui/index.html#id2">界面宽高</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui/index.html#id3">启动脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui/index.html#id4">停止脚本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui/index.html#id5">输出日志</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="web_socket_bot/index.html">WebSocketBot</a><ul>
@@ -487,13 +743,6 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="multimodule_mixing/index.html">多模块混合开发</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="multimodule_mixing/index.html#windowsbot-webbot">WindowsBot &amp; WebBot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multimodule_mixing/index.html#windowsbot-androidbot">WindowsBot &amp; AndroidBot</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ui/index.html">界面开发</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ui/index.html#id2">界面宽高</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ui/index.html#id3">启动脚本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ui/index.html#id4">停止脚本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ui/index.html#id5">输出日志</a></li>
 </ul>
 </li>
 </ul>
@@ -532,18 +781,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="tocsection sourcelink">
-    <a href="../_sources/dev_manual/index.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> 显示源代码
-    </a>
-  </div>
-</div>
-
-</div></div>
               
             
           </div>
@@ -586,7 +823,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
 </p></div>
       
     </div>

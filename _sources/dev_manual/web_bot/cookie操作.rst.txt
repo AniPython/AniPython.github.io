@@ -1,0 +1,57 @@
+
+.. currentmodule:: AiBot
+
+
+
+获取指定url匹配的cookies ``getCookies(url)``
+-----------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getCookies
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_cookies
+
+
+获取所有的Cookies ``getAllCookies()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getAllCookies
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_all_cookies
+
+
+设置cookies ``setCookie()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#setCookie
+    .. tab:: Python
+        .. automethod:: WebBotMain.set_cookies
+
+
+删除cookies ``deleteCookies()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#deleteCookies
+    .. tab:: Python
+        .. automethod:: WebBotMain.delete_cookies
+
+
+删除所有cookies ``deleteAllCookies()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#deleteAllCookies
+    .. tab:: Python
+        .. automethod:: WebBotMain.delete_all_cookies
+
+
+清除缓存 ``clearCache()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#clearCache
+    .. tab:: Python
+        .. automethod:: WebBotMain.clear_cache

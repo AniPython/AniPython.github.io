@@ -1,0 +1,5 @@
+
+AndroidBot.clickElement
+=========================================================
+
+.. js:autofunction:: AndroidBot#clickElement

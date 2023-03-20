@@ -1,0 +1,5 @@
+
+WindowsBot.getCaptcha
+=========================================================
+
+.. js:autofunction:: WindowsBot#getCaptcha

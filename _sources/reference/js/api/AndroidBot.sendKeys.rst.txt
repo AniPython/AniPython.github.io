@@ -1,0 +1,5 @@
+
+AndroidBot.sendKeys
+=========================================================
+
+.. js:autofunction:: AndroidBot#sendKeys

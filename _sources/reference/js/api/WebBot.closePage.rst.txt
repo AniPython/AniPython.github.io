@@ -1,0 +1,5 @@
+
+WebBot.closePage
+=========================================================
+
+.. js:autofunction:: WebBot#closePage

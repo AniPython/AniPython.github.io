@@ -3,19 +3,13 @@ Aibote基本使用
 
 安装
 -----------------------------
+到官方QQ群: ``213089247`` 的群文件中下载 aibote.zip, 解压即可使用, ``node.js`` 用户不需要安装环境;
+``python`` 用户需要安装 ``python`` 环境, 并安装 ``AiBot.py`` 包
 
-.. tabs::
+.. code-block:: bash
 
-    .. tab:: JavaScript
-        .. code-block:: bash
+    $ pip install AiBot.py
 
-            $ npm ...
-
-
-    .. tab:: Python
-        .. code-block:: bash
-
-            $ pip install AiBot.py
 
 
 使用 AndroidBot 编写脚本

@@ -1,0 +1,5 @@
+
+WindowsBot.findSubWindow
+=========================================================
+
+.. js:autofunction:: WindowsBot#findSubWindow

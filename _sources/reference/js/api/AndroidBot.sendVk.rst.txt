@@ -1,0 +1,5 @@
+
+AndroidBot.sendVk
+=========================================================
+
+.. js:autofunction:: AndroidBot#sendVk

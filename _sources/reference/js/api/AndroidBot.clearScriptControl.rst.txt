@@ -1,0 +1,5 @@
+
+AndroidBot.clearScriptControl
+=========================================================
+
+.. js:autofunction:: AndroidBot#clearScriptControl

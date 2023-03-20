@@ -1,0 +1,5 @@
+
+AndroidBot.sendMsg
+=========================================================
+
+.. js:autofunction:: AndroidBot#sendMsg

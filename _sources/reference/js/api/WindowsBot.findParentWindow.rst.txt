@@ -1,0 +1,5 @@
+
+WindowsBot.findParentWindow
+=========================================================
+
+.. js:autofunction:: WindowsBot#findParentWindow

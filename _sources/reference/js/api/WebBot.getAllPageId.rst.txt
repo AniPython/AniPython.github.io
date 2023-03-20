@@ -1,0 +1,5 @@
+
+WebBot.getAllPageId
+=========================================================
+
+.. js:autofunction:: WebBot#getAllPageId

@@ -1,0 +1,5 @@
+
+WindowsBot.clickMouse
+=========================================================
+
+.. js:autofunction:: WindowsBot#clickMouse

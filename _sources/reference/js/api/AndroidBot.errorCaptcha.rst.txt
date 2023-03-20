@@ -1,0 +1,5 @@
+
+AndroidBot.errorCaptcha
+=========================================================
+
+.. js:autofunction:: AndroidBot#errorCaptcha

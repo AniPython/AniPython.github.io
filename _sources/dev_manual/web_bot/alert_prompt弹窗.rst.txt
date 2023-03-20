@@ -1,0 +1,20 @@
+
+.. currentmodule:: AiBot
+
+点击警告框 ``clickAlert()``
+---------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#clickAlert
+    .. tab:: Python
+        .. automethod:: WebBotMain.click_alert
+
+
+获取警告框文本 ``getAlertText()``
+---------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getAlertText
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_alert_text
+

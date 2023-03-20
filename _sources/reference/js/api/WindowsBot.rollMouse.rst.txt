@@ -1,0 +1,5 @@
+
+WindowsBot.rollMouse
+=========================================================
+
+.. js:autofunction:: WindowsBot#rollMouse

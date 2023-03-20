@@ -1,0 +1,5 @@
+
+WebBot.clearCache
+=========================================================
+
+.. js:autofunction:: WebBot#clearCache

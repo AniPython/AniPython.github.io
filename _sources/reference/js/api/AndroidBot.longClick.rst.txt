@@ -1,0 +1,5 @@
+
+AndroidBot.longClick
+=========================================================
+
+.. js:autofunction:: AndroidBot#longClick

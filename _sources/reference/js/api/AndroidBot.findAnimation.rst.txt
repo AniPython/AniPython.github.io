@@ -1,0 +1,5 @@
+
+AndroidBot.findAnimation
+=========================================================
+
+.. js:autofunction:: AndroidBot#findAnimation

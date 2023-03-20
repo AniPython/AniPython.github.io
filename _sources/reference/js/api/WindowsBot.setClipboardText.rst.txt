@@ -1,0 +1,5 @@
+
+WindowsBot.setClipboardText
+=========================================================
+
+.. js:autofunction:: WindowsBot#setClipboardText

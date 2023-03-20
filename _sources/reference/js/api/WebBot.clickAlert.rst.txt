@@ -1,0 +1,5 @@
+
+WebBot.clickAlert
+=========================================================
+
+.. js:autofunction:: WebBot#clickAlert

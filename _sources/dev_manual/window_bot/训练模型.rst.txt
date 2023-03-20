@@ -1,0 +1,27 @@
+
+创建微调模型 ``createFineTune()``
+----------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#createFineTune
+
+
+列出所有微调信息 ``listFineTunes()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#listFineTunes
+
+
+取消正在微调的作业 ``cancelFineTune()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#cancelFineTune
+
+
+删除微调模型 ``deleteFineTuneModel()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#deleteFineTuneModel

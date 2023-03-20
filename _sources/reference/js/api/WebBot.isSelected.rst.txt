@@ -1,0 +1,5 @@
+
+WebBot.isSelected
+=========================================================
+
+.. js:autofunction:: WebBot#isSelected

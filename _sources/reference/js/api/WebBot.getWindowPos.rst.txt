@@ -1,0 +1,5 @@
+
+WebBot.getWindowPos
+=========================================================
+
+.. js:autofunction:: WebBot#getWindowPos

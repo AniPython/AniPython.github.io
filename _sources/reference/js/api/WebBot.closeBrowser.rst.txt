@@ -1,0 +1,5 @@
+
+WebBot.closeBrowser
+=========================================================
+
+.. js:autofunction:: WebBot#closeBrowser

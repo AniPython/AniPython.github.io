@@ -1,0 +1,18 @@
+.. currentmodule:: AiBot
+
+获取文字坐标 ``findWords()``
+-------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#findWords
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.find_text
+
+
+获取屏幕文字 ``getWords()``
+-------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#getWords
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.get_text

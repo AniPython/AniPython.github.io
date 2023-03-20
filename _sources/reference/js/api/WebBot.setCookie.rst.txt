@@ -1,0 +1,5 @@
+
+WebBot.setCookie
+=========================================================
+
+.. js:autofunction:: WebBot#setCookie

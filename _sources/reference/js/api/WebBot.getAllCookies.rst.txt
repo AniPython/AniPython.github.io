@@ -1,0 +1,5 @@
+
+WebBot.getAllCookies
+=========================================================
+
+.. js:autofunction:: WebBot#getAllCookies

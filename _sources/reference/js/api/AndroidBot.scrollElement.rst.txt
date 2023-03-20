@@ -1,0 +1,5 @@
+
+AndroidBot.scrollElement
+=========================================================
+
+.. js:autofunction:: AndroidBot#scrollElement

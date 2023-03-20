@@ -1,0 +1,5 @@
+
+AndroidBot.getWindowSize
+=========================================================
+
+.. js:autofunction:: AndroidBot#getWindowSize

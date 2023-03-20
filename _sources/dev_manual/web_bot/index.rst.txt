@@ -1,3 +1,4 @@
+.. currentmodule:: AiBot
 
 ======================
 WebBot
@@ -9,68 +10,136 @@ WebBot
 .. include:: 主函数示例/index.rst
 
 
-注册主函数
-======================
-.. include:: 注册主函数/index.rst
-
-
 等待超时
 ======================
-.. include:: 等待超时/index.rst
+.. include:: 等待超时.rst
 
 
 页面和导航
 ======================
-.. include:: 页面和导航/index.rst
+.. include:: 页面和导航.rst
 
 
 IFrame
 ======================
-.. include:: IFrame/index.rst
+
+切换frame ``switchFrame()``
+------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#switchFrame
+    .. tab:: Python
+        .. automethod:: WebBotMain.switch_to_frame
+
+
+切换主frame ``switchMainFrame()``
+------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#switchMainFrame
+    .. tab:: Python
+        .. automethod:: WebBotMain.switch_to_main_frame
 
 
 元素操作
 ======================
-.. include:: 元素操作/index.rst
+.. include:: 元素操作.rst
+
 
 鼠标键盘
 ======================
-.. include:: 鼠标键盘/index.rst
+.. include:: 鼠标键盘.rst
 
 
 截图
 ======================
-.. include:: 截图/index.rst
+
+截图(PNG-base64) ``takeScreenshot()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#takeScreenshot
+    .. tab:: Python
+        .. automethod:: WebBotMain.save_screenshot
+
 
 alert/prompt弹窗
 ======================
-.. include:: alert_prompt弹窗/index.rst
+.. include:: alert_prompt弹窗.rst
+
 
 cookie操作
 ======================
-.. include:: cookie操作/index.rst
+.. include:: cookie操作.rst
 
 
 注入JavaScript
 ======================
-.. include:: 注入JavaScript/index.rst
+
+注入执行 JS ``executeScript()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#executeScript
+    .. tab:: Python
+        .. automethod:: WebBotMain.execute_script
+
 
 浏览器窗口
 ======================
-.. include:: 浏览器窗口/index.rst
+
+
+获取窗口位置和状态 ``getWindowPos()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#getWindowPos
+    .. tab:: Python
+        .. automethod:: WebBotMain.get_window_pos
+
+
+设置窗口位置和状态 ``setWindowPos()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#setWindowPos
+    .. tab:: Python
+        .. automethod:: WebBotMain.set_window_pos
 
 
 手机浏览器仿真
 ======================
-.. include:: 手机浏览器仿真/index.rst
+
+手机浏览器仿真 ``mobileEmulation()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#mobileEmulation
+    .. tab:: Python
+        .. automethod:: WebBotMain.mobile_emulation
 
 
 关闭浏览器
-------------
-.. include:: 关闭浏览器/index.rst
+======================
+
+关闭浏览器 ``closeBrowser()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#closeBrowser
+    .. tab:: Python
+        .. automethod:: WebBotMain.quit
 
 
 关闭WebDriver.exe驱动程序
-------------------------------------
-.. include:: 关闭WebDriver_exe驱动程序/index.rst
+=============================
+
+关闭WebDriver.exe驱动程序 ``closeDriver()``
+--------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WebBot#closeDriver
+    .. tab:: Python
+        .. automethod:: WebBotMain.todo
+
 

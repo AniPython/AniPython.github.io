@@ -1,0 +1,37 @@
+.. currentmodule:: AiBot
+
+返回 ``back()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#back
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.back
+
+
+返回桌面 ``home()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#home
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.home
+
+
+显示最近任务 ``recents()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#recents
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.recent_tasks
+
+
+发送按键值 ``sendVk()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#sendVk
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.send_vk
+

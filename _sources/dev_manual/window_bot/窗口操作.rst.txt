@@ -1,0 +1,37 @@
+.. currentmodule:: AiBot
+
+
+显示/隐藏窗口 ``showWindow()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#showWindow
+    .. tab:: Python
+        .. automethod:: WinBotMain.show_window
+
+
+设置窗口到最顶层 ``setWindowTop()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#setWindowTop
+    .. tab:: Python
+        .. automethod:: WinBotMain.set_window_top
+
+
+获取窗口位置 ``getWindowPos()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getWindowPos
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo
+
+
+设置窗口位置 ``setWindowPos()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#setWindowPos
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo

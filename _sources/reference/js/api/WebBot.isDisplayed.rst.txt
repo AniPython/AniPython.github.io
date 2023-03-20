@@ -1,0 +1,5 @@
+
+WebBot.isDisplayed
+=========================================================
+
+.. js:autofunction:: WebBot#isDisplayed

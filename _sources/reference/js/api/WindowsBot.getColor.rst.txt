@@ -1,0 +1,5 @@
+
+WindowsBot.getColor
+=========================================================
+
+.. js:autofunction:: WindowsBot#getColor

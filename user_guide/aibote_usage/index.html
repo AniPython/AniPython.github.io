@@ -286,7 +286,6 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Aibote%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5.html">Aibote 使用须知</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E6%8B%BE%E5%8F%96%E5%85%83%E7%B4%A0%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html">拾取元素工具</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Aibote基本使用</a></li>
 </ul>
@@ -350,22 +349,31 @@ document.write(`
 <h1>Aibote基本使用<a class="headerlink" href="#aibote" title="此标题的永久链接">#</a></h1>
 <section id="id1">
 <h2>安装<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h2>
-<div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>npm<span class="w"> </span>...
+<p>到官方QQ群: <code class="docutils literal notranslate"><span class="pre">213089247</span></code> 的群文件中下载 aibote.zip, 解压即可使用, <code class="docutils literal notranslate"><span class="pre">node.js</span></code> 用户不需要安装环境;
+<code class="docutils literal notranslate"><span class="pre">python</span></code> 用户需要安装 <code class="docutils literal notranslate"><span class="pre">python</span></code> 环境, 并安装 <code class="docutils literal notranslate"><span class="pre">AiBot.py</span></code> 包</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install AiBot.py
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>AiBot.py
-</pre></div>
-</div>
-</div></div>
 </section>
 <section id="androidbot">
 <h2>使用 AndroidBot 编写脚本<a class="headerlink" href="#androidbot" title="此标题的永久链接">#</a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">)</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">AndroidBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;AndroidBot&#39;</span><span class="p">);</span><span class="c1">//引用AndroidBot模块</span><span class="w"></span>
+
+<span class="c1">//注册主函数，安卓端连接脚本会自动调用androidMain，并传递AndroidBot对象。设置服务端监听端口，手机端默认连接端口16678</span><span class="w"></span>
+<span class="nx">AndroidBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">androidMain</span><span class="p">,</span><span class="w"> </span><span class="mf">16678</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/**用作代码提示，androidMain函数会被多次调用，注意使用全局变量</span>
+<span class="cm">* @param {AndroidBot} androidBot</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">androidMain</span><span class="p">(</span><span class="nx">androidBot</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="c1">//设置隐式等待时间</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">findColor</span><span class="p">(</span><span class="s2">&quot;#0e76b1&quot;</span><span class="p">);</span><span class="c1">//查找指定颜色值坐标点</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. 导入 AndroidBotMain 类</span>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. 导入 AndroidBotMain 类</span>
 <span class="kn">from</span> <span class="nn">AiBot</span> <span class="kn">import</span> <span class="n">AndroidBotMain</span>
 
 
@@ -414,10 +422,35 @@ document.write(`
 <section id="winbot">
 <h2>使用 WinBot 编写脚本<a class="headerlink" href="#winbot" title="此标题的永久链接">#</a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-2-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-2-2-0" name="2-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-2-2-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-1" name="2-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-2-2-0" class="sphinx-tabs-panel" id="panel-2-2-0" name="2-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WindowsBot&#39;</span><span class="p">);</span><span class="c1">//引用WindowsBot模块</span><span class="w"></span>
+
+<span class="c1">//注册主函数</span><span class="w"></span>
+<span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">windowsMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">26678</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/**用作代码提示，windowsMain函数会被多次调用，注意使用全局变量</span>
+<span class="cm">* @param {WindowsBot} windowsBot</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">windowsMain</span><span class="p">(</span><span class="nx">windowsBot</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//设置隐式等待</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">hwnd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">.</span><span class="nx">findWindow</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;运行&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">.</span><span class="nx">clickElement</span><span class="p">(</span><span class="nx">hwnd</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Window/Button[2]&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">windowsMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">26678</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//参数一 回调函数，要注册的函数，必须含一个参数，用作接收WindowsBot对象</span><span class="w"></span>
+<span class="c1">//参数二 字符串型， 脚本所在的地址，传递给WindowsDriver.exe。如果值为 &quot;127.0.0.1&quot;脚本会将参数 ip和port作为启动参数并启动WindowsDriver.exe，否则用户需要手动启动WindowsDriver.exe 并且提供启动参数。</span><span class="w"></span>
+<span class="c1">//命令行启动示例：WindowsDriver.exe &quot;192.168.1.88&quot; 26678</span><span class="w"></span>
+<span class="c1">//脚本多进程需要指定不同的端口！</span><span class="w"></span>
+<span class="c1">//参数三 整型，监听端口, WindowsDriver.exe。默认26678。WindowsDriver.exe会通过ip和port 连接脚本</span><span class="w"></span>
+
+<span class="c1">// 代码示例</span><span class="w"></span>
+<span class="c1">// 远程云端部署</span><span class="w"></span>
+<span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">windowsMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;192.168.1.88&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">26678</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-2-2-1" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-1" name="2-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. 导入 WinBotMain 类</span>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. 导入 WinBotMain 类</span>
 <span class="kn">from</span> <span class="nn">AiBot</span> <span class="kn">import</span> <span class="n">WinBotMain</span>
 
 
@@ -466,10 +499,49 @@ document.write(`
 <section id="webbot">
 <h2>使用 WebBot 编写脚本<a class="headerlink" href="#webbot" title="此标题的永久链接">#</a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-3-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-3-3-0" name="3-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-3-3-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-3-3-1" name="3-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-3-3-0" class="sphinx-tabs-panel" id="panel-3-3-0" name="3-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-2-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-2-2-0" name="2-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-2-2-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-1" name="2-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-2-2-0" class="sphinx-tabs-panel" id="panel-2-2-0" name="2-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebBot&#39;</span><span class="p">);</span><span class="c1">//引用WebBot模块</span><span class="w"></span>
+
+<span class="c1">//注册主函数</span><span class="w"></span>
+<span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="s2">&quot;chrome&quot;</span><span class="p">});</span><span class="w"></span>
+
+<span class="cm">/**用作代码提示，webMain函数会被多次调用，注意使用全局变量</span>
+<span class="cm">* @param {WebBot} webBot</span>
+<span class="cm">*/</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">webMain</span><span class="p">(</span><span class="nx">webBot</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//设置隐式等待</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">webBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">webBot</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s2">&quot;https://www.baidu.com/&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">webBot</span><span class="p">.</span><span class="nx">sendKeys</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;kw&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Aibote\r&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="s2">&quot;chrome&quot;</span><span class="p">});</span><span class="w"></span>
+<span class="c1">// 参数一 函数行，要注册的函数，必须含一个参数，用作接收WebBot对象</span><span class="w"></span>
+<span class="c1">// 参数二 字符串型，脚本所在的地址，传递给WebDriver.exe。如果值为 &quot;127.0.0.1&quot;脚本会将参数 ip和port作为启动参数并启动WebDriver.exe，否则用户需要手动启动WebDriver.exe 并且提供启动参数。</span><span class="w"></span>
+<span class="c1">// 命令行启动示例：WebDriver.exe &quot;{\&quot;serverIp\&quot;:\&quot;127.0.0.1\&quot;, \&quot;serverPort\&quot;:26678, \&quot;browserName\&quot;:\&quot;chrome\&quot;, \&quot;debugPort\&quot;:0, \&quot;userDataDir\&quot;:\&quot;./UserData\&quot;, \&quot;browserPath\&quot;:\&quot;null\&quot;, \&quot;argument\&quot;:\&quot;null\&quot;}&quot;</span><span class="w"></span>
+<span class="c1">// 参数三 整型，监听端口，传递给WebDriver.exe。脚本多进程需要指定不同的端口</span><span class="w"></span>
+<span class="c1">// 参数四 json对象，{{browserName:string, debugPort:number, userDataDir:string, browserPath:string, argument:string}} 可选参数</span><span class="w"></span>
+<span class="c1">// browserName 浏览器名称，默认 chrome 浏览器。edge和chrome会自动寻找浏览器路径，其他浏览器需要指定browserPath。</span><span class="w"></span>
+<span class="c1">// debugPort 调试端口。默认 0 随机端口。指定端口则接管已打开的浏览器。启动浏览器指定的参数 --remote-debugging-port=19222 --user-data-dir=C:\\Users\\电脑用户名\\AppData\\Local\\Google\\Chrome\\User Data</span><span class="w"></span>
+<span class="c1">// userDataDir 用户数据目录。多进程同时操作多个浏览器数据目录不能相同。第一次指定数据目录路径会进入浏览器欢迎界面，第二次恢复正常操作</span><span class="w"></span>
+<span class="c1">// browserPath 浏览器路径</span><span class="w"></span>
+<span class="c1">// argument 浏览器启动参数。例如：无头模式: --headless   设置代理：--proxy-server=127.0.0.1:8080，多个启动参数空格隔开</span><span class="w"></span>
+
+<span class="c1">// 代码示例</span><span class="w"></span>
+<span class="c1">// 指定调试端口，接管已打开的浏览器。启动浏览器指定的参数 --remote-debugging-port=19222 --user-data-dir=C:\\Users\\电脑用户名\\AppData\\Local\\Google\\Chrome\\User Data</span><span class="w"></span>
+<span class="k">await</span><span class="w"> </span><span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="s2">&quot;chrome&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">debugPort</span><span class="o">:</span><span class="mf">19222</span><span class="p">});</span><span class="c1">//debugPort:19222 必须和 --remote-debugging-port=19222 端口对应</span><span class="w"></span>
+
+<span class="c1">// 指定浏览器路径</span><span class="w"></span>
+<span class="k">await</span><span class="w"> </span><span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="s2">&quot;360浏览器&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">browserPath</span><span class="o">:</span><span class="s2">&quot;D:\\Program Files\\360se.exe&quot;</span><span class="p">});</span><span class="w"></span>
+
+<span class="c1">// 启动参数指定User-Agent</span><span class="w"></span>
+<span class="k">await</span><span class="w"> </span><span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="s2">&quot;chrome&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">argument</span><span class="o">:</span><span class="s2">&quot;--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36&quot;</span><span class="p">});</span><span class="w"></span>
+
+<span class="c1">// 云端远程部署</span><span class="w"></span>
+<span class="k">await</span><span class="w"> </span><span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;192.168.1.88&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="s2">&quot;chrome&quot;</span><span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-3-3-1" class="sphinx-tabs-panel" hidden="true" id="panel-3-3-1" name="3-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+</div><div aria-labelledby="tab-2-2-1" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-1" name="2-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 
 <span class="c1"># 1. 导入 WebBotMain 类</span>
 <span class="kn">from</span> <span class="nn">AiBot</span> <span class="kn">import</span> <span class="n">WebBotMain</span>
@@ -577,14 +649,6 @@ document.write(`
 </ul>
   </nav></div>
 
-  <div class="sidebar-secondary-item">
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/user_guide/aibote_usage/index.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> 显示源代码
-    </a>
-  </div>
-</div>
-
 </div></div>
               
             
@@ -628,7 +692,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
 </p></div>
       
     </div>

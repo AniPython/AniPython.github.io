@@ -1,0 +1,5 @@
+
+WebBot.sendVk
+=========================================================
+
+.. js:autofunction:: WebBot#sendVk

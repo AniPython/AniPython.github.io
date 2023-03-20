@@ -1,0 +1,5 @@
+
+AndroidBot.findWords
+=========================================================
+
+.. js:autofunction:: AndroidBot#findWords

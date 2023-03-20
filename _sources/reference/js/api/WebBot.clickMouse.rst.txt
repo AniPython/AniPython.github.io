@@ -1,0 +1,5 @@
+
+WebBot.clickMouse
+=========================================================
+
+.. js:autofunction:: WebBot#clickMouse

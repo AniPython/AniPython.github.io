@@ -1,0 +1,14 @@
+
+文本合成语音输出到扬声器播放 ``textToBullhorn()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#textToBullhorn
+
+
+文本合成语音保存到本地音频文件 ``textToAudioFile()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#textToAudioFile
+

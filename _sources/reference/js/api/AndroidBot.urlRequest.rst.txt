@@ -1,0 +1,5 @@
+
+AndroidBot.urlRequest
+=========================================================
+
+.. js:autofunction:: AndroidBot#urlRequest

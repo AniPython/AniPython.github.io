@@ -1,0 +1,5 @@
+
+WindowsBot.findDesktopWindow
+=========================================================
+
+.. js:autofunction:: WindowsBot#findDesktopWindow

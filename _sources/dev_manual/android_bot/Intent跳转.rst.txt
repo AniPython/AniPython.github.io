@@ -1,0 +1,28 @@
+.. currentmodule:: AiBot
+
+
+跳转uri ``openUri()``
+----------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#openUri
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.open_uri
+
+
+拨打电话 ``callPhone()``
+----------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#callPhone
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.call_phone
+
+
+发送短信 ``sendMsg()``
+----------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#sendMsg
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.send_msg

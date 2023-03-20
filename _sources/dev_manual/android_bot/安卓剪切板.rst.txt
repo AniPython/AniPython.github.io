@@ -1,0 +1,18 @@
+.. currentmodule:: AiBot
+
+设置剪切板内容 ``setClipboardText()``
+---------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#setClipboardText
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.set_clipboard_text
+
+
+获取剪切板内容 ``getClipboardText()``
+--------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#getClipboardText
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.get_clipboard_text

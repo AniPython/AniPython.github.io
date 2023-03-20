@@ -1,0 +1,5 @@
+
+WindowsBot.listFineTunes
+=========================================================
+
+.. js:autofunction:: WindowsBot#listFineTunes

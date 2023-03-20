@@ -1,0 +1,5 @@
+
+WebBot.sleep
+=========================================================
+
+.. js:autofunction:: WebBot#sleep

@@ -1,0 +1,5 @@
+
+WindowsBot.getWords
+=========================================================
+
+.. js:autofunction:: WindowsBot#getWords

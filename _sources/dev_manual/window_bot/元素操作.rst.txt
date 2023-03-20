@@ -1,0 +1,110 @@
+
+.. currentmodule:: AiBot
+
+
+获取元素名称 ``getElementName()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getElementName
+    .. tab:: Python
+        .. automethod:: WinBotMain.get_element_name
+
+
+获取元素文本 ``getElementValue()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getElementValue
+    .. tab:: Python
+        .. automethod:: WinBotMain.get_element_value
+
+
+获取元素矩形大小 ``getElementRect()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getElementRect
+    .. tab:: Python
+        .. automethod:: WinBotMain.get_element_rect
+
+
+获取元素窗口句柄 ``getElementWindow()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getElementWindow
+    .. tab:: Python
+        .. automethod:: WinBotMain.get_element_window
+
+
+点击元素 ``clickElement()
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#clickElement
+    .. tab:: Python
+        .. automethod:: WinBotMain.click_element
+
+
+执行元素默认操作(一般是点击操作) ``invokeElement()``
+--------------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#invokeElement
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo
+
+
+设置元素作为焦点 ``setElementFocus()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#setElementFocus
+    .. tab:: Python
+        .. automethod:: WinBotMain.set_element_focus
+
+
+设置元素文本 ``setElementValue()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#setElementValue
+    .. tab:: Python
+        .. automethod:: WinBotMain.set_element_value
+
+
+滚动元素 ``setElementScroll()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#setElementScroll
+    .. tab:: Python
+        .. automethod:: WinBotMain.scroll_element
+
+
+单/复选框是否选中 ``isSelected()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#isSelected
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo
+
+
+关闭窗口 ``closeWindow()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#closeWindow
+    .. tab:: Python
+        .. automethod:: WinBotMain.close_window
+
+
+设置窗口状态 ``setWindowState()``
+---------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#setWindowState
+    .. tab:: Python
+        .. automethod:: WinBotMain.set_element_state

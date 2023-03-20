@@ -1,0 +1,5 @@
+
+WebBot.getElementInnerHTML
+=========================================================
+
+.. js:autofunction:: WebBot#getElementInnerHTML

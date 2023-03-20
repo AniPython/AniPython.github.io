@@ -1,0 +1,5 @@
+
+WindowsBot.readExcelStr
+=========================================================
+
+.. js:autofunction:: WindowsBot#readExcelStr

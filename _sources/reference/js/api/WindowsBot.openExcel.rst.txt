@@ -1,0 +1,5 @@
+
+WindowsBot.openExcel
+=========================================================
+
+.. js:autofunction:: WindowsBot#openExcel

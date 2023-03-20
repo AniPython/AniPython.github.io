@@ -1,0 +1,5 @@
+
+WebBot.getElementAttribute
+=========================================================
+
+.. js:autofunction:: WebBot#getElementAttribute

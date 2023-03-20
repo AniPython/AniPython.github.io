@@ -1,0 +1,5 @@
+
+WebBot.mobileEmulation
+=========================================================
+
+.. js:autofunction:: WebBot#mobileEmulation

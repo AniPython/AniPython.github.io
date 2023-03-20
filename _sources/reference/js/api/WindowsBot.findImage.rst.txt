@@ -1,0 +1,5 @@
+
+WindowsBot.findImage
+=========================================================
+
+.. js:autofunction:: WindowsBot#findImage

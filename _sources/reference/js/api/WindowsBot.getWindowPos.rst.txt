@@ -1,0 +1,5 @@
+
+WindowsBot.getWindowPos
+=========================================================
+
+.. js:autofunction:: WindowsBot#getWindowPos

@@ -55,7 +55,7 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="界面开发" href="../ui/index.html" />
+    <link rel="next" title="API reference" href="../../reference/index.html" />
     <link rel="prev" title="WebSocketBot" href="../web_socket_bot/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
@@ -285,11 +285,11 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../android_bot/index.html">AndroidBot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../window_bot/index.html">WindowBot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../web_bot/index.html">WebBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../window_bot/index.html">WindowBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui/index.html">界面开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../web_socket_bot/index.html">WebSocketBot</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">多模块混合开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ui/index.html">界面开发</a></li>
 </ul>
 </div>
 </nav></div>
@@ -351,88 +351,88 @@ document.write(`
 <h1>多模块混合开发<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h1>
 <section id="windowsbot-webbot">
 <h2>WindowsBot &amp; WebBot<a class="headerlink" href="#windowsbot-webbot" title="此标题的永久链接">#</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WindowsBot&#39;</span><span class="p">);</span><span class="c1">//引用WindowsBot模块</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">WebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebBot&#39;</span><span class="p">);</span><span class="c1">//引用WebBot模块</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WindowsBot&#39;</span><span class="p">);</span><span class="c1">//引用WindowsBot模块</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">WebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WebBot&#39;</span><span class="p">);</span><span class="c1">//引用WebBot模块</span><span class="w"></span>
 
-<span class="c1">//注册主函数</span>
-<span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">windowsMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">26678</span><span class="p">);</span>
-<span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;chrome&quot;</span><span class="p">});</span>
+<span class="c1">//注册主函数</span><span class="w"></span>
+<span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">windowsMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">26678</span><span class="p">);</span><span class="w"></span>
+<span class="nx">WebBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">webMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">36678</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">browserName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;chrome&quot;</span><span class="p">});</span><span class="w"></span>
 
-<span class="c1">//bot 存放全局变量</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">gWebBot</span><span class="p">;</span>
+<span class="c1">//bot 存放全局变量</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">;</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">gWebBot</span><span class="p">;</span><span class="w"></span>
 
-<span class="c1">//回调函数接受存放驱动Bot</span>
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">windowsMain</span><span class="p">(</span><span class="nx">windowsBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="c1">//回调函数接受存放驱动Bot</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">windowsMain</span><span class="p">(</span><span class="nx">windowsBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">webMain</span><span class="p">(</span><span class="nx">webBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">gWebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">webBot</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">webMain</span><span class="p">(</span><span class="nx">webBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">gWebBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">webBot</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
 
 <span class="cm">/**用作代码提示</span>
 <span class="cm"> * @param {WindowsBot} windowsBot</span>
 <span class="cm"> * @param {WebBot} webBot</span>
-<span class="cm"> */</span>
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">(</span><span class="nx">windowsBot</span><span class="p">,</span><span class="w"> </span><span class="nx">webBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">//WebBot和WindowsBot 大多数都是本地启动驱动程序，因此只有一个驱动对象，我们可以采用此方式处理。</span>
-<span class="w">    </span><span class="c1">//如果WebBot或者WindowsBot其中有采用云端远程连接方式，我们可以参考下面的 WindowsBot &amp; AndroidBot 实现方案</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">(</span><span class="nx">windowsBot</span><span class="p">,</span><span class="w"> </span><span class="nx">webBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//WebBot和WindowsBot 大多数都是本地启动驱动程序，因此只有一个驱动对象，我们可以采用此方式处理。</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//如果WebBot或者WindowsBot其中有采用云端远程连接方式，我们可以参考下面的 WindowsBot &amp; AndroidBot 实现方案</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//为null，等待再赋值</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">windowsBot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">webBot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">sleep</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span>
-<span class="w">        </span><span class="nx">windowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">webBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gWebBot</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">//为null，等待再赋值</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">windowsBot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">webBot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">sleep</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">windowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">webBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gWebBot</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//设置隐式等待</span>
-<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span>
-<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">webBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//设置隐式等待</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">webBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//实现功能...</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="c1">//实现功能...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="nx">main</span><span class="p">(</span><span class="nx">gWindowsBot</span><span class="p">,</span><span class="w"> </span><span class="nx">gWebBot</span><span class="p">);</span><span class="c1">//自定义主函数，并且传递windowsBot 和webBot</span>
+<span class="nx">main</span><span class="p">(</span><span class="nx">gWindowsBot</span><span class="p">,</span><span class="w"> </span><span class="nx">gWebBot</span><span class="p">);</span><span class="c1">//自定义主函数，并且传递windowsBot 和webBot</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="windowsbot-androidbot">
 <h2>WindowsBot &amp; AndroidBot<a class="headerlink" href="#windowsbot-androidbot" title="此标题的永久链接">#</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WindowsBot&#39;</span><span class="p">);</span><span class="c1">//引用WindowsBot模块</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">AndroidBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;AndroidBot&#39;</span><span class="p">);</span><span class="c1">//引用AndroidBot模块</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">WindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;WindowsBot&#39;</span><span class="p">);</span><span class="c1">//引用WindowsBot模块</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">AndroidBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;AndroidBot&#39;</span><span class="p">);</span><span class="c1">//引用AndroidBot模块</span><span class="w"></span>
 
-<span class="c1">//注册主函数</span>
-<span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">windowsMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">26678</span><span class="p">);</span><span class="c1">//windowsMain 应当在 androidMain之前注册，以防在androidMain 函数内，出现gWindowsBot未赋值情况</span>
-<span class="nx">AndroidBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">androidMain</span><span class="p">,</span><span class="w"> </span><span class="mf">16678</span><span class="p">);</span>
+<span class="c1">//注册主函数</span><span class="w"></span>
+<span class="nx">WindowsBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">windowsMain</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">26678</span><span class="p">);</span><span class="c1">//windowsMain 应当在 androidMain之前注册，以防在androidMain 函数内，出现gWindowsBot未赋值情况</span><span class="w"></span>
+<span class="nx">AndroidBot</span><span class="p">.</span><span class="nx">registerMain</span><span class="p">(</span><span class="nx">androidMain</span><span class="p">,</span><span class="w"> </span><span class="mf">16678</span><span class="p">);</span><span class="w"></span>
 
-<span class="c1">//bot 存放全局变量</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="c1">//bot 存放全局变量</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
 
-<span class="c1">//回调 函数接受存放驱动Bot</span>
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">windowsMain</span><span class="p">(</span><span class="nx">windowsBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="c1">//回调 函数接受存放驱动Bot</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">windowsMain</span><span class="p">(</span><span class="nx">windowsBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">windowsBot</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
 <span class="cm">/**用作代码提示，androidMain函数会被多次调用，注意使用全局变量</span>
 <span class="cm"> * @param {AndroidBot} androidBot</span>
-<span class="cm"> */</span>
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">androidMain</span><span class="p">(</span><span class="nx">androidBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">//AndroidBot较为特殊，它是纯云端构架，只能远程等待连接。不像WebBot和WindowsBot 可以本地执行驱动，也可以远程等待驱动连接</span>
-<span class="w">    </span><span class="c1">//AndroidBot 云端构架多设备连接的特殊性，我们直接在回到函数处理</span>
-<span class="w">    </span><span class="c1">//用户也可以将androidBot存入数组，在其他函数调用。可参考WebSocketBot&amp;AndroidBot 服务端node.js 代码</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">androidMain</span><span class="p">(</span><span class="nx">androidBot</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//AndroidBot较为特殊，它是纯云端构架，只能远程等待连接。不像WebBot和WindowsBot 可以本地执行驱动，也可以远程等待驱动连接</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//AndroidBot 云端构架多设备连接的特殊性，我们直接在回到函数处理</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//用户也可以将androidBot存入数组，在其他函数调用。可参考WebSocketBot&amp;AndroidBot 服务端node.js 代码</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//为null，等待gWindowsBot赋值</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span>
-<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">sleep</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//为null，等待gWindowsBot赋值</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">gWindowsBot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">sleep</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//这里直接使用gWindowsBot。</span>
-<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span>
-<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">//这里直接使用gWindowsBot。</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">gWindowsBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">androidBot</span><span class="p">.</span><span class="nx">setImplicitTimeout</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">//实现功能</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="c1">//实现功能</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -456,11 +456,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../ui/index.html"
+       href="../../reference/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">界面开发</p>
+        <p class="prev-next-title">API reference</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -483,14 +483,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windowsbot-androidbot">WindowsBot &amp; AndroidBot</a></li>
 </ul>
   </nav></div>
-
-  <div class="sidebar-secondary-item">
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/dev_manual/multimodule_mixing/index.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> 显示源代码
-    </a>
-  </div>
-</div>
 
 </div></div>
               
@@ -535,7 +527,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
 </p></div>
       
     </div>

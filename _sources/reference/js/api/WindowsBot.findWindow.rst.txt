@@ -1,0 +1,5 @@
+
+WindowsBot.findWindow
+=========================================================
+
+.. js:autofunction:: WindowsBot#findWindow

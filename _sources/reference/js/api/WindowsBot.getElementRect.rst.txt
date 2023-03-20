@@ -1,0 +1,5 @@
+
+WindowsBot.getElementRect
+=========================================================
+
+.. js:autofunction:: WindowsBot#getElementRect

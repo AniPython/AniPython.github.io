@@ -1,0 +1,76 @@
+.. currentmodule:: AiBot
+
+
+移动鼠标 ``moveMouse()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#moveMouse
+    .. tab:: Python
+        .. automethod:: WinBotMain.move_mouse
+
+
+移动鼠标(相对坐标) ``moveMouseRelative()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#moveMouseRelative
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo
+
+
+
+滚动鼠标 ``rollMouse()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#rollMouse
+    .. tab:: Python
+        .. automethod:: WinBotMain.scroll_mouse
+
+
+
+鼠标点击 ``clickMouse()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#clickMouse
+    .. tab:: Python
+        .. automethod:: WinBotMain.click_mouse
+
+
+输入文本 ``sendKeys()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#sendKeys
+    .. tab:: Python
+        .. automethod:: WinBotMain.send_keys
+
+
+后台输入文本 ``sendKeysByHwnd()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#sendKeysByHwnd
+    .. tab:: Python
+        .. automethod:: WinBotMain.send_keys_by_hwnd
+
+
+输入虚拟键值(VK) ``sendVk()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#sendVk
+    .. tab:: Python
+        .. automethod:: WinBotMain.send_vk
+
+
+后台输入虚拟键值(VK) ``sendVkByHwnd()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#sendVkByHwnd
+    .. tab:: Python
+        .. automethod:: WinBotMain.send_vk_by_hwnd
+

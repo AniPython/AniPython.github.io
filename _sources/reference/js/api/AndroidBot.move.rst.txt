@@ -1,0 +1,5 @@
+
+AndroidBot.move
+=========================================================
+
+.. js:autofunction:: AndroidBot#move

@@ -1,0 +1,5 @@
+
+AndroidBot.setElementText
+=========================================================
+
+.. js:autofunction:: AndroidBot#setElementText

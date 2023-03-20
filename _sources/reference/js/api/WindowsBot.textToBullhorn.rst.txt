@@ -1,0 +1,5 @@
+
+WindowsBot.textToBullhorn
+=========================================================
+
+.. js:autofunction:: WindowsBot#textToBullhorn

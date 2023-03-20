@@ -1,0 +1,5 @@
+
+AndroidBot.writeAndroidFile
+=========================================================
+
+.. js:autofunction:: AndroidBot#writeAndroidFile

@@ -1,0 +1,5 @@
+
+AndroidBot.pushFile
+=========================================================
+
+.. js:autofunction:: AndroidBot#pushFile

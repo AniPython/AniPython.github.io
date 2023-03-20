@@ -1,0 +1,5 @@
+
+AndroidBot.createTextView
+=========================================================
+
+.. js:autofunction:: AndroidBot#createTextView

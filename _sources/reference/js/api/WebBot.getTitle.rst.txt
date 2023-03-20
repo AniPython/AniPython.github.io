@@ -1,0 +1,5 @@
+
+WebBot.getTitle
+=========================================================
+
+.. js:autofunction:: WebBot#getTitle

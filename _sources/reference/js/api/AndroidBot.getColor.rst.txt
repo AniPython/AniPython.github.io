@@ -1,0 +1,5 @@
+
+AndroidBot.getColor
+=========================================================
+
+.. js:autofunction:: AndroidBot#getColor

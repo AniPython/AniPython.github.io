@@ -1,0 +1,5 @@
+
+WindowsBot.removeExcelCol
+=========================================================
+
+.. js:autofunction:: WindowsBot#removeExcelCol

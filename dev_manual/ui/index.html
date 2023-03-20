@@ -57,8 +57,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'dev_manual/ui/index';</script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="API reference" href="../../reference/index.html" />
-    <link rel="prev" title="多模块混合开发" href="../multimodule_mixing/index.html" />
+    <link rel="next" title="WebSocketBot" href="../web_socket_bot/index.html" />
+    <link rel="prev" title="WindowBot" href="../window_bot/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="zh-CN"/>
   </head>
@@ -287,11 +287,11 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../android_bot/index.html">AndroidBot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../window_bot/index.html">WindowBot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../web_bot/index.html">WebBot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../window_bot/index.html">WindowBot</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">界面开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../web_socket_bot/index.html">WebSocketBot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../multimodule_mixing/index.html">多模块混合开发</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">界面开发</a></li>
 </ul>
 </div>
 </nav></div>
@@ -359,9 +359,9 @@ document.write(`
 <section id="id2">
 <h2>界面宽高<a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">SetAiboteSize</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="p">);</span>
-<span class="c1">//AiboteScriptUI 宽高 由document.body.offsetHeight 和 document.body.offsetWidth决定</span>
-<span class="c1">//此函数脚本作者不可见，内部自动执行。脚本作者需要设定页面 body 宽高</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">SetAiboteSize</span><span class="p">(</span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//AiboteScriptUI 宽高 由document.body.offsetHeight 和 document.body.offsetWidth决定</span><span class="w"></span>
+<span class="c1">//此函数脚本作者不可见，内部自动执行。脚本作者需要设定页面 body 宽高</span><span class="w"></span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span>
@@ -372,10 +372,10 @@ document.write(`
 <section id="id3">
 <h2>启动脚本<a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">StartScript</span><span class="p">(</span><span class="s2">&quot;../testAibote.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
-<span class="c1">//参数一 字符串型。要启动脚本的路径，空格分隔脚本参数。 脚本可通过 let args = process.argv.splice(2); 接收参数</span>
-<span class="c1">//参数二 布尔类型。是否显示控制台日志，true 显示控制台日志</span>
-<span class="c1">//返回值 脚本进程ID</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">StartScript</span><span class="p">(</span><span class="s2">&quot;../testAibote.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//参数一 字符串型。要启动脚本的路径，空格分隔脚本参数。 脚本可通过 let args = process.argv.splice(2); 接收参数</span><span class="w"></span>
+<span class="c1">//参数二 布尔类型。是否显示控制台日志，true 显示控制台日志</span><span class="w"></span>
+<span class="c1">//返回值 脚本进程ID</span><span class="w"></span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span>
@@ -386,9 +386,9 @@ document.write(`
 <section id="id4">
 <h2>停止脚本<a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-2-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-2-2-0" name="2-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-2-2-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-1" name="2-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-2-2-0" class="sphinx-tabs-panel" id="panel-2-2-0" name="2-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">StopScript</span><span class="p">(</span><span class="nx">processId</span><span class="p">);</span>
-<span class="c1">//参数一 数字型。脚本进程ID</span>
-<span class="c1">//成功返回true 失败返回false</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-2-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-2-2-0" name="2-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-2-2-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-1" name="2-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-2-2-0" class="sphinx-tabs-panel" id="panel-2-2-0" name="2-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">StopScript</span><span class="p">(</span><span class="nx">processId</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//参数一 数字型。脚本进程ID</span><span class="w"></span>
+<span class="c1">//成功返回true 失败返回false</span><span class="w"></span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-2-2-1" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-1" name="2-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span>
@@ -399,9 +399,9 @@ document.write(`
 <section id="id5">
 <h2>输出日志<a class="headerlink" href="#id5" title="此标题的永久链接">#</a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-3-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-3-3-0" name="3-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-3-3-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-3-3-1" name="3-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-3-3-0" class="sphinx-tabs-panel" id="panel-3-3-0" name="3-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">PrintAiboteLog</span><span class="p">();</span>
-<span class="c1">//当StartScript第二个参数为 false 时有效，可以使用 setInterval 循环输出，输出10000字节时，会自动清空内容</span>
-<span class="c1">//返回脚本输出内容</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-3-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-3-3-0" name="3-0" role="tab" tabindex="0">JavaScript</button><button aria-controls="panel-3-3-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-3-3-1" name="3-1" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-3-3-0" class="sphinx-tabs-panel" id="panel-3-3-0" name="3-0" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">PrintAiboteLog</span><span class="p">();</span><span class="w"></span>
+<span class="c1">//当StartScript第二个参数为 false 时有效，可以使用 setInterval 循环输出，输出10000字节时，会自动清空内容</span><span class="w"></span>
+<span class="c1">//返回脚本输出内容</span><span class="w"></span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-3-3-1" class="sphinx-tabs-panel" hidden="true" id="panel-3-3-1" name="3-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span>
@@ -420,20 +420,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../multimodule_mixing/index.html"
+       href="../window_bot/index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">上一页</p>
-        <p class="prev-next-title">多模块混合开发</p>
+        <p class="prev-next-title">WindowBot</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../reference/index.html"
+       href="../web_socket_bot/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">API reference</p>
+        <p class="prev-next-title">WebSocketBot</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -458,14 +458,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">输出日志</a></li>
 </ul>
   </nav></div>
-
-  <div class="sidebar-secondary-item">
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/dev_manual/ui/index.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> 显示源代码
-    </a>
-  </div>
-</div>
 
 </div></div>
               
@@ -510,7 +502,7 @@ document.write(`
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
 </p></div>
       
     </div>

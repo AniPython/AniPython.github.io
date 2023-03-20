@@ -1,0 +1,5 @@
+
+WebBot.setWindowPos
+=========================================================
+
+.. js:autofunction:: WebBot#setWindowPos

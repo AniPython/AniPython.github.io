@@ -1,0 +1,5 @@
+
+WindowsBot.removeExcelRow
+=========================================================
+
+.. js:autofunction:: WindowsBot#removeExcelRow

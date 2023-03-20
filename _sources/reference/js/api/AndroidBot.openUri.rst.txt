@@ -1,0 +1,5 @@
+
+AndroidBot.openUri
+=========================================================
+
+.. js:autofunction:: AndroidBot#openUri

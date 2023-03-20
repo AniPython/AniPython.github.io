@@ -1,0 +1,37 @@
+.. currentmodule:: AiBot
+
+
+写入安卓文件 ``writeAndroidFile()``
+----------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#writeAndroidFile
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.write_android_file
+
+
+读取安卓文件 ``readAndroidFile()``
+----------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#readAndroidFile
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.read_android_file
+
+
+删除安卓文件 ``deleteAndroidFile()``
+----------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#deleteAndroidFile
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.delete_android_file
+
+
+判断文件是否存在 ``existsAndroidFile()``
+----------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#existsAndroidFile
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.exists_android_file

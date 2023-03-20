@@ -1,0 +1,5 @@
+
+WindowsBot.getClipboardText
+=========================================================
+
+.. js:autofunction:: WindowsBot#getClipboardText

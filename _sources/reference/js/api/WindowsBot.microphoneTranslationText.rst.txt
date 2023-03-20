@@ -1,0 +1,5 @@
+
+WindowsBot.microphoneTranslationText
+=========================================================
+
+.. js:autofunction:: WindowsBot#microphoneTranslationText

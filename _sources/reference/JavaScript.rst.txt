@@ -1,0 +1,13 @@
+.. _api.js:
+
+Javascript
+===================
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Javascript
+
+    js/AndroidBot
+    js/WebBot
+    js/WindowsBot
+

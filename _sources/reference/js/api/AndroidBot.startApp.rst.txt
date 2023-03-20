@@ -1,0 +1,5 @@
+
+AndroidBot.startApp
+=========================================================
+
+.. js:autofunction:: AndroidBot#startApp

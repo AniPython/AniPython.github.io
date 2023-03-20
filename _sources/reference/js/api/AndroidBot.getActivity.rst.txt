@@ -1,0 +1,5 @@
+
+AndroidBot.getActivity
+=========================================================
+
+.. js:autofunction:: AndroidBot#getActivity

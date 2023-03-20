@@ -1,0 +1,5 @@
+
+WebBot.getElementOuterHTML
+=========================================================
+
+.. js:autofunction:: WebBot#getElementOuterHTML

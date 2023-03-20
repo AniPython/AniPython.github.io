@@ -1,0 +1,5 @@
+
+WindowsBot.textToAudioFile
+=========================================================
+
+.. js:autofunction:: WindowsBot#textToAudioFile

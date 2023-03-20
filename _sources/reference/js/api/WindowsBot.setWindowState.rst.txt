@@ -1,0 +1,5 @@
+
+WindowsBot.setWindowState
+=========================================================
+
+.. js:autofunction:: WindowsBot#setWindowState

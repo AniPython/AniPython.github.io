@@ -1,0 +1,5 @@
+
+WebBot.setElementFocus
+=========================================================
+
+.. js:autofunction:: WebBot#setElementFocus

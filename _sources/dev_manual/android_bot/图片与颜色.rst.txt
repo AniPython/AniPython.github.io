@@ -1,0 +1,57 @@
+.. currentmodule:: AiBot
+
+
+截图保存 ``saveScreenshot()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#saveScreenshot
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.save_screenshot
+
+
+找图 ``findImage()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#findImage
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.find_image
+
+
+找动态图 ``findAnimation()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#findAnimation
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.find_dynamic_image
+
+
+获取颜色值 ``getColor()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#findColor
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.find_color
+
+
+比色 ``compareColor()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#compareColor
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.todo
+
+
+找色 ``findColor()``
+--------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: AndroidBot#findColor
+    .. tab:: Python
+        .. automethod:: AndroidBotMain.find_color
+
+

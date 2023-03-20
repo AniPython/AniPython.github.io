@@ -1,0 +1,5 @@
+
+WindowsBot.getWindowName
+=========================================================
+
+.. js:autofunction:: WindowsBot#getWindowName

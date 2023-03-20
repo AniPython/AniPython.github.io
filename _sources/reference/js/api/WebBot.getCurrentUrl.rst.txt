@@ -1,0 +1,5 @@
+
+WebBot.getCurrentUrl
+=========================================================
+
+.. js:autofunction:: WebBot#getCurrentUrl

@@ -1,0 +1,5 @@
+
+WindowsBot.downloadFile
+=========================================================
+
+.. js:autofunction:: WindowsBot#downloadFile

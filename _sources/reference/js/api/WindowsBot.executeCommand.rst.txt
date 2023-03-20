@@ -1,0 +1,5 @@
+
+WindowsBot.executeCommand
+=========================================================
+
+.. js:autofunction:: WindowsBot#executeCommand

@@ -5,10 +5,10 @@ Aibote 开发手册
 .. toctree::
     :maxdepth: 3
 
-    android_bot/index.rst
-    window_bot/index.rst
-    web_bot/index.rst
-    web_socket_bot/index.rst
-    multimodule_mixing/index.rst
-    ui/index.rst
+    android_bot/index
+    web_bot/index
+    window_bot/index
+    ui/index
+    web_socket_bot/index
+    multimodule_mixing/index
 

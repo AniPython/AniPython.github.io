@@ -1,0 +1,55 @@
+.. currentmodule:: AiBot
+
+
+截图保存 ``saveScreenshot()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#saveScreenshot
+    .. tab:: Python
+        .. automethod:: WinBotMain.save_screenshot
+
+
+获取指定坐标点的色值 ``getColor()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#getColor
+    .. tab:: Python
+        .. automethod:: WinBotMain.get_color
+
+
+找图 ``findImage()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#findImage
+    .. tab:: Python
+        .. automethod:: WinBotMain.find_images
+
+
+找动态图 ``findAnimation()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#findAnimation
+    .. tab:: Python
+        .. automethod:: WinBotMain.find_dynamic_image
+
+
+查找指定色值的坐标点 ``findColor()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#findColor
+    .. tab:: Python
+        .. automethod:: WinBotMain.find_color
+
+
+比较指定坐标点的颜色值 ``compareColor()``
+------------------------------------------
+.. tabs::
+    .. tab:: JavaScript
+        .. js:autofunction:: WindowsBot#compareColor
+    .. tab:: Python
+        .. automethod:: WinBotMain.todo

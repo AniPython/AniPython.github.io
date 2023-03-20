@@ -1,0 +1,5 @@
+
+WindowsBot.errorCaptcha
+=========================================================
+
+.. js:autofunction:: WindowsBot#errorCaptcha

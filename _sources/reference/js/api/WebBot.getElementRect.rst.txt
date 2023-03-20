@@ -1,0 +1,5 @@
+
+WebBot.getElementRect
+=========================================================
+
+.. js:autofunction:: WebBot#getElementRect

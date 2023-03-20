@@ -1,0 +1,5 @@
+
+AndroidBot.getScriptParam
+=========================================================
+
+.. js:autofunction:: AndroidBot#getScriptParam

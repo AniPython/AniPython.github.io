@@ -1,0 +1,5 @@
+
+WindowsBot.listTrainFile
+=========================================================
+
+.. js:autofunction:: WindowsBot#listTrainFile

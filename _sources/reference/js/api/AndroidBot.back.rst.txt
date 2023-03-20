@@ -1,0 +1,5 @@
+
+AndroidBot.back
+=========================================================
+
+.. js:autofunction:: AndroidBot#back

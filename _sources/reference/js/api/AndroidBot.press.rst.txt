@@ -1,0 +1,5 @@
+
+AndroidBot.press
+=========================================================
+
+.. js:autofunction:: AndroidBot#press

@@ -1,0 +1,5 @@
+
+WindowsBot.chatgptEdit
+=========================================================
+
+.. js:autofunction:: WindowsBot#chatgptEdit

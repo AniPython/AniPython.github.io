@@ -1,0 +1,5 @@
+
+WindowsBot.scoreCaptcha
+=========================================================
+
+.. js:autofunction:: WindowsBot#scoreCaptcha

@@ -1,0 +1,5 @@
+
+WindowsBot.setWindowTop
+=========================================================
+
+.. js:autofunction:: WindowsBot#setWindowTop

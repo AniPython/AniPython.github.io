@@ -1,0 +1,5 @@
+
+AndroidBot.getClipboardText
+=========================================================
+
+.. js:autofunction:: AndroidBot#getClipboardText

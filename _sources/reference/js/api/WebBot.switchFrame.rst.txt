@@ -1,0 +1,5 @@
+
+WebBot.switchFrame
+=========================================================
+
+.. js:autofunction:: WebBot#switchFrame

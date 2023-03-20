@@ -1,0 +1,5 @@
+
+WebBot.refresh
+=========================================================
+
+.. js:autofunction:: WebBot#refresh

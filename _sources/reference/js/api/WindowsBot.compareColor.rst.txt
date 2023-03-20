@@ -1,0 +1,5 @@
+
+WindowsBot.compareColor
+=========================================================
+
+.. js:autofunction:: WindowsBot#compareColor

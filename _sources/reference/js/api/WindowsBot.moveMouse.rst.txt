@@ -1,0 +1,5 @@
+
+WindowsBot.moveMouse
+=========================================================
+
+.. js:autofunction:: WindowsBot#moveMouse

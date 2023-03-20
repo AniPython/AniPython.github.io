@@ -1,0 +1,5 @@
+
+WebBot.executeScript
+=========================================================
+
+.. js:autofunction:: WebBot#executeScript

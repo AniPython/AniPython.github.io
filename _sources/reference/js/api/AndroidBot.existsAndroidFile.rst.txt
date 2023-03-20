@@ -1,0 +1,5 @@
+
+AndroidBot.existsAndroidFile
+=========================================================
+
+.. js:autofunction:: AndroidBot#existsAndroidFile
