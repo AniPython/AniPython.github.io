@@ -1,0 +1,1631 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>API 开源协议 &#8212; Aibote  文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="AiBot.WebBotMain.upload_file_by_element" href="../reference/py/api/AiBot.WebBotMain.upload_file_by_element.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aibote  文档</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        Aibote 基本使用
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../dev_manual/index.html">
+                        Aibote 开发手册
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        API 参考
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        API 开源协议
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        Aibote 基本使用
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../dev_manual/index.html">
+                        Aibote 开发手册
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        API 参考
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        API 开源协议
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">API 开源协议</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="api">
+<h1>API 开源协议<a class="headerlink" href="#api" title="此标题的永久链接">#</a></h1>
+</section>
+<section id="id1">
+<h1>数据包收发格式<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h1>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>框架封装作者应当考虑远程部署数据包传输完整性问题
+
+发送命令协议格式：len/len/len...\ndata
+//len：函数名和参数的(字节)长度，统一为十进制 字符串类型
+//data：函数名和参数数据 类型为 字符串或字节类型(string/byte) 
+
+接收命令协议格式：len/data
+//len：返回数据包的(字节)长度
+//data：返回的数据，类型为字符串或字节类型(string/byte) 
+</pre></div>
+</div>
+</section>
+<section id="andoridbot">
+<h1>AndoridBot开源协议<a class="headerlink" href="#andoridbot" title="此标题的永久链接">#</a></h1>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>Aibote安卓云端自动化框架，采用云端服务模式构建。由安卓手机客户端主动连接服务器/电脑服务端程序，
+服务端应采用多线程TCP协议和多个安卓设备通信。构架模式决定了自动化代码部署在云端，能有效防止脚本被第三方恶意破解。
+结合Aibote远程投屏技术，可直接连接远程用户设备做自动化机器人编写，完美解决远程自动化测试需求。独家图色定位算法，
+50毫秒以内的速度遍历查找2340*1080分辨率的设备。为了让更多人体验到我们产品，我们决议在此公布框架协议，
+希望有更多开发者能完善并封装成各种计算机语言，封装请参考nodejs版的函数说明
+
+协议示例：
+//截图保存
+sendData(&quot;saveScreenshot&quot;, &quot;/storage/emulated/0/Android/data/com.aibot.client/files/1.png&quot;, 80, 150, 30, 30, 0, 127, 255);
+// 参数一：函数名称
+// 参数二：保存的图片路径（手机）
+// 参数三：矩形左上角x坐标
+// 参数四：矩形左上角y坐标
+// 参数五：矩形右下角x坐标
+// 参数六：矩形右下角y坐标
+// 参数七：二值化算法类型
+// 参数八：二值化阈值
+// 参数九：二值化最大值
+发送数据包：14/61/2/3/2/2/1/3/3\nsaveScreenshot/storage/emulated/0/Android/data/com.aibot.client/files/1.png8015030300127255
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取色值
+sendData(&quot;getColor&quot;, 100, 200);
+// 参数一：函数名称
+// 参数二：x坐标
+// 参数三：y坐标
+数据包：8/3/3\ngetColor100200
+返回数据包：#000000
+
+//找图
+sendData(&quot;findImage&quot;, &quot;/storage/emulated/0/Android/data/com.aibot.client/files/1.png&quot;, 0, 0, 0, 0, 0.95, 0, 0, 0, 1);
+// 参数一：函数名称
+// 参数二：保存的图片路径（手机）
+// 参数三：矩形左上角x坐标
+// 参数四：矩形左上角y坐标
+// 参数五：矩形右下角x坐标
+// 参数六：矩形右下角y坐标
+// 参数七：相似度
+// 参数八：二值化算法类型
+// 参数九：二值化阈值
+// 参数十：二值化最大值
+// 参数十一：多个坐标点
+数据包：9/61/1/1/1/1/4/1/1/1/1\nfindImage/storage/emulated/0/Android/data/com.aibot.client/files/1.png00000.950001
+返回数据包：单坐标点成功&quot;x|y&quot;  多坐标点成功 &quot;x1|y1/x2|y2...&quot;  失败&quot;-1.0|-1.0&quot;
+
+//找动态图
+sendData(&quot;findAnimation&quot;, 100, 0, 0, 0, 0);
+// 参数一：函数名称
+// 参数二：前后两张图相隔的时间，单位毫秒
+// 参数三：矩形左上角x坐标
+// 参数四：矩形左上角y坐标
+// 参数五：矩形右下角x坐标
+// 参数六：矩形右下角y坐标
+数据包：13/3/0/0/0/0\nfindAnimation1000000
+返回数据包：单坐标点成功&quot;x|y&quot;  多坐标点成功 &quot;x1|y1/x2|y2...&quot;  失败&quot;-1.0|-1.0&quot;
+
+//找色
+sendData(&quot;findColor&quot;, &quot;#e8f2f8&quot;, &quot;10/20/#e7f0f7&quot;, 0, 0, 0, 0, 1);
+// 参数一：函数名称
+// 参数二：主颜色值
+// 参数三：相对偏移的颜色点，以 &quot;x坐标+y坐标+色值&quot; 字符串形式
+// 参数四：矩形左上角x坐标
+// 参数五：矩形左上角y坐标
+// 参数六：矩形右下角x坐标
+// 参数七：矩形右下角y坐标
+// 参数八：相似度
+数据包：9/7/13/1/1/1/1/1\nfindColor#e8f2f810/20/#e7f0f700001
+返回数据包：成功&quot;x|y&quot; 失败&quot;-1.0|-1.0&quot;
+
+//比色
+sendData(&quot;compareColor&quot;, 100, 200, &quot;#e8f2f8&quot;, &quot;10/20/#e7f0f7&quot;, 0, 0, 0, 0, 1);
+// 参数一：函数名称
+// 参数二：主颜色值所在的X坐标
+// 参数三：主颜色值所在的Y坐标
+// 参数四：主颜色值
+// 参数五：相对偏移的颜色点，以 &quot;x坐标+y坐标+色值&quot; 字符串形式
+// 参数六：矩形左上角x坐标
+// 参数七：矩形左上角y坐标
+// 参数八：矩形右下角x坐标
+// 参数九：矩形右下角y坐标
+// 参数十：相似度
+数据包：12/3/3/7/13/1/1/1/1/1\ncompareColor100200#e8f2f810/20/#e7f0f700001
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//手指按下
+sendData(&quot;press&quot;, 10, 20, 3000);
+// 参数一：函数名称
+// 参数二：x坐标
+// 参数三：y坐标
+// 参数四：按下持续时间
+数据包：5/2/2/4\npress10203000
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//手指移动
+sendData(&quot;move&quot;, 10, 20, 3000);
+// 参数一：函数名称
+// 参数二：x坐标
+// 参数三：y坐标
+// 参数四：移动持续时间
+数据包：4/2/2/4\nmove10203000
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//手指抬起
+sendData(&quot;release&quot;);
+// 参数一：函数名称
+数据包：7\nrelease
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//点击坐标
+sendData(&quot;click&quot;, 200, 500);
+// 参数一：函数名称
+// 参数二：x坐标
+// 参数三：y坐标
+数据包：5/3/3\nclick200500
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//双击坐标
+sendData(&quot;doubleClick&quot;, 200, 500);
+// 参数一：函数名称
+// 参数二：x坐标
+// 参数三：y坐标
+数据包：11/3/3\ndoubleClick200500
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//长按坐标
+sendData(&quot;longClick&quot;, 10, 20, 3000);
+// 参数一：函数名称
+// 参数二：x坐标
+// 参数三：y坐标
+// 参数四：长按持续时间
+数据包：9/2/2/4\nlongClick10203000
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//滑动坐标
+sendData(&quot;swipe&quot;, 10, 10, 200, 200, 1000);
+// 参数一：函数名称
+// 参数二：开始x坐标
+// 参数三：开始y坐标
+// 参数四：结束x坐标
+// 参数五：结束y坐标
+// 参数六：滑动耗时
+数据包：5/2/2/3/3/4\nswipe10102002001000
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//执行手势
+sendData(&quot;dispatchGesture&quot;, &quot;1000/1558\n100/100\n799/800\n234/89&quot;, 3000);
+// 参数一：函数名称
+// 参数二：执行手势坐标位， 以&quot;/&quot;分割横纵坐标 &quot;\n&quot;分割坐标点。注意：末尾坐标点没有\n结束
+// 参数三：手势耗时
+数据包：15/35/4\ndispatchGesture1000/1558\n100/100\n799/800\n234/893000
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//执行多个手势
+sendData(&quot;dispatchGestures&quot;, &quot;1000/100/100\n200/200\r\n2000/300/300\n500/500&quot;);
+// 参数一：函数名称
+// 参数二：执行手势坐标位， 以&quot;/&quot;分割手势时长、横纵和坐标 &quot;\n&quot;分割坐标点。&quot;\r\n&quot;分割多个手势
+数据包：16/46\ndispatchGestures1000/100/100\n200/200\r\n2000/300/300\n500/500
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//发送文本
+sendData(&quot;sendKeys&quot;, &quot;aibot&quot;);
+// 参数一：函数名称
+// 参数二：文本内容
+数据包：8/5\nsendKeysaibot
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//返回
+sendData(&quot;back&quot;);
+// 参数一：函数名称
+数据包：4\nback
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//home
+sendData(&quot;home&quot;);
+// 参数一：函数名称
+数据包：4\nhome
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//最近任务列表
+sendData(&quot;recents&quot;);
+// 参数一：函数名称
+数据包：7\nrecents
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//发送按键
+sendData(&quot;sendVk&quot;, 187);
+// 参数一：函数名称
+// 参数二：虚拟键值 按键对照表 https://blog.csdn.net/yaoyaozaiye/article/details/122826340
+数据包：6/3\nsendVk187
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//启动App
+sendData(&quot;startApp&quot;, &quot;QQ&quot;);
+// 参数一：函数名称
+// 参数二：启动APP的名称或者包名
+数据包：8/2\nstartAppQQ
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//屏幕大小
+sendData(&quot;getWindowSize&quot;);
+数据包：13\ngetWindowSize
+返回数据包：&quot;width|height&quot;
+
+//图片大小
+sendData(&quot;getImageSize&quot;, &quot;/storage/emulated/0/Android/data/com.aibot.client/files/1.png&quot;);
+数据包：12/61\nsaveScreenshot/storage/emulated/0/Android/data/com.aibot.client/files/1.png
+返回数据包：&quot;width|height&quot;
+
+//获取安卓ID
+sendData(&quot;getAndroidId&quot;);
+数据包：12\ngetAndroidId
+返回数据包：&quot;1f73c8f2f3b2f108&quot;
+
+//ocr
+sendData(&quot;ocr&quot;, 0, 0, 0, 0, 0, 0, 0, 1.0);
+数据包：3/1/1/1/1/1/1/1/3\nocr00000001.0
+返回数据包：[[[7.0, 18.0], [61.0, 18.0], [61.0, 38.0], [7.0, 38.0]], (&#39;办公自动化&#39;, 0.8806074261665344)][[[4.0, 94.0], [49.0, 94.0], [49.0, 118.0], [4.0, 118.0]], (&#39;rpa&#39;, 0.978314220905304)]
+
+//URL请求
+sendData(&quot;urlRequest&quot;, &quot;http://www.baidu.com&quot;, &quot;GET&quot;, &quot;null&quot;, &quot;null&quot;);
+数据包：10/20/3/4/4\nurlRequesthttp://www.baidu.comGETnullnull
+返回数据包：返回请求数据内容
+
+//Toast消息提示
+sendData(&quot;showToast&quot;, &quot;rpa&quot;, 1000);
+数据包：9/2/4\nshowToastrpa1000
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//识别验证码
+sendData(&quot;getCaptcha&quot;, &quot;/storage/emulated/0/Android/data/com.aibot.client/files/1.png&quot;, &quot;username&quot;, &quot;password&quot;, &quot;123456&quot;, &quot;1004&quot;, &quot;0&quot;);
+数据包：10/61/8/8/6/4/1\n/storage/emulated/0/Android/data/com.aibot.client/files/1.pngusernamepassword12345610040
+返回数据包：&quot;{&quot;err_no&quot;:0,&quot;err_str&quot;:&quot;OK&quot;,&quot;pic_id&quot;:&quot;9160109360600112681&quot;,&quot;pic_str&quot;:&quot;8vka&quot;,&quot;md5&quot;:&quot;35d5c7f6f53223fbdc5b72783db0c2c0&quot;}&quot;
+
+//识别报错返分
+sendData(&quot;errorCaptcha&quot;, &quot;username&quot;, &quot;password&quot;, &quot;123456&quot;, &quot;9160109360600112681&quot;);
+数据包：12/8/8/6/19\nerrorCaptchausernamepassword1234569160109360600112681
+返回数据包：&quot;{&quot;err_no&quot;:0,&quot;err_str&quot;:&quot;OK&quot;}&quot;
+
+//查询验证码剩余题分
+sendData(&quot;scoreCaptcha&quot;, &quot;username&quot;, &quot;password&quot;);
+数据包：12/8/8\nscoreCaptchausernamepassword
+返回数据包：&quot;{&quot;err_no&quot;:0,&quot;err_str&quot;:&quot;OK&quot;,&quot;tifen&quot;:821690,&quot;tifen_lock&quot;:0}&quot;
+
+//获取元素位置
+sendData(&quot;getElementRect&quot;, &quot;com.aibot.client/com.aibot.client:id=inputServer&quot;);
+数据包：14/48\ngetElementRectcom.aibot.client/com.aibot.client:id=inputServer
+返回数据包：&quot;239|628|989|764&quot;
+
+//获取元素描述内容
+sendData(&quot;getElementDescription&quot;, &quot;com.aibot.client/com.aibot.client:id=inputServer&quot;);
+数据包：21/48\ngetElementDescriptioncom.aibot.client/com.aibot.client:id=inputServer
+返回数据包：&quot;192.168.2.7&quot;
+
+//获取元素文本
+sendData(&quot;getElementText&quot;, &quot;com.aibot.client/com.aibot.client:id=inputServer&quot;);
+数据包：14/48\ngetElementTextcom.aibot.client/com.aibot.client:id=inputServer
+返回数据包：&quot;192.168.2.7&quot;
+
+//设置元素文本
+sendData(&quot;setElementText&quot;, &quot;com.aibot.client/com.aibot.client:id=inputServer&quot;, &quot;rpa&quot;);
+数据包：14/48/3\nsetElementTextcom.aibot.client/com.aibot.client:id=inputServerrpa
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//点击元素
+sendData(&quot;clickElement&quot;, &quot;com.aibot.client/com.aibot.client:id=inputServer&quot;);
+数据包：12/48\nclickElementcom.aibot.client/com.aibot.client:id=inputServer
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//滚动元素
+sendData(&quot;scrollElement&quot;, &quot;com.aibot.client/com.aibot.client:id=inputServer&quot;, 0);
+数据包：13/48/1\nclickElementcom.aibot.client/com.aibot.client:id=inputServer0
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//判断元素是否存在
+sendData(&quot;existsElement&quot;, &quot;com.aibot.client/com.aibot.client:id=inputServer&quot;);
+数据包：13/48\nexistsElementcom.aibot.client/com.aibot.client:id=inputServer
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//判断元素是否选中
+sendData(&quot;isSelectedElement&quot;, &quot;com.aibot.client/com.aibot.client:id=inputServer&quot;);
+数据包：17/48\nisSelectedElementcom.aibot.client/com.aibot.client:id=inputServer
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//上传文件
+sendData(&quot;pushFile&quot;, &quot;/storage/emulated/0/1.png&quot;, fileData);
+//fileData 文件字节数据
+数据包：8/25/655423\npushFile/storage/emulated/0/1.pngfileData
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//拉取文件
+sendData(&quot;pullFile&quot;, &quot;/storage/emulated/0/1.png&quot;, &quot;d:/1.png&quot;);
+数据包：8/25/8\npullFile/storage/emulated/0/1.pngd:/1.png
+返回数据包：文件字节数据
+
+//写入安卓文件
+sendData(&quot;writeAndroidFile&quot;, &quot;/storage/emulated/0/1.txt&quot;, &quot;aibote rpa&quot;, false);
+数据包：16/25/10/5\nwriteAndroidFile/storage/emulated/0/1.txtaibote rpafalse
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//读取安卓文件
+sendData(&quot;readAndroidFile&quot;, &quot;/storage/emulated/0/1.txt&quot;);
+数据包：15/25\nreadAndroidFile/storage/emulated/0/1.txt
+返回数据包：&quot;aibote rpa&quot;
+
+//删除安卓文件
+sendData(&quot;deleteAndroidFile&quot;, &quot;/storage/emulated/0/Android/data/com.aibot.client/files/1.png&quot;);
+数据包：17/61\ndeleteAndroidFile/storage/emulated/0/Android/data/com.aibot.client/files/1.png
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//判断文件是否存在
+sendData(&quot;existsAndroidFile&quot;, &quot;/storage/emulated/0/Android/data/com.aibot.client/files/1.png&quot;);
+数据包：17/61\nexistsAndroidFile/storage/emulated/0/Android/data/com.aibot.client/files/1.png
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//跳转uri
+sendData(&quot;openUri&quot;, &quot;alipayqr://platformapi/startapp?saId=10000007&quot;);
+数据包：7/45\nopenUrialipayqr://platformapi/startapp?saId=10000007
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//拨打电话
+sendData(&quot;callPhone&quot;, &quot;10086&quot;);
+数据包：9/5\ncallPhone10086
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//发送短信
+sendData(&quot;sendMsg&quot;, &quot;10086&quot;, &quot;123&quot;);
+数据包：7/5/3\nsendMsg10086123
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取活动窗口(activity)
+sendData(&quot;getActivity&quot;);
+数据包：11\ngetActivity
+返回数据包：&quot;.MainActivity&quot;
+
+//获取活动包名(package)
+sendData(&quot;getPackage&quot;);
+数据包：10\ngetPackage
+返回数据包：&quot;com.aibot.client&quot;
+
+//设置剪切板文本
+sendData(&quot;setClipboardText&quot;, &quot;aibote&quot;);
+数据包：16/6\nsetClipboardTextaibote
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取剪切板文本
+sendData(&quot;getClipboardText&quot;);
+数据包：16\ngetClipboardText
+返回数据包：&quot;aibote&quot;
+
+//创建TextView控件
+sendData(&quot;createTextView&quot;, 100, &quot;Aibote TextView&quot;, 10, 10, 300, 100);
+数据包：14/3/15/2/2/3/3\ngetcreateTextView100Aibote TextView1010300100
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//创建EditText控件
+sendData(&quot;createEditText&quot;, 101, &quot;Aibote EditText&quot;, 10, 10, 300, 100);
+数据包：14/3/15/2/2/3/3\ngetcreateExitView101Aibote ExitView1010300100
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//创建CheckBox控件
+sendData(&quot;createCheckBox&quot;, 102, &quot;Aibote CheckBox&quot;, 10, 10, 300, 100);
+数据包：14/3/15/2/2/3/3\ngetcreateCheckBox102Aibote CheckBox1010300100
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//创建WebView控件
+sendData(&quot;createWebView&quot;, 103, &quot;http://www.aibote.net&quot;, -1, -1, -1, -1);
+数据包：13/3/22/2/2/2/2\ncreateWebView103http://www.aibote.net-1-1-1-1
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//清除脚本控件
+sendData(&quot;clearScriptControl&quot;);
+数据包：18\nclearScriptControl
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取脚本配置参数
+sendData(&quot;getScriptParam&quot;);
+数据包：14\ngetScriptParam
+返回数据包：{&quot;100&quot;:&quot;Aibote TextView&quot;}
+</pre></div>
+</div>
+</section>
+<section id="windowsbot">
+<h1>WindowsBot开源协议<a class="headerlink" href="#windowsbot" title="此标题的永久链接">#</a></h1>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>Aibote Windows自动化框架，由WindowsDriver.exe客户端驱动程序连接脚本服务端，采用TCP协议传输命令。
+全国领先xpath元素定位算法，一键拾取控件元素、图色 坐标等属性。与安卓端代码统一书写格式，降低用户学习成本。
+独家图色定位算法，50毫秒以内的速度遍历查找1920*1080分辨率的设备。为了让更多人体验到我们产品，
+我们决议在此公布框架协议，希望有更多开发者能完善并封装成各种计算机语言，封装请参考nodejs版的函数说明
+
+协议示例：
+//查找句柄
+sendData(&quot;findWindow&quot;, &quot;className&quot;, &quot;windowName&quot;);
+// 参数一：函数名称
+// 参数二：窗口类名
+// 参数三：窗口名
+发送数据包：10/9/10\nfindWindowclassNamewindowNmae
+返回数据包：成功&quot;65862&quot;，失败 &quot;null&quot;
+
+//查找句柄数组
+sendData(&quot;findWindows&quot;, &quot;className&quot;, &quot;windowName&quot;);
+// 参数一：函数名称
+// 参数二：窗口类名
+// 参数三：窗口名
+发送数据包：11/9/10\nfindWindowsclassNamewindowNmae
+返回数据包：成功返回多个句柄&quot;65862|65863|65864&quot;，失败 &quot;null&quot;
+
+//查找子句柄
+sendData(&quot;findSubWindow&quot;, 65862, &quot;className&quot;, &quot;windowName&quot;);
+// 参数一：函数名称
+// 参数二：当前窗口句柄
+// 参数三：窗口类名
+// 参数四：窗口名
+发送数据包：13/5/9/10\nfindSubWindow65862classNamewindowNmae
+返回数据包：成功&quot;460538&quot;，失败 &quot;null&quot;
+
+//查找父句柄
+sendData(&quot;findParentWindow&quot;, 460538);
+// 参数一：函数名称
+// 参数二：当前窗口句柄
+发送数据包：16/6/\nfindParentWindow460538
+返回数据包：成功&quot;65862&quot;，失败 &quot;null&quot;
+
+//查找桌面窗口句柄
+sendData(&quot;findDesktopWindow&quot;);
+// 参数一：函数名称
+发送数据包：17/\nfindDesktopWindow
+返回数据包：成功&quot;100011&quot;，失败 &quot;null&quot;
+
+//获取窗口名称
+sendData(&quot;getWindowName&quot;, 65862);
+// 参数一：函数名称
+// 参数二：窗口句柄
+发送数据包：13/5\ngetWindowName65862
+返回数据包：成功&quot;aibote&quot;，失败 &quot;null&quot;
+
+//显示/隐藏窗口
+sendData(&quot;showWindow&quot;, 65862, true);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：显示窗口 true， 隐藏窗口 false
+发送数据包：10/5/4\nshowWindow65862true
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//设置窗口到最顶层
+sendData(&quot;setWindowTop&quot;, 65862, true);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：是否置顶
+发送数据包：12/5/4\nsetWindowTop65862true
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取窗口位置
+sendData(&quot;getWindowPos&quot;, 65862);
+// 参数一：函数名称
+// 参数二：窗口句柄
+发送数据包：12/5\ngetWindowPos65862
+返回数据包：&quot;239|628|989|764&quot;
+
+//设置窗口位置
+sendData(&quot;setWindowPos&quot;, 65862, 10, 10, 200, 200);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三 整型，左上角横坐标
+// 参数四 整型，左上角纵坐标
+// 参数五 整型，窗口宽度
+// 参数六 整型，窗口高度
+发送数据包：12/5/2/2/3/3\nsetWindowPos658621010200200
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//移动鼠标
+sendData(&quot;moveMouse&quot;, 65862, 100, 100, false, 0);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：x坐标
+// 参数四：y坐标
+// 参数五：操作模式
+// 参数六：元素句柄
+发送数据包：9/5/3/3/5/1\nmoveMouse65862100100false0
+返回数据包：&quot;true&quot;
+
+//移动鼠标(相对坐标)
+sendData(&quot;moveMouseRelative&quot;, 65862, 100, 100, false);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：x坐标
+// 参数四：y坐标
+// 参数五：操作模式
+发送数据包：17/5/3/3/5\nmoveMouseRelative65862100100false
+返回数据包：&quot;true&quot;
+
+//滚动鼠标
+sendData(&quot;rollMouse&quot;, 65862, 100, 100, 10, false);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：x坐标
+// 参数四：y坐标
+// 参数五：鼠标滚动次数,负数下滚鼠标,正数上滚鼠标
+// 参数六：操作模式
+发送数据包：9/5/3/3/2/5\nrollMouse658621001002false
+返回数据包：&quot;true&quot;
+
+//点击鼠标
+sendData(&quot;clickMouse&quot;, 65862, 100, 100, 1, false, 0);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：x坐标
+// 参数四：y坐标
+// 参数五：点击类型，单击左键:1 单击右键:2 按下左键:3 弹起左键:4 按下右键:5 弹起右键:6 双击左键:7 双击右键:8
+// 参数六：操作模式
+// 参数七：元素句柄
+发送数据包：9/5/3/3/1/5/1\nclickMouse658621001001false0
+返回数据包：&quot;true&quot;
+
+//发送文本
+sendData(&quot;sendKeys&quot;, &quot;rpa&quot;);
+// 参数一：函数名称
+// 参数二：输入的文本
+发送数据包：8/3\nsendKeysrpa
+返回数据包：&quot;true&quot;
+
+//后台发送文本
+sendData(&quot;sendKeysByHwnd&quot;, 65862, &quot;rpa&quot;);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：输入的文本
+发送数据包：14/5/3\nsendKeysByHwnd65862rpa
+返回数据包：&quot;true&quot;
+
+//输入虚拟键值(VK)
+sendData(&quot;sendVk&quot;, 13, 1);
+// 参数一：函数名称
+// 参数二：虚拟键值 回车对应 VK键值 13
+// 参数三：输入类型，按下弹起:1 按下:2 弹起:3
+发送数据包：6/2/1\nsendVk131
+返回数据包：&quot;true&quot;
+
+//后台输入虚拟键值(VK)
+sendData(&quot;sendVkByHwnd&quot;, 65862, 13, 1);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：虚拟键值 回车对应 VK键值 13
+// 参数四：输入类型，按下弹起:1 按下:2 弹起:3
+发送数据包：12/5/2/1\nsendVkByHwnd65862131
+返回数据包：&quot;true&quot;
+
+//截图保存
+sendData(&quot;saveScreenshot&quot;, 65862, &quot;d:/1.png&quot;, 80, 150, 30, 30, 0, 127, 255, false);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：保存的图片路径（手机）
+// 参数四：矩形左上角x坐标
+// 参数五：矩形左上角y坐标
+// 参数六：矩形右下角x坐标
+// 参数七：矩形右下角y坐标
+// 参数八：二值化算法类型
+// 参数九：二值化阈值
+// 参数十：二值化最大值
+// 参数十一：前后台截图
+发送数据包：14/5/8/2/3/2/2/1/3/3/5\nsaveScreenshot65862d:/1.png8015030300127255false
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取色值
+sendData(&quot;getColor&quot;, 65862, 100, 200, false);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：x坐标
+// 参数四：y坐标
+// 参数五：前后台获取颜色值
+数据包：8/5/3/3/5\ngetColor65862100200false
+返回数据包：#000000
+
+//找图
+sendData(&quot;findImage&quot;, 65862, &quot;d:/1.png&quot;, 0, 0, 0, 0, 0.95, 0, 0, 0, 1, false);
+// 参数一：函数名称
+// 参数二：窗口句柄或者图片路径
+// 参数三：图片路径
+// 参数四：矩形左上角x坐标
+// 参数五：矩形左上角y坐标
+// 参数六：矩形右下角x坐标
+// 参数七：矩形右下角y坐标
+// 参数八：相似度
+// 参数九：二值化算法类型
+// 参数十：二值化阈值
+// 参数十一：二值化最大值
+// 参数十二：多个坐标点
+// 参数十三：前后台找图
+数据包：9/5/8/1/1/1/1/4/1/1/1/1/5\nfindImage65862d:/1.png00000.950001false
+返回数据包：单坐标点成功&quot;x|y&quot;  多坐标点成功 &quot;x1|y1/x2|y2...&quot;  失败&quot;-1|-1&quot;
+
+//找动态图
+sendData(&quot;findAnimation&quot;, 65862, 100, 0, 0, 0, 0, false);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：前后两张图相隔的时间，单位毫秒
+// 参数四：矩形左上角x坐标
+// 参数五：矩形左上角y坐标
+// 参数六：矩形右下角x坐标
+// 参数七：矩形右下角y坐标
+// 参数八：前后台找动态图
+数据包：13/5/3/0/0/0/0/5\nfindAnimation658621000000false
+返回数据包：单坐标点成功&quot;x|y&quot;  多坐标点成功 &quot;x1|y1/x2|y2...&quot;  失败&quot;-1|-1&quot;
+
+//找色
+sendData(&quot;findColor&quot;, 65862, &quot;#e8f2f8&quot;, &quot;10/20/#e7f0f7&quot;, 0, 0, 0, 0, 1, false);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：主颜色值
+// 参数四：相对偏移的颜色点，以 &quot;x坐标+y坐标+色值&quot; 字符串形式
+// 参数五：矩形左上角x坐标
+// 参数六：矩形左上角y坐标
+// 参数七：矩形右下角x坐标
+// 参数八：矩形右下角y坐标
+// 参数九：相似度
+// 参数十：前后台找色
+数据包：9/5/7/13/1/1/1/1/1/5\nfindColor65862#e8f2f810/20/#e7f0f700001false
+返回数据包：成功&quot;x|y&quot; 失败&quot;-1|-1&quot;
+
+//比色
+sendData(&quot;compareColor&quot;, 65862, 100, 200, &quot;#e8f2f8&quot;, &quot;10/20/#e7f0f7&quot;, 0, 0, 0, 0, 1, false);
+// 参数一：函数名称
+// 参数二：窗口句柄
+// 参数三：主颜色值所在的X坐标
+// 参数四：主颜色值所在的Y坐标
+// 参数五：主颜色值
+// 参数六：相对偏移的颜色点，以 &quot;x坐标+y坐标+色值&quot; 字符串形式
+// 参数七：矩形左上角x坐标
+// 参数八：矩形左上角y坐标
+// 参数九：矩形右下角x坐标
+// 参数十：矩形右下角y坐标
+// 参数十一：相似度
+// 参数十二：前后台比色
+数据包：12/5/3/3/7/11/1/1/1/1/1/5\ncompareColor65862100200#e8f2f810/20/#e7f0f700001false
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//ocr
+sendData(&quot;ocr&quot;, 65862,  0, 0, 0, 0, 0, 0, 0, false);
+数据包：3/5/1/1/1/1/1/1/1/5\nocr658620000000false
+返回数据包：[[[7.0, 18.0], [61.0, 18.0], [61.0, 38.0], [7.0, 38.0]], (&#39;办公自动化&#39;, 0.8806074261665344)][[[4.0, 94.0], [49.0, 94.0], [49.0, 118.0], [4.0, 118.0]], (&#39;rpa&#39;, 0.978314220905304)]
+
+//ocrByFile
+sendData(&quot;ocrByFile&quot;, &quot;d:/1.png&quot;,  0, 0, 0, 0, 0, 0, 0);
+数据包：9/8/1/1/1/1/1/1/1\nocrByFiled:/1.png0000000
+返回数据包：[[[7.0, 18.0], [61.0, 18.0], [61.0, 38.0], [7.0, 38.0]], (&#39;办公自动化&#39;, 0.8806074261665344)][[[4.0, 94.0], [49.0, 94.0], [49.0, 118.0], [4.0, 118.0]], (&#39;rpa&#39;, 0.978314220905304)]
+
+//获取指定元素名称
+sendData(&quot;getElementName&quot;, 65862, &quot;Window/Text&quot;);
+数据包：14/5/11\ngetElementName65862Window/Text
+返回数据包：&quot;aibote is pure code RPA&quot;
+
+//获取指定元素文本
+sendData(&quot;getElementValue&quot;, 65862, &quot;Window/Edit&quot;);
+数据包：15/5/11\ngetElementValue65862Window/Edit
+返回数据包：&quot;aibote RPA&quot;
+
+//获取指定元素矩形大小
+sendData(&quot;getElementRect&quot;, 65862, &quot;Window/Button&quot;);
+数据包：14/5/13\ngetElementRect65862Window/Button
+返回数据包：&quot;239|628|989|764&quot;
+
+//获取指定元素窗口句柄
+sendData(&quot;getElementWindow&quot;, 65862, &quot;Window/Button&quot;);
+数据包：16/5/13\ngetElementWindow65862Window/Button
+返回数据包：&quot;460538&quot;
+
+//点击元素
+sendData(&quot;clickElement&quot;, 65862, &quot;Window/Button&quot;, 1);
+数据包：12/5/13/1\nclickElement65862Window/Button1
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//执行元素默认操作(一般是点击操作)
+sendData(&quot;invokeElement&quot;, 65862, &quot;Window/Button&quot;);
+数据包：13/5/13\ninvokeElement65862Window/Button
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//设置指定元素作为焦点
+sendData(&quot;setElementFocus&quot;, 65862, &quot;Window/Button&quot;);
+数据包：15/5/13\nsetElementFocus65862Window/Button
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//设置元素文本
+sendData(&quot;setElementValue&quot;, 65862, &quot;Window/Button&quot;, &quot;rpa&quot;);
+数据包：15/5/13/3\nsetElementValue65862Window/Buttonrpa
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//滚动元素
+sendData(&quot;setElementScroll&quot;, 65862, &quot;Window&quot;, -1, 0.1);
+数据包：16/5/6/2/3\nsetElementScroll65862Window-10.1
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//单/复选框是否选中
+sendData(&quot;isSelected&quot;, 65862, &quot;Window/CheckBox&quot;);
+数据包：10/5/15\nisSelected65862Window/CheckBox
+返回数据包：未找到元素返回&quot;false&quot; 选中返回&quot;selected&quot; 未选中返回 &quot;unselected&quot;
+
+//关闭窗口
+sendData(&quot;closeWindow&quot;, 65862, &quot;Window&quot;);
+数据包：11/5/6\ncloseWindow65862Window
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//设置窗口状态
+sendData(&quot;setWindowState&quot;, 65862, &quot;Window&quot;, 2);
+数据包：14/5/6/1\nsetWindowState65862Window2
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//设置剪切板文本
+sendData(&quot;setClipboardText&quot;, &quot;rpa&quot;);
+数据包：16/3\nsetClipboardTextrpa
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取剪切板文本
+sendData(&quot;getClipboardText&quot;);
+数据包：16\ngetClipboardText
+返回数据包：&quot;rpa&quot;
+
+//启动指定程序
+sendData(&quot;startProcess&quot;, &quot;cmd&quot;, true, false);
+数据包：12/3/4/5\nstartProcesscmdtruefalse
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//执行cmd命令
+sendData(&quot;executeCommand&quot;, &quot;ipconfig&quot;, 300);
+数据包：14/8/3\nexecuteCommandipconfig300
+返回数据包：返回cmd执行结果
+
+//指定url下载文件
+sendData(&quot;downloadFile&quot;, &quot;http://www.gogo.com/rpa.rar&quot;, &quot;d:/rpa.rar&quot;, true);
+数据包：12/27/10/4\ndownloadFilehttp://www.gogo.com/rpa.rard:/rpa.rartrue
+返回数据包：&quot;true&quot;
+
+//打开excle
+sendData(&quot;openExcel&quot;, &quot;D:/rpa.xlsx&quot;);
+数据包：9/11\nopenExcelD:/rpa.xlsx
+返回数据包：&quot;null&quot;或者 {&quot;book&quot;:&quot;088173SDFU13&quot;,&quot;path&quot;:&quot;D:/rpa.xlsx&quot;}
+
+//打开excel表格
+sendData(&quot;openExcelSheet&quot;, &quot;088173SDFU13&quot;, &quot;D:/rpa.xlsx&quot;, &quot;sheet1&quot;);
+数据包：14/12/11/6\nopenExcelSheet088173SDFU13D:/rpa.xlsxsheet1
+返回数据包：&quot;null&quot;或者 &quot;A123HHI123F132&quot;
+
+//保存/关闭excel
+sendData(&quot;saveExcel&quot;, &quot;088173SDFU13&quot;, &quot;D:/rpa.xlsx&quot;);
+数据包：9/12/11\nsaveExcel088173SDFU13D:/rpa.xlsx
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//写入数字到表格
+sendData(&quot;writeExcelNum&quot;, &quot;A123HHI123F132&quot;, 0, 0, 123);
+数据包：13/14/1/1/3\nwriteExcelNumA123HHI123F13200123
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//写入字符串到表格
+sendData(&quot;writeExcelStr&quot;, &quot;A123HHI123F132&quot;, 0, 0, &quot;rpa&quot;);
+数据包：13/14/1/1/3\nwriteExcelStrA123HHI123F13200rpa
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//读取excel表格数字
+sendData(&quot;readExcelNum&quot;, &quot;A123HHI123F132&quot;, 0, 0);
+数据包：12/14/1/1\nreadExcelNumA123HHI123F13200
+返回数据包：123
+
+//读取excel表格字串
+sendData(&quot;readExcelStr&quot;, &quot;A123HHI123F132&quot;, 0, 0);
+数据包：12/14/1/1\nreadExcelStrA123HHI123F13200
+返回数据包：&quot;rpa&quot;
+
+删除excel表格行
+sendData(&quot;removeExcelRow&quot;,  0, 0);
+数据包：14/1/1\nremoveExcelRow00
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+删除excel表格列
+sendData(&quot;removeExcelCol&quot;, 0, 0);
+数据包：14/1/1\nremoveExcelCol00
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+提取视频帧
+setSendData(&quot;extractImageByVideo&quot;, &quot;d:/video/test.mp4&quot;, &quot;d:/video&quot;, 1);
+数据包：19/17/8/1\nextractImageByVideod:/video/test.mp4d:/video1
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+裁剪图片
+setSendData(&quot;cropImage&quot;, &quot;d:/image/src.jpg&quot;, &quot;d:/image/dest.jpg&quot;, 0, 0, 10, 10);
+数据包：9/16/17/1/1/2/2\ncropImaged:/image/src.jpgd:/image/dest.jpg001010
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+初始化NLP
+sendData(&quot;initNLP&quot;, &quot;xxxaOS3Z8xxRvbJv2qA7VcLxxBlxxxJxxnZvmfLMxTUcnx8DLx6&quot;);
+数据包：7/51\ninitNLPxxxaOS3Z8xxRvbJv2qA7VcLxxBlxxxJxxnZvmfLMxTUcnx8DLx6
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+chatGpt
+sendData(&quot;chatgpt&quot;, &quot;text-davinci-003&quot;, &quot;hello！&quot;, 256, 0.7, &quot;&quot;);
+数据包：7/16/6/3/3/0\nchatgpttext-davinci-003hello!2560.7
+返回数据包：&#39;{text:&quot;你好&quot;, finish:true}&#39;
+
+chatgptEdit
+sendData(&quot;chatgptEdit&quot;, &quot;text-davinci-edit-001&quot;, &quot;hella&quot;, &quot;修正错误文字&quot;, 256, 1);
+数据包：11/21/5/18/3/1\nchatgptEdittext-davinci-edit-001hella修正错误文字2561
+返回数据包：&#39;{text:&quot;hello&quot;, finish:true}&#39;
+
+创建微调模型
+sendData(&quot;createFineTune&quot;, &quot;fileId&quot;, &quot;davinci&quot;, &quot;aiboteRPA&quot;);
+数据包：14/6/7/9\ncreateFineTunefileIddavinciaiboteRPA
+返回数据包：成功返回微调id，失败返回null
+
+列出所有微调信息
+sendData(&quot;listFineTunes&quot;);
+数据包：13\nlistFineTunes
+返回数据包：成功返回&quot;{[{baseModel, object, fineTuneId, fineTunedModel, fineTuneStatus, fileName:string, fileId, fileStatus}, ...]}&quot;，失败返回&quot;null&quot;
+
+获取指定微调id的详细信息
+sendData(&quot;listFineTune&quot;, &quot;ft-xxxxxxxx&quot;);
+数据包：12/11\nlistFineTunefd-xxxxxxxx
+返回数据包：成功返回&quot;{{baseModel, object, fineTuneId, fineTunedModel, fineTuneStatus, fileName:string, fileId, fileStatus}}&quot;，失败返回&quot;null&quot;
+
+取消正在微调的作业
+sendData(&quot;cancelFineTune&quot;, &quot;ft-xxxxxxxx&quot;);
+数据包：14/11\ncancelFineTunefd-xxxxxxxx
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+删除微调模型
+sendData(&quot;deleteFineTuneModel&quot;, &quot;ft-xxxxxxxx&quot;);
+数据包：19/11\ndeleteFineTuneModelfd-xxxxxxxx
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+上传训练文件到服务器
+sendData(&quot;uploadTrainFile&quot;, &quot;d:/test.jsonl&quot;);
+数据包：15/13\nuploadTrainFiled:/test.jsonl
+返回数据包：成功返回&quot;fileIdxxxxxxxxx&quot;，失败返回&quot;null&quot;
+
+列出所有训练文件信息
+sendData(&quot;listTrainFiles&quot;);
+数据包：14\nlistTrainFiles
+返回数据包：成功返回&quot;[{bytes, fileName, fileId, purpose}]&quot; 失败返回&quot;null&quot;
+
+列出指定id的文件信息
+sendData(&quot;listTrainFile&quot;, &quot;fileIdxxxxxxxxx&quot;);
+数据包：13/15\nlistTrainFilefileIdxxxxxxxxx
+返回数据包：成功返回&quot;{bytes, fileName, fileId, purpose}&quot; 失败返回&quot;null&quot;
+
+下载训练文件内容
+sendData(&quot;downloadTrainFile&quot;, &quot;fileIdxxxxxxxxx&quot;);
+数据包：17/15\ndownloadTrainFilefileIdxxxxxxxxx
+返回数据包：成功返回文件内容，失败返回&quot;null&quot;
+
+删除训练文件
+sendData(&quot;deleteTrainFile&quot;, &quot;fileIdxxxxxxxxx&quot;);
+数据包：15/15\ndeleteTrainFilefileIdxxxxxxxxx
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+初始化语音服务
+setSendData(&quot;initSpeechService&quot;, &quot;4:714d4ie62639d:2;;35;f65956621&quot;, &quot;eastus&quot;);
+数据包：17/31/6\ninitSpeechService4:714d4ie62639d:2;;35;f65956621eastus
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+音频文件转文本
+setSendData(&quot;audioFileToText&quot;, &quot;d:/test.wav&quot;, &quot;zh-cn&quot;);
+数据包：15/11/5\naudioFileToTextd:/test.wavzh-cn
+返回数据包：成功返回 &quot;Aibote 是一款非常优秀的自动化框架&quot;，失败返回&quot;null&quot;
+
+麦克风输入流转换文本
+setSendData(&quot;microphoneToText&quot;, &quot;zh-cn&quot;);
+数据包：16/5\nmicrophoneToTextzh-cn
+返回数据包：成功返回 &quot;Aibote 是一款非常优秀的自动化框架&quot;，失败返回&quot;null&quot;
+
+文本合成音频到扬声器
+setSendData(&quot;textToBullhorn&quot;, &quot;hello&quot;, &quot;zh-cn&quot;, &quot;zh-cn-XiaochenNeural&quot;);
+数据包：14/5/5/20\ntextToBullhornhellozh-cnzh-cn-XiaochenNeural
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+文本合成音频并保存到文件
+setSendData(&quot;textToAudioFile&quot;, &quot;d:/test.ssml&quot;, &quot;zh-cn&quot;, &quot;zh-cn-XiaochenNeural&quot;, &quot;d:/test.wav&quot;);
+数据包：15/12/5/20/11\ntextToAudioFiled:/test.ssmlzh-cnzh-cn-XiaochenNeurald:/test.wav
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+麦克风音频翻译成目标语言文本
+setSendData(&quot;microphoneTranslationText&quot;, &quot;zh-cn&quot;, &quot;en-US&quot;);
+数据包：25/5/5\nmicrophoneTranslationTextzh-cnen-US
+返回数据包：成功返回&quot;Aibote is an excellent automation framework&quot;，失败返回&quot;null&quot;
+
+音频文件翻译成目标语言文本
+setSendData(&quot;audioFileTranslationText&quot;, &quot;d:/test.wav&quot;, &quot;zh-cn&quot;, &quot;en-US&quot;);
+数据包：24/11/5/5\naudioFileTranslationTextd:/test.wavzh-cnen-US
+返回数据包：成功返回&quot;Aibote is an excellent automation framework&quot;，失败返回&quot;null&quot;
+
+初始化数字人
+setSendData(&quot;initMetahuman&quot;, &quot;D:/AiboteMetahuman/metahumanMode&quot;, false);
+数据包：13/32/5\ninitMetahumanD:/AiboteMetahuman/metahumanModefalse
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+数字人说话，此函数需要调用 initSpeechService 初始化语音服务
+setSendData(&quot;metahumanSpeech&quot;, &quot;D:/AiboteMetahuman/voice&quot;, &quot;Aibote is an excellent automation framework&quot;, &quot;zh-cn&quot;, &quot;zh-cn-XiaochenNeural&quot;, true, 0, &quot;General&quot;);
+数据包：15/24/43/5/20/4/1/7\nmetahumanSpeechD:/AiboteMetahuman/voiceAibote is an excellent automation frameworkzh-cnzh-cn-XiaochenNeuraltrue0General
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//关闭驱动程序
+sendData(&quot;closeDriver&quot;);
+发送数据包：11\ncloseDriver
+</pre></div>
+</div>
+</section>
+<section id="webbot">
+<h1>WebBot开源协议<a class="headerlink" href="#webbot" title="此标题的永久链接">#</a></h1>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>Aibote web自动化框架，由WebDriver.exe客户端驱动程序连接脚本服务端，采用TCP协议传输命令。
+WebBot 基于chromium内核研发而成的一款web自动化框架，因此支持chromium内核的所有浏览器和应用程序。框架稳定，运行速度非常快！
+为了让更多人体验到我们产品，我们决议在此公布框架协议，希望有更多开发者能完善并封装成各种计算机语言，封装请参考nodejs版的函数说明
+
+协议示例：
+//跳转url
+sendData(&quot;goto&quot;, &quot;http://www.ai-bot.net&quot;);
+数据包：4/21\ngotohttp://www.ai-bot.net
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//新建tab页面并跳转到指定url
+sendData(&quot;newPage&quot;, &quot;http://www.ai-bot.net&quot;);
+数据包：7/21\nnewPagehttp://www.ai-bot.net
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//返回
+sendData(&quot;back&quot;);
+数据包：4\nback
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//前进
+sendData(&quot;forward&quot;);
+数据包：7\nforward
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//刷新
+sendData(&quot;refresh&quot;);
+数据包：7\nrefresh
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取当前页面id
+sendData(&quot;getCurPageId&quot;);
+数据包：12\ngetCurPageId
+返回数据包：&quot;E2DB8A0856D83C4C3C194B79BBC2235F&quot;
+
+//获取所有页面id
+sendData(&quot;getAllPageId&quot;);
+数据包：12\ngetAllPageId
+返回数据包：&quot;E2DB8A0856D83C4C3C194B79BBC2235F|E2DB8A0856D83C4C3C194B79BBC22352&quot;
+
+//切换指定页面
+sendData(&quot;switchPage&quot;, &quot;E2DB8A0856D83C4C3C194B79BBC2235F&quot;);
+数据包：10/32\nswitchPageE2DB8A0856D83C4C3C194B79BBC2235F
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//关闭当前页面
+sendData(&quot;closePage&quot;);
+数据包：9\nclosePage
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取当前url
+sendData(&quot;getCurrentUrl&quot;);
+数据包：13\ngetCurrentUrl
+返回数据包：&quot;http://www.ai-bot.net&quot;，失败返回 &quot;webdriver error&quot;
+
+//获取当前标题
+sendData(&quot;getTitle&quot;);
+数据包：8\ngetTitle
+返回数据包：&quot;RPA自动化平台&quot;，失败返回 &quot;webdriver error&quot;
+
+//切换frame
+sendData(&quot;switchFrame&quot;, &quot;/html/body/div[3]/div[3]/div[1]/div/div[3]/div[1]/div[1]/iframe&quot;);
+数据包：11/63\nswitchFrame/html/body/div[3]/div[3]/div[1]/div/div[3]/div[1]/div[1]/iframe
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//切换到主frame
+sendData(&quot;switchMainFrame&quot;);
+数据包：15\nswitchMainFrame
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//点击元素
+sendData(&quot;clickElement&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：12/36\nclickElement/html/body/header/div/nav/ul/li[5]/a
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//设置编辑框值
+sendData(&quot;setElementValue&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;, &quot;rpa&quot;);
+数据包：15/36/3\nclickElement/html/body/header/div/nav/ul/li[5]/arpa
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取文本
+sendData(&quot;getElementText&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：14/36\ngetElementText/html/body/header/div/nav/ul/li[5]/a
+返回数据包：&quot;rpa&quot;
+
+//获取outerHTML
+sendData(&quot;getElementOuterHTML&quot;, &quot;/html/body/div[2]/div/div/div/div[2]/p&quot;);
+数据包：19/38\ngetElementOuterHTML/html/body/div[2]/div/div/div/div[2]/p
+返回数据包：&#39;&lt;p class=&quot;info&quot;&gt;Aibote&lt;/p&gt;&#39;
+
+//获取innerHTML
+sendData(&quot;getElementInnerHTML&quot;, &quot;/html/body/div[2]/div/div/div/div[2]/p&quot;);
+数据包：19/38\ngetElementInnerHTML/html/body/div[2]/div/div/div/div[2]/p
+返回数据包：&quot;Aibote&quot;
+
+//设置属性值
+sendData(&quot;setElementAttribute&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;, &quot;src&quot;, &quot;http://www.ai-bot.net&quot;);
+数据包：19/36/3/22\nsetElementAttribute/html/body/header/div/nav/ul/li[5]/asrchttp://www.ai-bot.net
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取指定属性的值
+sendData(&quot;getElementAttribute&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;, &quot;src&quot;);
+数据包：19/36/3\ngetElementAttribute/html/body/header/div/nav/ul/li[5]/asrc
+返回数据包：&quot;http://www.ai-bot.net&quot;
+
+//获取矩形位置
+sendData(&quot;getElementRect&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：14/36\ngetElementRect/html/body/header/div/nav/ul/li[5]/a
+返回数据包：&#39;{&quot;left&quot;:74,&quot;top&quot;:19,&quot;right&quot;:117, &quot;bottom&quot;:42,&quot;width&quot;:43, &quot;height&quot;:23}&#39;
+
+//判断元素是否选中
+sendData(&quot;isSelected&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：10/36\nisSelected/html/body/header/div/nav/ul/li[5]/a
+返回数据包：成功返回&quot;true&quot;，失败返回&quot;webdriver error&quot;
+
+//判断元素是否可见
+sendData(&quot;isDisplayed&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：11/36\nisDisplayed/html/body/header/div/nav/ul/li[5]/a
+返回数据包：成功返回&quot;true&quot;，失败返回&quot;webdriver error&quot;
+
+//判断元素是否可用
+sendData(&quot;isEnabled&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：9/36\nisEnabled/html/body/header/div/nav/ul/li[5]/a
+返回数据包：成功返回&quot;true&quot;，失败返回&quot;webdriver error&quot;
+
+//清空元素
+sendData(&quot;clearElement&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：12/36\nclearElement/html/body/header/div/nav/ul/li[5]/a
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//设置元素焦点
+sendData(&quot;setElementFocus&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：15/36\nsetElementFocus/html/body/header/div/nav/ul/li[5]/a
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//通过元素上传文件
+sendData(&quot;uploadFile&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;, &quot;d:\\1.png&quot;);
+数据包：10/36/8\nuploadFile/html/body/header/div/nav/ul/li[5]/ad:\\1.png
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//输入文本
+sendData(&quot;sendKeys&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;, &quot;aibote&quot;);
+数据包：8/36/6\nsendKeys/html/body/header/div/nav/ul/li[5]/aaibote
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//发送Vk虚拟键
+sendData(&quot;sendVk&quot;, &quot;13&quot;);
+数据包：6/2\nsendVk13
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//点击鼠标
+sendData(&quot;clickMouse&quot;, &quot;100&quot;, &quot;200&quot;, 1);
+数据包：10/3/3/1\nclickMouse1002001
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//移动鼠标
+sendData(&quot;moveMouse&quot;, &quot;100&quot;, &quot;200&quot;);
+数据包：9/3/3\nmoveMouse100200
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//滚动鼠标
+sendData(&quot;wheelMouse&quot;, &quot;0&quot;, &quot;100&quot;, &quot;0&quot;, &quot;0&quot;);
+数据包：10/1/3/1/1\nwheelMouse010000
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//xpath点击鼠标
+sendData(&quot;clickMouseByXpath&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;, 1);
+数据包：17/36/1\nclickMouseByXpath/html/body/header/div/nav/ul/li[5]/a1
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//xpath移动鼠标(元素中心点)
+sendData(&quot;moveMouseByXpath&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：16/36\nmoveMouseByXpath/html/body/header/div/nav/ul/li[5]/a
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//xpath滚动鼠标
+sendData(&quot;wheelMouseByXpath&quot;, &quot;0&quot;, &quot;100&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：17/1/3/36\nwheelMouseByXpath0100/html/body/header/div/nav/ul/li[5]/a
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//截图
+sendData(&quot;takeScreenshot&quot;);
+数据包：14\ntakeScreenshot
+返回数据包：成功返回PNG图片格式 base64 字符串，失败返回null
+
+//元素截图
+sendData(&quot;takeScreenshot&quot;, &quot;/html/body/header/div/nav/ul/li[5]/a&quot;);
+数据包：14/36\ntakeScreenshot/html/body/header/div/nav/ul/li[5]/a
+返回数据包：成功返回PNG图片格式 base64 字符串，失败返回null
+
+//点击警告框
+sendData(&quot;clickAlert&quot;, &quot;true&quot;, &quot;promptText&quot;);
+数据包：10/4/10\nclickAlerttruepromptText
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//获取警告框文本
+sendData(&quot;getAlertText&quot;);
+数据包：12\ngetAlertText
+返回数据包：&quot;aibote rpa&quot;
+
+//获取指定url匹配的cookies
+sendData(&quot;getCookies&quot;, &quot;http://www.ai-bot.net&quot;);
+数据包：10/21\ngetCookieshttp://www.ai-bot.net
+返回数据包：成功返回json格式的字符串，失败返回null
+
+//获取所有cookies
+sendData(&quot;getAllCookies&quot;);
+数据包：13\ngetAllCookies
+返回数据包：成功返回json格式的字符串，失败返回null
+
+//设置cookies
+sendData(&quot;setCookie&quot;, &quot;aibote&quot;, &quot;rpa&quot;, &quot;http://www.aibote.net&quot;, &quot;&quot;, &quot;&quot;, false, false, &quot;&quot;, 0, &quot;&quot;, false, &quot;&quot;, 0, &quot;&quot;);
+数据包：9/6/3/21/0/0/5/5/0/1/0/5/0/1\0nsetCookiesetCookieaiboterpahttp://www.aibote.netfalsefalse0false0
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//删除指定cookies
+sendData(&quot;deleteCookies&quot;, &quot;rpa&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;);
+数据包：13/3/0/0/0\ndeleteCookiesrpa
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//删除所有cookies
+sendData(&quot;deleteAllCookies&quot;);
+数据包：16\ndeleteAllCookies
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//清除缓存
+sendData(&quot;clearCache&quot;);
+数据包：10\nclearCache
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//注入JavaScript
+sendData(&quot;executeScript&quot;, &quot;(function () {return &#39;aibote rpa&#39;})();&quot;);
+数据包：13/38\nexecuteScript(function () {return &#39;aibote rpa&#39;})();
+返回数据包：&quot;aibote rpa&quot;  假如注入代码为函数且有return语句，则返回retrun 的值，否则返回null;
+
+//获取窗口位置和状态
+sendData(&quot;getWindowPos&quot;);
+数据包：12\ngetWindowPos
+返回数据包：&quot;{height: 300, left: 20, top: 20, width: 516, windowState: &#39;normal&#39;}&quot;
+
+//设置窗口位置和状态
+sendData(&quot;setWindowPos&quot;, &quot;normal&quot;, 10, 10, 200, 300);
+数据包：12/6/2/2/3/3\nsetWindowPosnormal1010200300
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//手机浏览器仿真
+sendData(&quot;mobileEmulation&quot;, 500, 800, &quot;Mozilla/5.0 (Linux; Android 7.0; SM-G950U Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36&quot;, 
+                &quot;Android&quot;, &quot;7.0&quot;, &quot;&quot;, &quot;&quot;, 0, 0, 0);
+//参数一 字符串型，函数名称
+//参数二 整型，宽度
+//参数三 整型，高度
+//参数四 字符串型，用户代理
+//参数五 字符串型，系统平台
+//参数六 字符串型，系统平台版本号
+//参数七 字符串型，可选参数，语言
+//参数八 字符串型，可选参数，时区标识
+//参数九 浮点型，可选参数，纬度
+//参数十 浮点型，可选参数，经度
+//参数十一 浮点型，可选参数，准确度
+数据包：15/3/3/135/7/3/0/0/1/1/1\nmobileEmulation500800Mozilla/5.0 (Linux; Android 7.0; SM-G950U Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36Android7.0
+返回数据包：&quot;false&quot;或者 &quot;true&quot;
+
+//关闭浏览器
+sendData(&quot;closeBrowser&quot;);
+数据包：12\ncloseBrowser
+返回数据包：&quot;true&quot;
+
+//关闭驱动程序
+sendData(&quot;closeDriver&quot;);
+发送数据包：11\ncloseDriver
+</pre></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../reference/py/api/AiBot.WebBotMain.upload_file_by_element.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">AiBot.WebBotMain.upload_file_by_element</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">API 开源协议</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">数据包收发格式</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#andoridbot">AndoridBot开源协议</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#windowsbot">WindowsBot开源协议</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#webbot">WebBot开源协议</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner"></div>
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, Aibote.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
